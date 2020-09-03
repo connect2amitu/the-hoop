@@ -1,0 +1,93 @@
+.dCard {
+  height          : 256px;
+  position        : relative;
+  padding         : 20px;
+  width           : 256px;
+  height          : 256px;
+  position        : relative;
+  display         : flex;
+  flex-direction  : column;
+  margin          : 4px;
+  padding         : 32px 32px 24px;
+  overflow        : hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius   : 4px;
+
+  @media (max-width: 767px) {
+    width         : 158px !important;
+    height        : 158px !important;
+    padding-left  : 16px !important;
+    padding-right : 16px !important;
+    padding-top   : 16px !important;
+    padding-bottom: 16px !important;
+
+    .quickLinks {
+      display: none;
+    }
+  }
+
+
+
+  // width : 256px;
+  .categoryImage {
+    // right: -13px;
+    // top  : -21px;
+
+    right              : -30px;
+    top                : -38px;
+    position           : absolute;
+    height             : 120px;
+    width              : 120px;
+    background-repeat  : no-repeat;
+    background-position: center;
+  }
+
+  h3 {
+    margin       : 0;
+    margin-top   : 40px;
+    margin-right : 50px;
+    font-size    : 15px;
+    font-weight  : bold;
+    color        : rgb(66, 66, 66);
+    display      : block;
+    width        : 122px;
+    margin-bottom: 10px;
+
+    // padding-bottom: 8px;
+  }
+
+  .quickLinks {
+    display       : flex;
+    flex-direction: column;
+    width         : 160px;
+
+    .link {
+      color          : rgb(117, 117, 117);
+      display        : inline-block;
+      padding        : 5px 0px;
+      font-size      : 14px;
+      font-weight    : 500;
+      vertical-align : top;
+      text-overflow  : ellipsis;
+      white-space    : nowrap;
+      overflow-x     : hidden;
+      width          : 100%;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    .viewMore {
+      color      : rgb(67, 176, 42);
+      display    : block;
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}

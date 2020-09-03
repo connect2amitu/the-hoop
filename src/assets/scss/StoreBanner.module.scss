@@ -1,0 +1,51 @@
+.storeBanner {
+  position: relative;
+
+  .overLay {
+    background      : linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 80%);
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 200px;
+    background-color: rgba(0, 0, 0, .2);
+    z-index         : 100;
+  }
+
+  .banner {
+    position             : absolute;
+    top                  : 0;
+    left                 : 0;
+    background-position-y: calc(50% + 0px);
+    filter               : blur(2px);
+    background-image     : url("https://cdn.pixabay.com/photo/2015/08/03/10/23/banner-873097_1280.jpg");
+    background-size      : cover;
+    background-repeat    : no-repeat;
+    background-position-x: center;
+    width                : 100%;
+    height               : 200px;
+    will-change          : background-position-y;
+
+  }
+
+  .innerWrapper {
+    padding-top: 10px;
+    top        : 15;
+    position   : absolute;
+    color      : #fff;
+    z-index    : 100;
+
+    .logo {
+      height: 96px;
+      width : 96px;
+    }
+
+    .storefront {
+      h1 {
+        margin: 0;
+      }
+    }
+
+    .storeInfo {}
+  }
+}
