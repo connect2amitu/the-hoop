@@ -15,8 +15,14 @@ const useAuth = () => {
     localStorage.setItem('token', "true")
     setState({ ...state, isLoggedIn: true })
   }
+
+  const logout = () => {
+    localStorage.removeItem('token')
+    setState({ ...state, isLoggedIn: false })
+  }
   return {
     setLoginUser,
+    logout,
     ...state,
   };
 };

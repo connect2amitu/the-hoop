@@ -12,14 +12,14 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px"
   },
   storeImage: {
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(768)]: {
       height: 70,
       width: 70,
     },
   },
   right: {
     flexDirection: "row",
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(768)]: {
       justifyContent: "center"
     }
   },
@@ -27,17 +27,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 12
   },
   storeName: {
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(768)]: {
       fontSize: "100%"
     }
   },
   storeCard: {
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(768)]: {
       width: "100%"
     }
   },
   meta: {
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(768)]: {
       flexDirection: "column",
       alignItems: "center"
     }
@@ -49,10 +49,9 @@ const StoreListing = (props) => {
   const classes = useStyles();
   const { openStore, toggleStore } = useAppState("global");
   const { stores } = useAppState("store");
-  console.log('props =>', props);
-
   return (
     <SwipeableDrawer
+      disableSwipeToOpen="false"
       anchor={"bottom"}
       open={openStore}
       onClose={() => toggleStore()}

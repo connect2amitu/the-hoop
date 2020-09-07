@@ -137,421 +137,421 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Walmart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -688,503 +688,510 @@ export const STORES = [
     id: 2,
     name: "The Hoop",
     slug: "thehoop",
-    image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1487/5ffe3fb7-2a0c-4714-8c71-364d7186a3d3.png",
+    image: require("../assets/images/logo/thehooplogo.svg"),
     tags: ["Organic", "Veggies", "Local"],
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        category_id: 1,
+        name: "The Hoop - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
-            price: "100",
-            discount: "5",
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
-            price: "100",
-            discount: "5",
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
-            price: "100",
-            discount: "5",
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
-            price: "100",
-            discount: "5",
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 10,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300"
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300"
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300"
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300"
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300"
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 2,
         name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 3,
         name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 4,
         name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 5,
         name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 6,
         name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
+        category_id: 7,
         name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -1326,379 +1333,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "BigBasket - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -1840,379 +1847,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "DGSM - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -2354,379 +2361,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Appsomania - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -2868,379 +2875,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "JioMart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -3382,379 +3389,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "D-Mart - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -3896,379 +3903,379 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
       },
       {
-        name: "Dairy & Eggs",
+        name: "Testing - Dairy & Eggs",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 2,
             name: "Clover Milk, Organic, Whole",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 3,
             name: "Sprouts Organic Extra Firm Tofu",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 4,
             name: "Sprouts Large Grade A Cage Free Eggs",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Clover Milk, Vitamin D",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Oatly! Oatmilk, The Original",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
           {
             id: 5,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: "100",
-            discount: "5",
+            price: 100,
+            discount: 5,
             image: "https://picsum.photos/200/300"
           },
         ]
@@ -4409,11 +4416,13 @@ export const CART = {
   offer: 20,
   items: [
     {
+      retailer_id: 1,
       store_name: "Walmart",
       image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1289/9f79fb62-4b6d-43d8-bd13-8fa60e3528fa.png",
       price: 880,
       items: [
         {
+          item_id: 1,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 2,
@@ -4422,6 +4431,7 @@ export const CART = {
           price: 100
         },
         {
+          item_id: 2,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 4,
@@ -4432,71 +4442,80 @@ export const CART = {
       ]
     },
     {
+      retailer_id: 2,
       store_name: "The Hoop",
       image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/31/f889f29f-5d02-4e96-92d2-19c05e886ff6.png",
       price: 170,
       items: [
         {
+          item_id: 1,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 2,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 2,
           price: 30
         },
         {
+          item_id: 2,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 4,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 2,
           price: 20
         },
         {
+          item_id: 3,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 1,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 2,
           price: 90
         },
       ]
     },
     {
+      retailer_id: 3,
       store_name: "DGSM",
       image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1289/9f79fb62-4b6d-43d8-bd13-8fa60e3528fa.png",
       price: 140,
       items: [
         {
+          item_id: 1,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 2,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 3,
           price: 30
         },
         {
+          item_id: 2,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 4,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 3,
           price: 20
         },
         {
+          item_id: 3,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 2,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 3,
           price: 90
         },
         {
+          item_id: 4,
           name: "Heinz Tomato Ketchup",
           image: "https://d2d8wwwkmhfcva.cloudfront.net/155x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_d086ea67-c0e9-4e87-b584-1d684356eb1a.jpg",
           quantity: 2,
           discount: 1,
-          retailer_id: 1,
+          retailer_id: 3,
           price: 90
         },
       ]

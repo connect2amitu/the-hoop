@@ -22,9 +22,7 @@ const useStore = () => {
 
   const getStoreDepartment = (slug) => {
     var data = STORES.find(data => data.slug === slug) || null;
-    console.log('data =>', data);
-
-    setState({ ...state, departments: data.departments })
+    setState({ ...state, store: data, departments: data.departments })
   }
 
   return {

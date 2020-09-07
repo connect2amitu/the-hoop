@@ -7,9 +7,9 @@ import { useAppState } from '../../context';
 
 const useStyles = makeStyles((theme) => ({
   myCartPaper: {
-    width: "520px",
+    width: "550px",
     padding: "0 10px",
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(768)]: {
       width: "100%",
     },
   }
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Cart(props) {
   const classes = useStyles();
   const { toggleCart, openCart } = useAppState("global");
-  const { cart } = useAppState("cart");
+  const { cart, removeCart } = useAppState("cart");
 
   return (
     <SwipeableDrawer
@@ -39,7 +39,7 @@ export default function Cart(props) {
         }} color={"primary"} id="nested-list-subheader">
           <Grid container justify={"space-between"} alignItems={"center"}>
             <Grid item>
-              <p>My Cart (0 items)</p>
+              <p>My Cart ({cart.count} items)</p>
             </Grid>
             <Grid item>
               <IconButton color={"secondary"} variant={"contained"} onClick={() => toggleCart()} ><CloseRounded /></IconButton>
@@ -49,7 +49,7 @@ export default function Cart(props) {
         </ListSubheader>
         <Grid container direction={"column"} spacing={1}>
           {
-            cart.items.map(cart =>
+            cart && cart.items && cart.items.map(cart =>
               <Grid item>
                 <Card style={{ padding: "10px 10px", margin: "0px 10px" }}>
                   <Grid container alignItems={"center"} justify={"space-between"}>
@@ -63,9 +63,9 @@ export default function Cart(props) {
                             <Grid item>
                               <Typography variant={"h5"}>{cart.store_name}</Typography>
                             </Grid>
-                            <Grid item>
+                            {/* <Grid item>
                               <Typography variant={"subtitle2"}>Next delivery: Within 5 hours</Typography>
-                            </Grid>
+                            </Grid> */}
                           </Grid>
                         </Grid>
                       </Grid>
@@ -76,7 +76,7 @@ export default function Cart(props) {
                   </Grid>
                   <List>
                     {
-                      cart.items.map(product =>
+                      cart && cart.items && cart.items.map(product =>
                         <ListItem button>
                           <Grid container alignItems={"center"} justify={"space-between"}>
                             <Grid item>
@@ -100,7 +100,7 @@ export default function Cart(props) {
                               <Typography variant={"h6"}> {product.price * product.quantity}/- </Typography>
                             </Grid>
                             <Grid item>
-                              <IconButton><DeleteRounded /></IconButton>
+                              <IconButton onClick={() => removeCart()}><DeleteRounded /></IconButton>
                             </Grid>
                           </Grid>
                         </ListItem>

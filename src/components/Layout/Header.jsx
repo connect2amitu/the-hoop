@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab } from '@material-ui/core'
+import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, AccountBoxRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
 
 
@@ -10,6 +10,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import StoreListing from '../../views/Store/StoreListing';
 import Cart from '../../views/Cart';
 import { useAppState } from '../../context';
+import { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
@@ -25,7 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     background: "#f8f9fa !important",
-    color: "#000"
+    color: "#000",
+  },
+  appBarForSearch: {
+    position: 'relative',
+  },
+  appBar: {
+    top: 'auto',
+    bottom: 0,
   },
   desktop: {
     display: "block",
@@ -59,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 
     position: "absolute",
     bottom: "-42px",
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(768)]: {
       bottom: "-37px",
       width: "65px",
       height: "65px",
@@ -83,13 +94,9 @@ const useStyles = makeStyles((theme) => ({
   myCartPaper: {
     width: "520px",
     padding: "0 10px",
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(768)]: {
       width: "100%",
     },
-  },
-  appBar: {
-    top: 'auto',
-    bottom: 0,
   },
   grow: {
     flexGrow: 1,
@@ -105,35 +112,60 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function Header(props) {
+const Header = (props) => {
+
+  console.log('props =>', props);
+
+  const [open, setOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [stores, setStores] = useState(false);
+  const classes = useStyles();
   const { toggleCart, toggleStore } = useAppState("global");
   const { isLoggedIn } = useAppState("userAuth");
+  const { cart } = useAppState("cart");
+  const { store } = useAppState("store");
+  console.log('store =>', store);
 
-  const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [myCart, setMyCart] = useState(false);
-  const [stores, setStores] = useState(false);
+  console.log('Header Called  =>', cart);
+  const [cookies, setCookie] = useCookies();
+
+  useEffect(() => {
+    if (!cookies.location) {
+      props.history.push("/location")
+    }
+  }, [])
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const hideHeader = () => {
+    return !props.location.pathname.match(/(login|location)/)
+  }
+
   return (
     <>
-      <AppBar position="fixed" className={classes.appbar}>
+      {hideHeader() && <AppBar position="fixed" className={classes.appbar}>
         <Toolbar>
           <Grid container justify={"space-between"} alignItems={"center"}>
             <Grid item className={classes.logoSection}>
               <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}>
                 <img src={require('../../assets/images/logo/thehooplogo.svg')} alt=""
                   style={{
-                    height: "30px",
-                    width: "90px",
+                    height: "40px",
+                    width: "100px",
                     backgroundRepeat: "no-repeat"
                   }}
                 />
               </NavLink>
-              {/* <Typography variant="h6" component={NavLink} to={"/"} color={"inherit"} style={{ textDecoration: "none" }} > Hoop </Typography> */}
             </Grid>
             <Grid item className={classes.desktop}>
               <Grid container spacing={1} alignItems={"center"}>
@@ -144,7 +176,7 @@ function Header(props) {
                   <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
                 </Grid>
                 <Grid item>
-                  <Badge color="secondary" badgeContent={15} showZero>
+                  <Badge color="secondary" badgeContent={cart.count} showZero>
                     <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
                       <ShoppingCartRounded />
                      My Cart</Button>
@@ -152,6 +184,9 @@ function Header(props) {
                 </Grid>
                 {!isLoggedIn && <Grid item>
                   <Button component={NavLink} to="/login" color="secondary" variant={"contained"}> Login</Button>
+                </Grid>}
+                {isLoggedIn && <Grid item>
+                  <Button component={NavLink} to="/account" color="secondary" variant={"contained"}> Account</Button>
                 </Grid>}
               </Grid>
             </Grid>
@@ -171,36 +206,82 @@ function Header(props) {
                     <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
                   </Grid>
                   <Grid item>
-                    <Badge color="secondary" badgeContent={15} showZero>
+                    <Badge color="secondary" badgeContent={cart.count} showZero>
                       <Button variant={"contained"} onClick={() => { toggleCart(); handleDrawerToggle() }} color="primary"> <ShoppingCartRounded /> My Cart</Button>
                     </Badge>
                   </Grid>
                   {!isLoggedIn && <Grid item>
                     <Button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" color="secondary" variant={"contained"}> Login</Button>
                   </Grid>}
+                  {isLoggedIn && <Grid item>
+                    <Button component={NavLink} to="/account" onClick={() => handleDrawerToggle()} color="secondary" variant={"contained"}> Account</Button>
+                  </Grid>}
                 </Grid>
               </SwipeableDrawer>
-              <AppBar position="fixed" color="primary" className={classes.appBar}>
-                <Toolbar>
-                  <Grid container spacing={2} justify={"space-evenly"}>
-                    <Grid item><IconButton edge="start" color={"inherit"} > <StorefrontRounded onClick={() => toggleStore()} /> </IconButton></Grid>
-                    <Grid item><IconButton color={"inherit"}> <SearchRounded /> </IconButton></Grid>
-                    <Grid item><IconButton color={"inherit"}> <ViewModuleRounded /> </IconButton></Grid>
-                    <Grid item><IconButton color={"inherit"}> <ShoppingBasketRounded onClick={() => toggleCart()} /> </IconButton></Grid>
-                    <Grid item><IconButton color={"inherit"} component={NavLink} to="/account"> <PersonRounded /> </IconButton></Grid>
-                  </Grid>
-                </Toolbar>
-              </AppBar>
+              {props.location.pathname.includes('store') &&
+                <AppBar position="fixed" color="primary" className={classes.appBar}>
+                  <Toolbar>
+                    <Grid container spacing={0} justify={"space-evenly"}>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
+                          <Grid item><StorefrontRounded /> </Grid>
+                          <Grid item><span>Store</span></Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
+                          <Grid item><SearchRounded /></Grid>
+                          <Grid item><span>Search</span></Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
+                          <Grid item><ViewModuleRounded /> </Grid>
+                          <Grid item><span>Department</span></Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
+                          <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
+                          <Grid item><span>Cart</span></Grid>
+                        </Grid>
+                      </Grid>
+                      {isLoggedIn &&
+                        <Grid item>
+                          <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
+                            <Grid item ><AccountBoxRounded /> </Grid>
+                            <Grid item><span>Profile</span></Grid>
+                          </Grid>
+                        </Grid>
+                      }
+
+                    </Grid>
+                  </Toolbar>
+                </AppBar>
+              }
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
-
+      }
       <Cart />
 
       {/* store */}
       <StoreListing classes={classes} stores={stores} setStores={setStores} />
-      <Toolbar />
+
+
+      {/* Search */}
+      <Dialog fullScreen open={open} onClose={handleClose}>
+        {<AppBar className={classes.appBarForSearch}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <KeyboardArrowLeftRounded />
+            </IconButton>
+            <TextField fullWidth variant="standard" required id="standard-required" label="" defaultValue="" />
+          </Toolbar>
+        </AppBar>}
+      </Dialog>
+      {hideHeader() && <Toolbar />}
     </>
   )
 }

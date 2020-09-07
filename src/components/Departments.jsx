@@ -1,15 +1,15 @@
 import React from 'react'
 import classes from '../assets/scss/Departments.module.scss'
 import Card from '@material-ui/core/Card';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 
-export default function Departments(props) {
+function Departments(props) {
 
   const { category_id = 0, category_name, products_categories = [] } = props;
 
   return (
-    <Card className={classes.dCard} variant="outlined">
+    <Card component={NavLink} to={`/store/${props.match.params.storeName}/departments/${category_id}`} className={classes.dCard} variant="outlined">
       <div className={classes.categoryImage} style={{ backgroundImage: `url(${"https://thehoop.in/admin/category_image/Green-Vegetables.jpg"})` }} ></div>
       <Grid container>
         <Grid item>
@@ -18,12 +18,13 @@ export default function Departments(props) {
         <Grid item className={classes.quickLinks}>
           {
             products_categories.map((o, index) =>
-              <NavLink className={classes.link} to={`/store/thehoop/departments/${category_id}/${o.id}`} key={index}>{o.name}</NavLink>
+              <NavLink className={classes.link} to={`/store/${props.match.params.storeName}/departments/${category_id}/${o.id}`} key={index}>{o.name}</NavLink>
             )
           }
-          {products_categories.length >= 3 && <NavLink className={`${classes.link} ${classes.viewMore}`} to={`/store/thehoop/departments/${category_id}`}>View more</NavLink>}
+          {products_categories.length >= 3 && <NavLink className={`${classes.link} ${classes.viewMore}`} to={`/store/${props.match.params.storeName}/departments/${category_id}`}>View more</NavLink>}
         </Grid>
       </Grid>
     </Card >
   )
 }
+export default withRouter(Departments)

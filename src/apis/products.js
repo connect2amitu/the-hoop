@@ -8,7 +8,6 @@ export const getProducts = async () => {
   }).catch(e => {
     console.log('e =>', e);
   })
-  console.log('data =>', data);
   return data;
 
 }

@@ -25,18 +25,21 @@ code {
   color: #000 !important;
 }
 .slick-slider .slick-next {
-  transform: scale(2);
+  transform: scale(1.5);
   /* right: -40px; */
   right: -24px;
 }
 .slick-slider .slick-prev {
-  transform: scale(2);
+  transform: scale(1.5);
 }
 .slick-slider .slick-prev {
-  transform: scale(2);
+  transform: scale(1.5);
   left: -24px;
 }
 .slick-prev,
 .slick-next {
   top: 40% !important;
+}
+.slick-slide {
+  outline: none;
 }
