@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CarouselSlider from "react-slick";
-import { Grid, Dialog, Button, DialogTitle, DialogContent, Container, IconButton, Typography, Card, CardContent, Fade, makeStyles, Select } from '@material-ui/core';
-import { CloseRounded } from '@material-ui/icons';
+import { Grid, Dialog, Button, DialogTitle, DialogContent, Container, IconButton, Typography, Card, CardContent, Fade, makeStyles, Select, FormControl, InputLabel, MenuItem, TextField } from '@material-ui/core';
+import { CloseRounded, RemoveCircleRounded, AddRounded, RemoveRounded, DeleteRounded } from '@material-ui/icons';
 import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
+import { useCookies } from 'react-cookie';
+import { findIndex, find } from 'lodash';
+import { confirmAlert } from 'react-confirm-alert'; // Import
 
 
 const settings = {
@@ -96,12 +99,12 @@ const useStyles = makeStyles((theme) => ({
   productCard: {
     padding: "10px",
     [theme.breakpoints.up(1000)]: {
-      width: "250px !important"
+      width: "200px !important"
     }
   },
   productImage: {
-    height: 120,
-    width: "100%",
+    height: 100,
+    width: 100,
     margin: "auto",
     cursor: "pointer",
     borderRadius: 10,
@@ -135,6 +138,27 @@ const useStyles = makeStyles((theme) => ({
   },
   viewmore: {
     color: theme.palette.primary.main
+  },
+  select: {
+    padding: 10,
+    fontSize: 14
+  },
+  categoryName: {
+    margin: "31px 0 15px 0"
+  },
+  qtyChangeBtn: {
+    padding: 0,
+    width: 20,
+    minWidth: 25,
+    cursor: "pointer"
+  },
+  qtyInput: {
+    width: 33,
+    padding: 0,
+    '& input': {
+      padding: 4,
+      textAlign: "center"
+    }
   }
 }));
 
@@ -142,19 +166,15 @@ const CategoryAndProduct = (props) => {
   const [modalData, setModalData] = useState(null)
   const [open, setOpen] = useState(false)
   const classes = useStyles();
-  const { addToCart } = useAppState("cart");
+  const { addToCart, cart_items, updateProductQty } = useAppState("cart");
+  const [cookies, setCookie] = useCookies();
   const { store } = useAppState("store");
 
 
   const [state, setState] = React.useState(null);
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value,
-    });
-  };
+
+
 
   const openModal = (data) => {
     setModalData(data)
@@ -164,48 +184,203 @@ const CategoryAndProduct = (props) => {
     setModalData(null)
     setOpen(false)
   }
-  const { category } = props;
+
+
+  const handleChange = (event, pid) => {
+    const name = event.target.name;
+
+    if (state && state[name]) {
+
+      var _subProd = state[name];
+
+      var index = findIndex(_subProd.subProducts, { sub_prod_id: event.target.value.sub_prod_id });
+      if (index < 0) {
+
+        _subProd.subProducts.push(event.target.value)
+        _subProd.rate = event.target.value.rate
+        _subProd.qty = event.target.value.qty
+        _subProd.unit = event.target.value.unit
+        _subProd.sub_prod_id = event.target.value.sub_prod_id
+
+
+        setState({
+          ...state,
+          [name]: _subProd
+        });
+      } else {
+        _subProd.rate = event.target.value.rate
+        _subProd.qty = event.target.value.qty
+        _subProd.unit = event.target.value.unit
+        _subProd.sub_prod_id = event.target.value.sub_prod_id
+
+
+        setState({
+          ...state,
+          [name]: _subProd
+        });
+      }
+    } else {
+
+      var data = {
+        ...event.target.value,
+        sub_prod_id: event.target.value.sub_prod_id,
+        subProducts: [
+          event.target.value
+        ]
+      }
+
+      setState({
+        ...state,
+        [name]: data
+      });
+    }
+  };
+
+  const addToCartHandler = (product, sub_prod_id) => {
+
+    var _product = Object.assign({}, product);
+    if (state && state[`product-${_product.id}`]) {
+      var temp = state[`product-${product.id}`];
+      let data = {
+        ..._product,
+        rate: temp.rate,
+        unit: temp.unit,
+        unitQty: temp.qty,
+        sub_prod_id: sub_prod_id,
+        qty: 1,
+      }
+
+      addToCart(data, sub_prod_id)
+    } else {
+      let data = {
+        ..._product,
+        rate: _product.data[0].rate,
+        unit: _product.data[0].unit,
+        unitQty: _product.data[0].qty,
+        sub_prod_id: sub_prod_id,
+        qty: 1,
+      }
+
+      addToCart(data, sub_prod_id)
+    }
+
+  }
+
+  const showButtons = (product) => {
+    if (state && state[`product-${product.id}`]) {
+      var _state_product = state[`product-${product.id}`]
+      var test = cart_items.find(data => data.id === product.id && data.sub_prod_id === _state_product.sub_prod_id)
+
+      if (test) {
+        return <>{test.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(test.sub_prod_id)} />}
+          <TextField className={classes.qtyInput} value={test.qty} id="outlined-search" label="" type="text" variant="outlined" />
+          <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, 1)} />
+        </>
+      } else {
+        var subProd = find(_state_product.subProducts, { sub_prod_id: _state_product.sub_prod_id })
+        if (subProd) {
+          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, subProd.sub_prod_id)}>Add to cart</Button>
+        } else {
+          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>sub Add to cart</Button>
+        }
+
+      }
+    } else {
+      let test = cart_items.find(data => data.id === product.id && data.sub_prod_id === product.data[0].sub_prod_id)
+      if (test) {
+        return <>{test.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(test.sub_prod_id)} />}
+          <TextField className={classes.qtyInput} value={test.qty} id="outlined-search" label="" type="text" variant="outlined" />
+          <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, 1)} />
+        </>
+      } else {
+        return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>Add to cart</Button>
+      }
+    }
+  }
+
+  const confirmDelete = (sub_prod_id) => {
+    confirmAlert({
+      title: 'Remove Item',
+      message: 'Are you sure you want to remove this item from cart?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => updateProductQty(sub_prod_id, -1)
+        },
+        {
+          label: 'No',
+          onClick: () => console.info("no")
+        }
+      ]
+    })
+  }
+
+  const { products = [] } = props;
+
+
   return (
     <Container>
       <Grid container className={classes.categoryHeading} justify={"space-between"}>
-        <Grid item>
-          <Typography variant={"h5"}>{category.name} </Typography>
+        <Grid item xs={12}>
+          <Typography variant={"h4"} className={classes.categoryName}>{products.category_name} </Typography>
         </Grid>
-        <Grid item><NavLink to={`/store/${props.match.params.storeName}/departments/${category.category_id}`} className={classes.viewmore} >view more</NavLink></Grid>
-      </Grid>
-      <CarouselSlider style={{ width: "100%" }} className="slider" {...settings}>
-        {
-          category.products.map((product, index) =>
-            <Grid container className={classes.productCard} spacing={1} direction={"column"} >
-              <Grid item onClick={() => openModal({ ...product, quantity: 1 })} className={classes.productImage} style={{ backgroundImage: `url(${product.image})` }}  ></Grid>
-              <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
-              {/* <Grid item ><Typography variant={"caption"} className={classes.productDescription}>{product.name}</Typography></Grid> */}
-              <Grid item>
-                <Select
-                  native
-                  className={classes.selectBox}
-                  value={state && state[`product-${product.id}`] ? state[`product-${product.id}`] : 0}
-                  onChange={handleChange}
-                  inputProps={{
-                    name: `product-${product.id}`,
-                    id: 'age-native-simple',
-                  }}
-                >
-                  <option value={0}>1kg - 40Rs</option>
-                  <option value={1}>2kg - 70Rs</option>
-                  <option value={2}>3kg - 100Rs</option>
-                </Select>
-              </Grid>
-              <Grid item>
-                <Grid container alignItems={"center"} justify={"space-between"}>
-                  <Grid item><Typography className={classes.priceGrid} variant={"caption"}>&#8377;{product.price}/-</Typography></Grid>
-                  <Grid item><Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => { addToCart({ ...product, quantity: 1 }, store); handleClose() }}>Add to cart</Button></Grid>
+        <Grid item xs={12}>
+          <Grid container >
+            {
+              products.products.map((product, index) =>
+                <Grid item xs={6} sm={4} md={3} >
+                  <Grid container className={classes.productCard} spacing={1} direction={"column"} >
+                    <Grid item
+                      // onClick={() => openModal({ ...product, quantity: 1 })} 
+                      className={classes.productImage} style={{ backgroundImage: `url('https://thehoop.in/admin/${product.image}')` }}  ></Grid>
+                    <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.product_name}</Typography></Grid>
+                    <Grid item>
+                      <FormControl variant="outlined" className={classes.selectBox}>
+                        <Select
+                          classes={{ root: classes.select }}
+                          labelId="demo-simple-select-outlined-label"
+                          id="demo-simple-select-outlined"
+                          defaultValue={product.data[0]}
+                          onChange={(e) => handleChange(e, product.id)}
+                          inputProps={{
+                            name: `product-${product.id}`,
+                            id: 'age-native-simple',
+                          }}
+                        >
+                          {
+                            product.data.map((option, index) =>
+                              <MenuItem value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
+                            )
+                          }
+                        </Select>
+                      </FormControl>
+                    </Grid>
+                    <Grid item>
+                      <Grid container alignItems={"center"} justify={"space-between"}>
+                        <Grid item>
+                          <Typography className={classes.priceGrid} variant={"caption"}>
+                            &#8377;{state && state[`product-${product.id}`] ? state[`product-${product.id}`].rate : product.data[0].rate}/-
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                          {showButtons(product)}
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Grid>
-          )
-        }
-      </CarouselSlider>
+              )
+            }
+          </Grid>
+        </Grid>
+
+        {/* <Grid item><NavLink to={`/store/${props.match.params.storeName}/departments/${category.category_id}`} className={classes.viewmore} >view more</NavLink></Grid> */}
+      </Grid>
+      {/* <CarouselSlider style={{ width: "100%" }} className="slider" {...settings}> */}
+      <Grid container spacing={1}>
+
+      </Grid>
+      {/* </CarouselSlider> */}
 
       {modalData && <Dialog
         maxWidth={"lg"}
@@ -229,14 +404,14 @@ const CategoryAndProduct = (props) => {
             <Grid item xs={12} sm={4}>
               <Grid container justify={"center"}>
                 <Grid item>
-                  <img src={modalData.image} style={{ width: "250px", height: "250px" }} alt="aaa" />
+                  <img src={`https://thehoop.in/admin/${modalData.image}`} style={{ width: "250px", height: "250px" }} alt="aaa" />
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={8}>
               <Grid container direction={"column"} spacing={1}>
                 <Grid item><Typography variant={"h5"}>{modalData.name}</Typography></Grid>
-                <Grid item><Typography variant={"h6"}>MRP : {modalData.price}/-</Typography></Grid>
+                <Grid item><Typography variant={"h6"}>MRP : {modalData.data[0].rate}/-</Typography></Grid>
                 <Grid item><Button variant={"contained"} color={"primary"} onClick={() => { addToCart(modalData, store); handleClose() }} >Add to cart</Button></Grid>
                 <Grid item>
                   <Card>

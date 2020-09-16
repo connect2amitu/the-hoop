@@ -12,6 +12,7 @@ import Cart from '../../views/Cart';
 import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
+import FormDialog from '../Location';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appbar: {
-    background: "#f8f9fa !important",
+    background: "#ffffff !important",
     color: "#000",
   },
   appBarForSearch: {
@@ -109,28 +110,30 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     margin: '0 auto',
   },
+  checkout: {
+    fontSize: 20
+  }
 }));
 
 
 const Header = (props) => {
 
-  console.log('props =>', props);
-
   const [open, setOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
-  const { toggleCart, toggleStore } = useAppState("global");
-  const { isLoggedIn } = useAppState("userAuth");
-  const { cart } = useAppState("cart");
-  const { store } = useAppState("store");
-  console.log('store =>', store);
 
-  console.log('Header Called  =>', cart);
+  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("global");
+  const { isLoggedIn, user } = useAppState("userAuth");
+  const { cart, cart_items, grand_total } = useAppState("cart");
+  const { store } = useAppState("store");
+
   const [cookies, setCookie] = useCookies();
 
   useEffect(() => {
-    if (!cookies.location) {
+    if (!user) {
+      props.history.push("/login")
+    } else if (!location) {
       props.history.push("/location")
     }
   }, [])
@@ -151,6 +154,9 @@ const Header = (props) => {
     return !props.location.pathname.match(/(login|location)/)
   }
 
+  console.log('props.location =>', props.location);
+
+
   return (
     <>
       {hideHeader() && <AppBar position="fixed" className={classes.appbar}>
@@ -169,29 +175,42 @@ const Header = (props) => {
             </Grid>
             <Grid item className={classes.desktop}>
               <Grid container spacing={1} alignItems={"center"}>
-                <Grid item>
+                {/* <Grid item>
                   <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
+                </Grid> */}
+                <Grid item>
+                  <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
                 </Grid>
                 <Grid item>
-                  <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
-                </Grid>
-                <Grid item>
-                  <Badge color="secondary" badgeContent={cart.count} showZero>
+                  <Badge color="secondary" badgeContent={cart_items.length} showZero>
                     <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
                       <ShoppingCartRounded />
                      My Cart</Button>
                   </Badge>
                 </Grid>
-                {!isLoggedIn && <Grid item>
+                {/* {!isLoggedIn && <Grid item>
                   <Button component={NavLink} to="/login" color="secondary" variant={"contained"}> Login</Button>
                 </Grid>}
                 {isLoggedIn && <Grid item>
                   <Button component={NavLink} to="/account" color="secondary" variant={"contained"}> Account</Button>
-                </Grid>}
+                </Grid>} */}
               </Grid>
             </Grid>
             <Grid item className={classes.mobile}>
-              <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
+              <Grid container spacing={0} alignItems={"center"}>
+                {/* <Grid item>
+                  <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
+                </Grid> */}
+                <Grid item>
+                  <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
+                </Grid>
+                <Grid item>
+                  <Badge color="primary" badgeContent={cart_items.length} showZero>
+                    <ShoppingCartRounded color="primary" onClick={() => toggleCart()} />
+                  </Badge>
+                </Grid>
+              </Grid>
+              {/* <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton> */}
               <SwipeableDrawer
                 anchor={"right"}
                 open={mobileOpen}
@@ -199,30 +218,30 @@ const Header = (props) => {
                 onOpen={handleDrawerToggle}
               >
                 <Grid container spacing={1} direction={"column"}>
-                  <Grid item>
+                  {/* <Grid item>
                     <Button color="inherit" onClick={() => { toggleStore(); handleDrawerToggle() }} ><StorefrontRounded /> Store</Button>
-                  </Grid>
-                  <Grid item>
+                  </Grid> */}
+                  {/* <Grid item>
                     <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
-                  </Grid>
+                  </Grid> */}
                   <Grid item>
-                    <Badge color="secondary" badgeContent={cart.count} showZero>
+                    <Badge color="secondary" badgeContent={cart_items.length} showZero>
                       <Button variant={"contained"} onClick={() => { toggleCart(); handleDrawerToggle() }} color="primary"> <ShoppingCartRounded /> My Cart</Button>
                     </Badge>
                   </Grid>
-                  {!isLoggedIn && <Grid item>
+                  {/* {!isLoggedIn && <Grid item>
                     <Button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" color="secondary" variant={"contained"}> Login</Button>
                   </Grid>}
                   {isLoggedIn && <Grid item>
                     <Button component={NavLink} to="/account" onClick={() => handleDrawerToggle()} color="secondary" variant={"contained"}> Account</Button>
-                  </Grid>}
+                  </Grid>} */}
                 </Grid>
               </SwipeableDrawer>
-              {props.location.pathname.includes('store') &&
-                <AppBar position="fixed" color="primary" className={classes.appBar}>
+              {(props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
+                <AppBar AppBar position="fixed" color="primary" onClick={() => props.history.push(`/checkout`)} className={classes.appBar}>
                   <Toolbar>
-                    <Grid container spacing={0} justify={"space-evenly"}>
-                      <Grid item>
+                    <Grid container spacing={0} justify={"space-between"} alignItems={"center"}>
+                      {/* <Grid item>
                         <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
                           <Grid item><StorefrontRounded /> </Grid>
                           <Grid item><span>Store</span></Grid>
@@ -239,21 +258,26 @@ const Header = (props) => {
                           <Grid item><ViewModuleRounded /> </Grid>
                           <Grid item><span>Department</span></Grid>
                         </Grid>
+                      </Grid> */}
+                      <Grid item>
+                        <Button color={"inherit"} className={classes.checkout}>Checkout</Button>
                       </Grid>
                       <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
+                        <Button color={"inherit"} className={classes.checkout}>&#8377; {grand_total}/-</Button>
+
+                        {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
                           <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
                           <Grid item><span>Cart</span></Grid>
-                        </Grid>
+                        </Grid> */}
                       </Grid>
-                      {isLoggedIn &&
+                      {/* {isLoggedIn &&
                         <Grid item>
                           <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
                             <Grid item ><AccountBoxRounded /> </Grid>
                             <Grid item><span>Profile</span></Grid>
                           </Grid>
                         </Grid>
-                      }
+                      } */}
 
                     </Grid>
                   </Toolbar>
@@ -269,6 +293,8 @@ const Header = (props) => {
       {/* store */}
       <StoreListing classes={classes} stores={stores} setStores={setStores} />
 
+      {/* Location */}
+      <FormDialog />
 
       {/* Search */}
       <Dialog fullScreen open={open} onClose={handleClose}>

@@ -12,6 +12,7 @@ const StoreListing = React.lazy(() => import('./views/Store/StoreListing'))
 const StoreDepartments = React.lazy(() => import('./views/Store/StoreDepartments'))
 const StoreDepartmentsCategory = React.lazy(() => import('./views/Store/StoreDepartmentsCategory'))
 const Checkout = React.lazy(() => import('./views/Checkout'))
+const Success = React.lazy(() => import('./views/Checkout/Success'))
 const Login = React.lazy(() => import('./views/Login'))
 const Account = React.lazy(() => import('./views/Account'))
 const Location = React.lazy(() => import('./views/Location'))
@@ -36,6 +37,7 @@ function App({ isDark }) {
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />
                   <Route exact path="/store/:storeName/departments/:categoryId" component={StoreDepartmentsCategory} />
                   <Route exact path="/checkout" component={Checkout} />
+                  <Route exact path="/success" component={Success} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <Route exact path="/account" component={Account} />

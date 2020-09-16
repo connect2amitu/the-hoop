@@ -15,7 +15,9 @@ var darkTheme = createMuiTheme({
 });
 var theme = createMuiTheme({
   palette: {
-    primary: red,
+    primary: {
+      main: "#ff2829"
+    },
     secondary: grey
   },
 

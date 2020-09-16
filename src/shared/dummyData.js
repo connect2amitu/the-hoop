@@ -784,7 +784,7 @@ export const STORES = [
       },
       {
         category_id: 2,
-        name: "Vegitables",
+        name: "Vegetables",
         products: [
           {
             id: 1,

@@ -4,6 +4,7 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff !important;
 }
 
 code {
@@ -41,5 +42,27 @@ code {
   top: 40% !important;
 }
 .slick-slide {
+  outline: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.react-confirm-alert-overlay {
+  z-index: 1304 !important;
+}
+.MuiInputAdornment-positionStart p {
+  color: #fff;
+  font-size: 35px;
+}
+.PrivateNotchedOutline-root-47.MuiOutlinedInput-notchedOutline {
+  border-color: rgb(255 255 255) !important;
+}
+.MuiInputBase-formControl {
+  border: none;
   outline: none;
 }

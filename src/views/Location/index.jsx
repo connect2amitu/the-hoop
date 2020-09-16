@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles, Grid, Button, TextField, Typography } from '@material-ui/core';
 import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
-
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { COOKIE_OPTION } from '../../shared/constants';
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
@@ -20,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     padding: "14px 40px 0 40px",
     height: 240,
-    borderRadius: "35px 35px 0 0",
-    background: theme.palette.primary.main,
-    backdropFilter: "blur(25px)",
+    // borderRadius: "35px 35px 0 0",
+    background: "transparent",
+    backdropFilter: "blur(10px)",
     [theme.breakpoints.up(768)]: {
-      backdropFilter: "blur(25px)",
+      backdropFilter: "blur(10px)",
       background: "none",
       borderRadius: 0,
       bottom: "30%",
@@ -46,52 +47,74 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     width: "100%",
+    padding: 10,
+    textTransform: "capitalize",
+    fontSize: 16
   },
+  disabledButton: {
+    background: "white !important",
+    color: "black !important",
+    opacity: 0.7
+  },
+  inputFocused: {
+    outline: "none",
+    border: "none"
+  }
 }));
 
 
 function Location(props) {
   const classes = useStyles();
-  const [isLoading, setIsLoading] = useState(false)
   const [zipCode, setZipcode] = useState("")
+  const { locations, getLocations, setLocation } = useAppState("global");
+
 
   const [cookies, setCookie] = useCookies();
 
   useEffect(() => {
+    console.log('call location =>');
     if (cookies.location) {
+      console.log('redirec =>');
+
       props.history.push("/")
     }
-  })
+    getLocations()
+  }, [])
 
   const submit = () => {
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-      setCookie('location', zipCode, { path: '/' });
-    }, 1000);
+    setLocation(zipCode)
+    setCookie('location', zipCode, COOKIE_OPTION);
+    props.history.push("/")
   }
 
   return (
     <div className={classes.mainWrapper} >
       <Grid container direction={"column"} spacing={1} className={classes.container}>
-        <Grid item className={classes.title}><Typography variant={"h4"}>Find Address</Typography></Grid>
+        <Grid item className={classes.title}><Typography variant={"h4"}>Find Area</Typography></Grid>
         <Grid item>
-          <TextField
-            fullWidth
-            InputProps={{
-              className: classes.TextField
+          <Autocomplete
+            classes={{ root: classes.inputFocused }}
+            style={{ width: "100%", outline: "none" }}
+            id="combo-box-demo"
+            color={"secondary"}
+            options={locations}
+            getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}
+            onChange={(event, newValue) => {
+              setZipcode(newValue);
             }}
-            required
-            onChange={(e) => setZipcode(e.target.value)}
-            color={"primary"}
-            id="filled-required"
-            label="Enter Zip Code"
-            defaultValue=""
-            variant="outlined"
+            renderInput={(params) => <TextField
+              {...params}
+              color={"secondary"}
+              required
+              fullWidth
+              label="Select Area"
+              style={{ background: "#fff", borderColor: "#fff", }}
+              variant="filled" />
+            }
           />
         </Grid>
         <Grid item className={classes.btnWrap}>
-          <Button onClick={() => submit()} className={classes.btn} variant={"contained"} color={"inherit"}>Locate me</Button>
+          <Button onClick={() => submit()} disabled={!zipCode} classes={{ disabled: classes.disabledButton }} className={classes.btn} variant={"contained"} color={"primary"}>Go for Shopping</Button>
         </Grid>
       </Grid>
     </div >

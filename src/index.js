@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 ReactDOM.render(
   <React.StrictMode>

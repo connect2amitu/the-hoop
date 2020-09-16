@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
-import { styled, IconButton, makeStyles } from '@material-ui/core'
-import { withRouter, useLocation } from 'react-router-dom';
+import { IconButton, makeStyles } from '@material-ui/core'
+import { useLocation } from 'react-router-dom';
 import { KeyboardArrowUpRounded } from '@material-ui/icons';
+import { ToastContainer } from 'react-toastify';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,6 +42,17 @@ function Layout({ history, children }) {
       <IconButton>
         <KeyboardArrowUpRounded className={classes.root} id="scrollToTop" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}></KeyboardArrowUpRounded>
       </IconButton>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+      />
     </React.Fragment >
   )
 }
