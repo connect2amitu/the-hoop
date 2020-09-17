@@ -1,6 +1,6 @@
 import React from 'react'
-import { SwipeableDrawer, Container, Grid, Paper, makeStyles, Button } from '@material-ui/core';
-import { NavLink, withRouter } from 'react-router-dom';
+import { SwipeableDrawer, Container, Grid, makeStyles, Button } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
 
 
@@ -51,7 +51,7 @@ const StoreListing = (props) => {
   const { stores } = useAppState("store");
   return (
     <SwipeableDrawer
-      disableSwipeToOpen="false"
+      disableSwipeToOpen={false}
       anchor={"bottom"}
       open={openStore}
       onClose={() => toggleStore()}

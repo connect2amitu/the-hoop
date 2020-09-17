@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import StoreBanner from '../../components/StoreBanner';
-import { styled, Container, Button, Grid, CircularProgress, makeStyles } from '@material-ui/core';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { styled, Container, Grid, CircularProgress, makeStyles } from '@material-ui/core';
 import CategoryAndProduct from './CategoryAndProduct';
 import { useAppState } from '../../context';
-import Slider from "react-slick";
 
 const MyContainer = styled(Container)({
   paddingBottom: "90px",
@@ -19,17 +16,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Store = (props) => {
-  const { store, getStoreBySlug, getStoreDepartment, departments, isLoading } = useAppState("store");
+  const { getStoreDepartment, departments, isLoading } = useAppState("store");
   const classes = useStyles();
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
   useEffect(() => {
     getStoreDepartment(props.match.params.storeName)
   }, [])

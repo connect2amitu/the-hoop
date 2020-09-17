@@ -1,5 +1,5 @@
 import React from 'react'
-import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, Container, TextField } from '@material-ui/core'
+import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField } from '@material-ui/core'
 import { AddRounded, ClearRounded, CloseRounded, DeleteRounded, RemoveRounded } from '@material-ui/icons';
 import { NavLink } from 'react-router-dom';
 import { useAppState } from '../../context';
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Cart(props) {
   const classes = useStyles();
   const { toggleCart, openCart } = useAppState("global");
-  const { cart, removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
+  const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
 
   const confirmDelete = (sub_prod_id) => {
     confirmAlert({
@@ -91,7 +91,7 @@ export default function Cart(props) {
         <Grid container direction={"column"} spacing={1}>
           {
             orderBy(cart_items, ['id'], ['asc']).map((cart, index) =>
-              <Grid item>
+              <Grid item key={index}>
                 <Card style={{ padding: "10px 0", margin: "0px 10px" }}>
                   <Grid container justify={"space-between"}>
                     <Grid item>
@@ -153,8 +153,8 @@ export default function Cart(props) {
                   </Grid>
                   <List>
                     {
-                      cart && cart.items && cart.items.map(product =>
-                        <ListItem button>
+                      cart && cart.items && cart.items.map((product, index) =>
+                        <ListItem button key={index}>
                           <Grid container alignItems={"center"} justify={"space-between"}>
                             <Grid item>
                               <Grid container spacing={1}>

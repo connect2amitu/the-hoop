@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { makeStyles, Grid, Button, TextField, Typography, IconButton, FormControl, InputLabel, OutlinedInput, InputAdornment, CircularProgress } from '@material-ui/core';
+import { makeStyles, Grid, Button, TextField, Typography, FormControl, OutlinedInput, InputAdornment, CircularProgress } from '@material-ui/core';
 import { useAppState } from '../../context';
 import { fetchOTP, resendOTP } from '../../apis/login'
 import { useEffect } from 'react';
 import { TOAST, toHHMMSS } from '../../shared/funs';
+import { useCookies } from 'react-cookie';
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
@@ -91,7 +92,6 @@ const useStyles = makeStyles((theme) => ({
 function Login(props) {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(false)
   const [isOTPSent, setIsOTPSent] = useState(false)
   const [showResendBtn, setShowResendBtn] = useState(true)
   const [OTP, setOTP] = useState("")
@@ -100,9 +100,11 @@ function Login(props) {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [timerId, setTimerId] = useState(null)
   const { setLoginUser, saveOTP, user, phone, otp } = useAppState("userAuth");
+  const [cookies, setCookie] = useCookies();
+
   var timeLeft = 60;
   useEffect(() => {
-    if (user) {
+    if (cookies.isVerified) {
       props.history.push("/location")
     } else {
       if (otp) {
@@ -115,12 +117,15 @@ function Login(props) {
 
   useEffect(() => {
     return () => {
-      if (!user) {
-        props.history.push("/login")
-      }
+      setTimerId(null)
     }
   }, [])
 
+  useEffect(() => {
+    if (cookies.isVerified) {
+      props.history.push("/");
+    }
+  }, [])
 
 
 
@@ -144,8 +149,6 @@ function Login(props) {
     callCounter()
     setIsLoading(true)
     fetchOTP(phoneNumber).then(resp => {
-      console.log('fetchOTP resp =>', resp);
-
       setGeneratedOTP(atob(resp.data.data.otp))
       saveOTP(resp.data.data.otp, phoneNumber)
       setIsOTPSent(true)
@@ -167,7 +170,6 @@ function Login(props) {
       clearTimeout(timerId);
       doSomething();
     } else {
-      console.info(timeLeft + ' seconds remaining');
       setClock(timeLeft)
       timeLeft--;
     }
@@ -184,8 +186,6 @@ function Login(props) {
       return;
     }
     // setIsLoading(true)
-    console.log('submit phoneNumber =>', phoneNumber);
-    console.log('submit generatedOTP =>', generatedOTP);
 
     // setTimeout(() => {
     // setIsLoading(false)
@@ -193,7 +193,7 @@ function Login(props) {
       setLoginUser(phoneNumber);
       saveOTP("", phoneNumber)
       // props.history.push("/location")
-      window.location.href = `${window.location.origin}/location`
+      window.location.href = `${window.location.origin}/checkout`
       return;
     } else {
       TOAST.error("Invalid OTP")
@@ -268,7 +268,6 @@ function Login(props) {
                       label="Enter OTP CODE"
                       onChange={(e) => setOTP(e.target.value)}
                       variant="outlined"
-                      helperText={error && "invalid OTP"}
                     />
                   </Grid>
                   <Grid item xs={2} sm={4}>

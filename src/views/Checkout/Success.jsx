@@ -1,5 +1,4 @@
-import { Avatar, Button, Container, Grid, IconButton, makeStyles, styled, Typography } from '@material-ui/core'
-import { CheckBoxOutlined, CheckBoxRounded, CheckCircleOutlined, CheckCircleRounded } from '@material-ui/icons';
+import { Avatar, Button, Container, Grid, makeStyles, styled, Typography } from '@material-ui/core'
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useAppState } from '../../context';

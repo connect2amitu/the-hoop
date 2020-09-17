@@ -31,6 +31,7 @@ const useAuth = () => {
   const setLoginUser = () => {
     localStorage.setItem('token', "true")
     setCookie('user', true, COOKIE_OPTION);
+    setCookie('isVerified', true, COOKIE_OPTION);
     setState({ ...state, isLoggedIn: true })
   }
 

@@ -1,6 +1,5 @@
 import { useReducer, useEffect } from "react";
-import { CART } from "../shared/dummyData";
-import { findIndex, sum, sumBy, reduce } from "lodash";
+import { findIndex } from "lodash";
 import { useCookies } from "react-cookie";
 import { COOKIE_OPTION } from "../shared/constants";
 
@@ -67,25 +66,6 @@ const useCart = () => {
     })
   }
 
-
-
-  const itemCount = () => {
-    var count = 0;
-    var total = 0;
-    state.cart.items.forEach(element => {
-      var subTotal = 0;
-      element.items.forEach(prod => {
-        var sub_total = prod.price * prod.quantity;
-        var discountAmount = sub_total * (prod.discount / 100);
-        subTotal += (sub_total - discountAmount)
-        total += subTotal
-      });
-      element.price = subTotal.toFixed(2)
-      count += element.items.length
-    });
-
-    return { total, count }
-  }
   const updateProductQty = (productId, value) => {
 
     var _cart_items = Object.assign([], state.cart_items);

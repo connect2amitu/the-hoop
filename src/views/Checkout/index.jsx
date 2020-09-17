@@ -1,21 +1,17 @@
 import React, { useEffect } from 'react'
-import { Container, Grid, Accordion, AccordionSummary, Typography, AccordionDetails, styled, Box, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemSecondaryAction, IconButton, ListItemIcon, Checkbox, Radio, Card, Paper, makeStyles, CircularProgress } from '@material-ui/core'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { ScheduleRounded, RoomRounded, DeleteForever, FolderRounded, FileCopyRounded } from '@material-ui/icons';
+import { Container, Grid, Typography, styled, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemSecondaryAction, IconButton, ListItemIcon, Radio, Paper, makeStyles, CircularProgress } from '@material-ui/core'
+import { FileCopyRounded } from '@material-ui/icons';
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { order } from '../../apis/order';
 import { TOAST } from '../../shared/funs';
 import { useAppState } from '../../context';
 import { COOKIE_OPTION } from '../../shared/constants';
-
-
+import { order } from '../../apis/order';
 
 const checkOutFormSchema = Yup.object().shape({
   name: Yup.string().required().matches(/^[a-zA-Z ]{3,20}$/, 'Name is not valid'),
-  // name: Yup.string().required(),
   address: Yup.string()
     .required()
     .min(5, 'Too Short!')
@@ -39,65 +35,27 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-
 export default function Checkout(props) {
-  const [expanded, setExpanded] = useState("");
-  const [value, setValue] = useState(0);
   const [cookies, setCookie] = useCookies();
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [address, setAddress] = useState("")
-  const [name, setName] = useState("")
   const [loading, setLoading] = useState("")
   const [paymentMode, setPaymentMode] = useState(0);
   const { location } = useAppState("global");
-  const { grand_total, cart_items, setOrderResponse, clearCart } = useAppState("cart");
+  const { grand_total, cart_items, setOrderResponse } = useAppState("cart");
   const classes = useStyles();
 
 
   useEffect(() => {
-    if (cookies.phone) {
-      setPhoneNumber(cookies.phone)
-    }
-    if (cookies.address) {
-      setAddress(cookies.address)
-    }
-    if (cookies.name) {
-      setName(cookies.name)
-    }
-
     if (cart_items.length <= 0) {
       props.history.push("/");
     }
-    // if (cookies.location) {
-    //   setLocation(cookies.location)
-    // }
-  }, [])
-  useEffect(() => {
-    if (cart_items.length <= 0) {
-      props.history.push("/")
-    }
   }, [cart_items])
+
+  useEffect(() => {
+    if (!cookies.isVerified) {
+      props.history.push("/login");
+    }
+  }, [])
+
 
   // const handleChange = (type) => {
   //   setExpanded(expanded !== type ? type : "")
@@ -126,7 +84,6 @@ export default function Checkout(props) {
       order_data
     }
     setLoading(true);
-    // clearCart()
     order(data).then(resp => {
       TOAST.success("Order Placed Success")
       props.history.push("/success");

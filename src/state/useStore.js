@@ -1,7 +1,6 @@
 import { useReducer } from "react";
 import { STORES } from "../shared/dummyData";
 import { getProducts } from "../apis/products";
-import { mapValues, groupBy, omit } from "lodash";
 
 function reducer(state, action) {
   return { ...state, ...action };

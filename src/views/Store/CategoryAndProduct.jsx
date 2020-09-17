@@ -1,84 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import CarouselSlider from "react-slick";
-import { Grid, Dialog, Button, DialogTitle, DialogContent, Container, IconButton, Typography, Card, CardContent, Fade, makeStyles, Select, FormControl, InputLabel, MenuItem, TextField } from '@material-ui/core';
-import { CloseRounded, RemoveCircleRounded, AddRounded, RemoveRounded, DeleteRounded } from '@material-ui/icons';
-import { NavLink, withRouter } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Grid, Dialog, Button, DialogTitle, DialogContent, Container, IconButton, Typography, Card, CardContent, makeStyles, Select, FormControl, MenuItem, TextField } from '@material-ui/core';
+import { CloseRounded, AddRounded, RemoveRounded, DeleteRounded } from '@material-ui/icons';
+import { withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
-import { useCookies } from 'react-cookie';
 import { findIndex, find } from 'lodash';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 
-
-const settings = {
-  infinite: false,
-  speed: 800,
-  slidesToShow: 7,
-  dots: false,
-  slidesToScroll: 7,
-  draggable: false,
-  responsive: [
-    {
-      breakpoint: 3000,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 2000,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1800,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1500,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-  ]
-};
 
 const useStyles = makeStyles((theme) => ({
   productTitle: {
@@ -167,19 +94,11 @@ const CategoryAndProduct = (props) => {
   const [open, setOpen] = useState(false)
   const classes = useStyles();
   const { addToCart, cart_items, updateProductQty } = useAppState("cart");
-  const [cookies, setCookie] = useCookies();
   const { store } = useAppState("store");
 
 
   const [state, setState] = React.useState(null);
 
-
-
-
-  const openModal = (data) => {
-    setModalData(data)
-    setOpen(true)
-  }
   const handleClose = () => {
     setModalData(null)
     setOpen(false)
@@ -328,7 +247,7 @@ const CategoryAndProduct = (props) => {
           <Grid container >
             {
               products.products.map((product, index) =>
-                <Grid item xs={6} sm={4} md={3} >
+                <Grid item xs={6} sm={4} md={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item
                       // onClick={() => openModal({ ...product, quantity: 1 })} 
@@ -349,7 +268,7 @@ const CategoryAndProduct = (props) => {
                         >
                           {
                             product.data.map((option, index) =>
-                              <MenuItem value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
+                              <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
                             )
                           }
                         </Select>
@@ -386,7 +305,7 @@ const CategoryAndProduct = (props) => {
         maxWidth={"lg"}
         open={open}
         fullWidth
-        TransitionComponent={Fade}
+        // TransitionComponent={Fade}
         onClose={handleClose}
         scroll={"paper"}
         aria-labelledby="scroll-dialog-title"

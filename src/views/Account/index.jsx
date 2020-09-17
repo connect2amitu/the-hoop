@@ -6,14 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
-import { FilterNoneRounded, EditLocationRounded, LiveHelpRounded, SettingsApplicationsRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded } from '@material-ui/icons';
+import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded } from '@material-ui/icons';
 import { useAppState } from '../../context';
 
 const useStyles = makeStyles((theme) => ({

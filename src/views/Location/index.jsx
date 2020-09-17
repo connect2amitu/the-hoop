@@ -72,10 +72,7 @@ function Location(props) {
   const [cookies, setCookie] = useCookies();
 
   useEffect(() => {
-    console.log('call location =>');
     if (cookies.location) {
-      console.log('redirec =>');
-
       props.history.push("/")
     }
     getLocations()

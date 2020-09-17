@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField } from '@material-ui/core'
+import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Dialog, TextField } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, AccountBoxRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded } from '@material-ui/icons'
+import { LocationOnRounded, ShoppingCartRounded, KeyboardArrowLeftRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
-
-
-
 import { makeStyles } from '@material-ui/core/styles';
 import StoreListing from '../../views/Store/StoreListing';
 import Cart from '../../views/Cart';
 import { useAppState } from '../../context';
 import { useEffect } from 'react';
-import { useCookies } from 'react-cookie';
 import FormDialog from '../Location';
 
 
@@ -123,18 +119,17 @@ const Header = (props) => {
   const [stores, setStores] = useState(false);
   const classes = useStyles();
 
-  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("global");
-  const { isLoggedIn, user } = useAppState("userAuth");
-  const { cart, cart_items, grand_total } = useAppState("cart");
-  const { store } = useAppState("store");
+  const { toggleCart, location, toggleLocation } = useAppState("global");
+  const { user } = useAppState("userAuth");
+  const { cart_items, grand_total } = useAppState("cart");
 
-  const [cookies, setCookie] = useCookies();
+  console.log('location =>', location);
 
   useEffect(() => {
-    if (!user) {
-      props.history.push("/login")
-    } else if (!location) {
+    if (!location) {
+      // props.history.push("/login")
       props.history.push("/location")
+      // } else if (!location) {
     }
   }, [])
 
@@ -142,9 +137,6 @@ const Header = (props) => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -153,9 +145,6 @@ const Header = (props) => {
   const hideHeader = () => {
     return !props.location.pathname.match(/(login|location)/)
   }
-
-  console.log('props.location =>', props.location);
-
 
   return (
     <>
@@ -238,7 +227,7 @@ const Header = (props) => {
                 </Grid>
               </SwipeableDrawer>
               {(props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
-                <AppBar AppBar position="fixed" color="primary" onClick={() => props.history.push(`/checkout`)} className={classes.appBar}>
+                <AppBar position="fixed" color="primary" onClick={() => props.history.push(`/checkout`)} className={classes.appBar}>
                   <Toolbar>
                     <Grid container spacing={0} justify={"space-between"} alignItems={"center"}>
                       {/* <Grid item>
@@ -291,7 +280,7 @@ const Header = (props) => {
       <Cart />
 
       {/* store */}
-      <StoreListing classes={classes} stores={stores} setStores={setStores} />
+      {/* <StoreListing classes={classes} stores={stores} setStores={setStores} /> */}
 
       {/* Location */}
       <FormDialog />
