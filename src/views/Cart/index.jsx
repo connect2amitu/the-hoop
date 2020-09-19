@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   qtyInput: {
     width: 33,
     padding: 0,
+    '&$disabled': {
+      color: 'black',
+    },
     '& input': {
       padding: 4,
       textAlign: "center"
@@ -43,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
   checkout: {
     fontSize: 20
+  },
+  disabled: {
+    color: '#000',
   }
 }));
 
@@ -129,7 +135,11 @@ function Cart(props) {
                                 <Grid item>
                                   <>
                                     {cart.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(cart.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(cart.sub_prod_id)} />}
-                                    <TextField readOnly className={classes.qtyInput} value={cart.qty} id="outlined-search" label="" type="text" variant="outlined" />
+                                    <TextField disabled InputProps={{
+                                      classes: {
+                                        disabled: classes.disabled
+                                      }
+                                    }} className={classes.qtyInput} value={cart.qty} id="outlined-search" label="" type="text" variant="outlined" />
                                     <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(cart.sub_prod_id, 1)} />
                                   </>
                                 </Grid>

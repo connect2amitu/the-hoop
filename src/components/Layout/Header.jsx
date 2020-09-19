@@ -117,13 +117,11 @@ const Header = (props) => {
 
   const [open, setOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [stores, setStores] = useState(false);
   const classes = useStyles();
   const [cookies, setCookie] = useCookies();
 
 
   const { toggleCart, location, toggleLocation } = useAppState("global");
-  const { user } = useAppState("userAuth");
   const { cart_items, grand_total } = useAppState("cart");
 
   useEffect(() => {

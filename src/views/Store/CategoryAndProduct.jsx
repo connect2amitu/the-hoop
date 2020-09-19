@@ -86,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
       padding: 4,
       textAlign: "center"
     }
+  },
+  disabled: {
+    color: '#000',
   }
 }));
 
@@ -192,7 +195,20 @@ const CategoryAndProduct = (props) => {
 
       if (test) {
         return <>{test.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(test.sub_prod_id)} />}
-          <TextField className={classes.qtyInput} value={test.qty} id="outlined-search" label="" type="text" variant="outlined" />
+          <TextField
+            disabled
+            InputProps={{
+              classes: {
+                disabled: classes.disabled
+              }
+            }}
+            className={classes.qtyInput}
+            value={test.qty}
+            id="outlined-search"
+            label=""
+            type="text"
+            variant="outlined"
+          />
           <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, 1)} />
         </>
       } else {
@@ -208,7 +224,20 @@ const CategoryAndProduct = (props) => {
       let test = cart_items.find(data => data.id === product.id && data.sub_prod_id === product.data[0].sub_prod_id)
       if (test) {
         return <>{test.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(test.sub_prod_id)} />}
-          <TextField className={classes.qtyInput} value={test.qty} id="outlined-search" label="" type="text" variant="outlined" />
+          <TextField
+            disabled
+            InputProps={{
+              classes: {
+                disabled: classes.disabled
+              }
+            }}
+            className={classes.qtyInput}
+            value={test.qty}
+            id="outlined-search"
+            label=""
+            type="text"
+            variant="outlined"
+          />
           <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, 1)} />
         </>
       } else {
