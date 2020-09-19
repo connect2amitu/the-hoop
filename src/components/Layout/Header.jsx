@@ -9,6 +9,7 @@ import Cart from '../../views/Cart';
 import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import FormDialog from '../Location';
+import { useCookies } from 'react-cookie';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -118,6 +119,8 @@ const Header = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
+  const [cookies, setCookie] = useCookies();
+
 
   const { toggleCart, location, toggleLocation } = useAppState("global");
   const { user } = useAppState("userAuth");
@@ -227,9 +230,9 @@ const Header = (props) => {
                 </Grid>
               </SwipeableDrawer>
               {(props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
-                <AppBar position="fixed" color="primary" onClick={() => props.history.push(`/checkout`)} className={classes.appBar}>
+                <AppBar position="fixed" color="primary" onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} className={classes.appBar}>
                   <Toolbar>
-                    <Grid container spacing={0} justify={"space-between"} alignItems={"center"}>
+                    <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")}>
                       {/* <Grid item>
                         <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
                           <Grid item><StorefrontRounded /> </Grid>
@@ -249,10 +252,10 @@ const Header = (props) => {
                         </Grid>
                       </Grid> */}
                       <Grid item>
-                        <Button color={"inherit"} className={classes.checkout}>Checkout</Button>
+                        <Button color={"inherit"} className={classes.checkout} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} >Checkout</Button>
                       </Grid>
                       <Grid item>
-                        <Button color={"inherit"} className={classes.checkout}>&#8377; {grand_total}/-</Button>
+                        <Button color={"inherit"} className={classes.checkout} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} >&#8377; {grand_total}/-</Button>
 
                         {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
                           <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>

@@ -17,7 +17,10 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     padding: 11,
     backgroundColor: "#1ca811",
-    textTransform: "capitalize"
+    textTransform: "capitalize",
+    '&:hover': {
+      backgroundColor: "#1ca811",
+    },
   },
   keepShoppingBtn: {
     padding: 11,

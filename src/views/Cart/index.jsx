@@ -1,10 +1,11 @@
 import React from 'react'
-import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField } from '@material-ui/core'
+import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField, AppBar, Toolbar } from '@material-ui/core'
 import { AddRounded, ClearRounded, CloseRounded, DeleteRounded, RemoveRounded } from '@material-ui/icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { orderBy } from 'lodash';
+import { useCookies } from 'react-cookie';
 
 
 
@@ -35,14 +36,23 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     width: "100%",
     marginTop: "60px",
+  },
+  appBar: {
+    top: 'auto',
+    bottom: 0,
+  },
+  checkout: {
+    fontSize: 20
   }
 }));
 
 
 
-export default function Cart(props) {
+function Cart(props) {
   const classes = useStyles();
   const { toggleCart, openCart } = useAppState("global");
+  const [cookies, setCookie] = useCookies();
+
   const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
 
   const confirmDelete = (sub_prod_id) => {
@@ -88,7 +98,7 @@ export default function Cart(props) {
           </Grid>
           <Divider />
         </ListSubheader>
-        <Grid container direction={"column"} spacing={1}>
+        <Grid container direction={"column"} spacing={1} style={{ marginBottom: "60px" }}>
           {
             orderBy(cart_items, ['id'], ['asc']).map((cart, index) =>
               <Grid item key={index}>
@@ -189,20 +199,52 @@ export default function Cart(props) {
             )
           }
         </Grid>
-        {grand_total > 0 ? <ListItemText style={{ position: "sticky", bottom: 0, margin: 0 }}>
-          <Button component={NavLink} onClick={() => toggleCart()} to="/checkout" style={{ width: "100%", bottom: 0, position: "static", padding: "10px", fontSize: "18px" }} variant={"contained"} color={"primary"}>
-            <Grid container justify={"space-between"}>
-              <Grid item>
-                Go to Checkout
-              </Grid>
-              <Grid item>
-                &#8377; {grand_total}
-              </Grid>
-            </Grid>
+        {grand_total > 0 ? (props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
+          <AppBar position="fixed" color="primary" onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} className={classes.appBar}>
+            <Toolbar>
+              <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }}>
+                {/* <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
+                          <Grid item><StorefrontRounded /> </Grid>
+                          <Grid item><span>Store</span></Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
+                          <Grid item><SearchRounded /></Grid>
+                          <Grid item><span>Search</span></Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
+                          <Grid item><ViewModuleRounded /> </Grid>
+                          <Grid item><span>Department</span></Grid>
+                        </Grid>
+                      </Grid> */}
+                <Grid item>
+                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
+                </Grid>
+                <Grid item>
+                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >&#8377; {grand_total}/-</Button>
 
-          </Button>
+                  {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
+                          <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
+                          <Grid item><span>Cart</span></Grid>
+                        </Grid> */}
+                </Grid>
+                {/* {isLoggedIn &&
+                        <Grid item>
+                          <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
+                            <Grid item ><AccountBoxRounded /> </Grid>
+                            <Grid item><span>Profile</span></Grid>
+                          </Grid>
+                        </Grid>
+                      } */}
 
-        </ListItemText> : <ListItemText style={{ margin: 40 }}>
+              </Grid>
+            </Toolbar>
+          </AppBar>
+          : <ListItemText style={{ margin: 40 }}>
             <Typography variant="body1" style={{ textAlign: "center", fontWeight: 600 }}>Empty Cart</Typography>
             <Button className={classes.keepShoppingBtn} variant={"contained"} color={"primary"} onClick={() => toggleCart()} component={NavLink} to={"/"}>Keep Shopping</Button>
           </ListItemText>
@@ -211,3 +253,4 @@ export default function Cart(props) {
     </SwipeableDrawer >
   )
 }
+export default withRouter(Cart)
