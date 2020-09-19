@@ -126,8 +126,6 @@ const Header = (props) => {
   const { user } = useAppState("userAuth");
   const { cart_items, grand_total } = useAppState("cart");
 
-  console.log('location =>', location);
-
   useEffect(() => {
     if (!location) {
       // props.history.push("/login")
