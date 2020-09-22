@@ -1,4 +1,4 @@
-const { default: Axios } = require("axios");
+const Axios = require("axios");
 
 
 

@@ -35,14 +35,14 @@ const Store = (props) => {
         store && store !== null && <>
           <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />
           <MyContainer maxWidth={false} fixed={true}>
-            <Grid container spacing={2} justify={"center"}>
+            {/* <Grid container spacing={2} justify={"center"}>
               <Grid item>
                 <Button component={NavLink} color={"secondary"} to={`/store/${store.slug}/storefront`}>Home</Button>
               </Grid>
               <Grid item>
                 <Button component={NavLink} to={`/store/${store.slug}/departments`}>Departments</Button>
               </Grid>
-            </Grid>
+            </Grid> */}
             <Container>
               <Slider {...settings}>
                 <div>

@@ -26,7 +26,7 @@ const StoreDepartments = (props) => {
 
       {/* </AppBar> */}
       <MyContainer fixed={true}>
-        <Grid container justify={"center"}>
+        {/* <Grid container justify={"center"}>
           <Grid item>
             {store && store.image && <Avatar src={store.image} height="100" width="200" alt={store.name} />}
           </Grid>
@@ -34,7 +34,7 @@ const StoreDepartments = (props) => {
             <Button component={NavLink} to={`/store/${props.match.params.storeName}/storefront`}>Home</Button>
             <Button component={NavLink} color={"secondary"} to={`/store/${props.match.params.storeName}/departments`}>Departments</Button>
           </Grid>
-        </Grid>
+        </Grid> */}
         <h1>Departments</h1>
         <Grid container spacing={1} justify={"flex-start"}>
 

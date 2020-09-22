@@ -11,4 +11,7 @@ export const VALIDATION_FAILURE_STATUS = 417;
 export const DATABASE_ERROR_STATUS = 422;
 export const INTERNAL_SERVER_ERROR = 500;
 
+var date = new Date();
+date.setDate(date.getDate() + 30);
 
+export const COOKIE_OPTION = { path: '/', expires: date }
