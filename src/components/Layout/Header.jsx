@@ -13,18 +13,6 @@ import { useCookies } from 'react-cookie';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('sm')]: {
-      backgroundColor: theme.palette.secondary.main,
-    },
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: theme.palette.primary.main,
-    },
-    [theme.breakpoints.up('lg')]: {
-      backgroundColor: green[500],
-    },
-  },
   appbar: {
     background: "#ffffff !important",
     color: "#000",

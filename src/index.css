@@ -13,10 +13,21 @@ code {
 
 .slick-slider {
   width: 100%;
+  outline: none;
 }
-.slick-slider .slick-dots {
-  display: none !important;
+/* @media only screen and (min-width: 425px) {
+  .slick-slider .slick-dots {
+    display: none !important;
+  }
+} */
+.slick-slide > div {
+  margin: 0 5px;
+  outline: none;
 }
+.slick-list {
+  margin: 0 -10px;
+}
+
 .slick-track {
   margin-left: 0 !important;
   margin-right: 0 !important;
