@@ -20,8 +20,14 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     borderRadius: 10,
     outline: "none",
-    [theme.breakpoints.down('sm')]: {
-      height: 110
+    [theme.breakpoints.down('460')]: {
+      height: 115
+    },
+    [theme.breakpoints.between('460', '960')]: {
+      height: 123
+    },
+    [theme.breakpoints.between('460', '960')]: {
+      height: 133
     },
     // backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: 200, width: "100%", borderRadius: 7
   }
@@ -29,10 +35,12 @@ const useStyles = makeStyles((theme) => ({
 
 const Store = (props) => {
   const { getStoreDepartment, departments, isLoading } = useAppState("store");
+  const { banner, getBanner, isLoading: bannerLoader } = useAppState("banner");
   const classes = useStyles();
 
   useEffect(() => {
     getStoreDepartment(props.match.params.storeName)
+    getBanner();
   }, [])
 
   const settings = {
@@ -45,72 +53,24 @@ const Store = (props) => {
     slidesToScroll: 1
   };
 
+  console.log('banner =>', banner);
+
   return (
     <React.Fragment>
       {
         <>
-          {/* <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} /> */}
           <MyContainer maxWidth={false} fixed={true}>
-            {/* <Grid container spacing={2} justify={"center"}>
-              <Grid item>
-                <Button component={NavLink} color={"secondary"} to={`/store/${store.slug}/storefront`}>Home</Button>
-              </Grid>
-              <Grid item>
-                <Button component={NavLink} to={`/store/${store.slug}/departments`}>Departments</Button>
-              </Grid>
-            </Grid> */}
-            {/* <Container> */}
             <Slider {...settings}>
-              <div style={{ padding: 10 }}>
-                {/* <div className={classes.slickItem} style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)` }}></div> */}
-                <img src="https://thehoop.in/admin/banners/Slider/slider_groceries.jpg" className={classes.slickItem} alt="sdfgdg" />
-              </div>
-              <div style={{ padding: 10 }}>
-                {/* <div className={classes.slickItem} style={{ backgroundImage: `url(https://miro.medium.com/max/11730/0*ihTZPO4iffJ8n69_)` }}></div> */}
-                <img src="https://thehoop.in/admin/banners/Slider/slider_groceries.jpg" className={classes.slickItem} alt="sdfgdg" />
-              </div>
-              <div style={{ padding: 10 }}>
-                {/* <div className={classes.slickItem} style={{ backgroundImage: `url(https://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg)` }}></div> */}
-                <img src="https://thehoop.in/admin/banners/Slider/slider_groceries.jpg" className={classes.slickItem} alt="sdfgdg" />
-              </div>
-              <div style={{ padding: 10 }}>
-                {/* <div className={classes.slickItem} style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)` }}></div> */}
-                <img src="https://thehoop.in/admin/banners/Slider/slider_groceries.jpg" className={classes.slickItem} alt="sdfgdg" />
-              </div>
-              <div style={{ padding: 10 }}>
-                {/* <div className={classes.slickItem} style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)` }}></div> */}
-                <img src="https://thehoop.in/admin/banners/Slider/slider_groceries.jpg" className={classes.slickItem} alt="sdfgdg" />
-              </div>
-              {/* <div>
-                  <div style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)`, backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: "200px", width: "100%", borderRadius: 5 }}></div>
+              {banner.map((ban, index) =>
+                <div style={{ padding: 10 }}>
+                  <img src={`https://thehoop.in/admin/${ban.image_url}`} className={classes.slickItem} alt="sdfgdg" />
                 </div>
-                <div>
-                  <div style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)`, backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: "200px", width: "100%", borderRadius: 5 }}></div>
-                </div>
-                <div>
-                  <div style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)`, backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: "200px", width: "100%", borderRadius: 5 }}></div>
-                </div>
-                <div>
-                  <div style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)`, backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: "200px", width: "100%", borderRadius: 5 }}></div>
-                </div>
-                <div>
-                  <div style={{ backgroundImage: `url(https://thehoop.in/admin/banners/Slider/slider_groceries.jpg)`, backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: "200px", width: "100%", borderRadius: 5 }}></div>
-                </div> */}
+              )}
             </Slider>
-            {/* </Container> */}
             {
               isLoading && <CircularProgress className={classes.loader} />
             }
             <Grid container spacing={2} direction={"column"} alignItems={"center"} justify={"center"}>
-              {/* {store.categories.map((category, index) =>
-                <Grid item xs={12}>
-                  <CategoryAndProduct key={index} category={category} store={store} />
-                </Grid>
-              )} */}
-
-              {/* <Grid item xs={12}>
-                
-              </Grid> */}
               {
                 departments.length > 0 && departments.map((product, index) =>
                   <CategoryAndProduct key={index} products={product} />
