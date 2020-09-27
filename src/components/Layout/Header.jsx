@@ -158,6 +158,9 @@ const Header = (props) => {
                   <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
                 </Grid>
                 <Grid item>
+                  <Button color="inherit" component={NavLink} to="/jashoda-fresh">Milk Inquiry</Button>
+                </Grid>
+                <Grid item>
                   <Badge color="secondary" badgeContent={cart_items.length} showZero>
                     <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
                       <ShoppingCartRounded />
@@ -179,6 +182,9 @@ const Header = (props) => {
                 </Grid> */}
                 <Grid item>
                   <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
+                </Grid>
+                <Grid item>
+                  <Button color="inherit" component={NavLink} to="/jashoda-fresh">Milk Inquiry</Button>
                 </Grid>
                 <Grid item>
                   <Badge color="primary" badgeContent={cart_items.length} showZero>

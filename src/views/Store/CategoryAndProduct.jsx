@@ -270,7 +270,7 @@ const CategoryAndProduct = (props) => {
     <Container>
       <Grid container className={classes.categoryHeading} justify={"space-between"}>
         <Grid item xs={12}>
-          <Typography variant={"h4"} className={classes.categoryName}>{products.category_name} </Typography>
+          <Typography variant={"h4"} className={classes.categoryName} >{products.category_name} </Typography>
         </Grid>
         <Grid item xs={12}>
           <Grid container >
