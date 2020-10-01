@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField } from '@material-ui/core'
+import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
 import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, AccountBoxRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "#f8f9fa !important",
     color: "#000",
+    padding: "10px 0 0 0"
   },
   appBarForSearch: {
     position: 'relative',
@@ -125,9 +126,15 @@ const Header = (props) => {
   const { cart } = useAppState("cart");
   const { store } = useAppState("store");
   console.log('store =>', store);
+  const [value, setValue] = React.useState(-1);
+
 
   console.log('Header Called  =>', cart);
   const [cookies, setCookie] = useCookies();
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   useEffect(() => {
     if (!cookies.location) {
@@ -154,114 +161,131 @@ const Header = (props) => {
   return (
     <>
       {hideHeader() && <AppBar position="fixed" className={classes.appbar}>
-        <Toolbar>
-          <Grid container justify={"space-between"} alignItems={"center"}>
-            <Grid item className={classes.logoSection}>
-              <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}>
-                <img src={require('../../assets/images/logo/thehooplogo.svg')} alt=""
-                  style={{
-                    height: "40px",
-                    width: "100px",
-                    backgroundRepeat: "no-repeat"
-                  }}
-                />
-              </NavLink>
+        {/* <Toolbar> */}
+        <Grid container justify={"space-between"} alignItems={"center"}>
+          <Grid item xs={4} className={classes.logoSection}>
+            <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}>
+              <img src={require('../../assets/images/logo/thehooplogo.svg')} alt=""
+                style={{
+                  height: "40px",
+                  width: "100px",
+                  backgroundRepeat: "no-repeat"
+                }}
+              />
+            </NavLink>
+          </Grid>
+          <Grid item xs={4} className={classes.logoSection}>
+            <Tabs
+              value={value}
+              indicatorColor="primary"
+              textColor="primary"
+              onChange={handleChange}
+              aria-label="disabled tabs example"
+            >
+              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="Bingo" />
+              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="Sudoku" />
+              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="My Coupon" />
+            </Tabs>
+
+            {/* <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> Bingo </NavLink>
+              <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> Sudoku </NavLink>
+              <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> My Coupon </NavLink> */}
+          </Grid>
+          <Grid item xs={4} className={classes.desktop}>
+            <Grid container spacing={1} justify={"flex-end"} alignItems={"center"}>
+              <Grid item>
+                <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
+              </Grid>
+              <Grid item>
+                <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
+              </Grid>
+              <Grid item>
+                <Badge color="secondary" badgeContent={cart.count} showZero>
+                  <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
+                    <ShoppingCartRounded />
+                     My Cart</Button>
+                </Badge>
+              </Grid>
+              {!isLoggedIn && <Grid item>
+                <Button component={NavLink} to="/login" color="secondary" variant={"contained"}> Login</Button>
+              </Grid>}
+              {isLoggedIn && <Grid item>
+                <Button component={NavLink} to="/account" color="secondary" variant={"contained"}> Account</Button>
+              </Grid>}
             </Grid>
-            <Grid item className={classes.desktop}>
-              <Grid container spacing={1} alignItems={"center"}>
+          </Grid>
+          <Grid item className={classes.mobile}>
+            <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
+            <SwipeableDrawer
+              anchor={"right"}
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              onOpen={handleDrawerToggle}
+            >
+              <Grid container spacing={1} direction={"column"}>
                 <Grid item>
-                  <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
+                  <Button color="inherit" onClick={() => { toggleStore(); handleDrawerToggle() }} ><StorefrontRounded /> Store</Button>
                 </Grid>
                 <Grid item>
                   <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
                 </Grid>
                 <Grid item>
                   <Badge color="secondary" badgeContent={cart.count} showZero>
-                    <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
-                      <ShoppingCartRounded />
-                     My Cart</Button>
+                    <Button variant={"contained"} onClick={() => { toggleCart(); handleDrawerToggle() }} color="primary"> <ShoppingCartRounded /> My Cart</Button>
                   </Badge>
                 </Grid>
                 {!isLoggedIn && <Grid item>
-                  <Button component={NavLink} to="/login" color="secondary" variant={"contained"}> Login</Button>
+                  <Button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" color="secondary" variant={"contained"}> Login</Button>
                 </Grid>}
                 {isLoggedIn && <Grid item>
-                  <Button component={NavLink} to="/account" color="secondary" variant={"contained"}> Account</Button>
+                  <Button component={NavLink} to="/account" onClick={() => handleDrawerToggle()} color="secondary" variant={"contained"}> Account</Button>
                 </Grid>}
               </Grid>
-            </Grid>
-            <Grid item className={classes.mobile}>
-              <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
-              <SwipeableDrawer
-                anchor={"right"}
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-                onOpen={handleDrawerToggle}
-              >
-                <Grid container spacing={1} direction={"column"}>
-                  <Grid item>
-                    <Button color="inherit" onClick={() => { toggleStore(); handleDrawerToggle() }} ><StorefrontRounded /> Store</Button>
-                  </Grid>
-                  <Grid item>
-                    <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
-                  </Grid>
-                  <Grid item>
-                    <Badge color="secondary" badgeContent={cart.count} showZero>
-                      <Button variant={"contained"} onClick={() => { toggleCart(); handleDrawerToggle() }} color="primary"> <ShoppingCartRounded /> My Cart</Button>
-                    </Badge>
-                  </Grid>
-                  {!isLoggedIn && <Grid item>
-                    <Button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" color="secondary" variant={"contained"}> Login</Button>
-                  </Grid>}
-                  {isLoggedIn && <Grid item>
-                    <Button component={NavLink} to="/account" onClick={() => handleDrawerToggle()} color="secondary" variant={"contained"}> Account</Button>
-                  </Grid>}
-                </Grid>
-              </SwipeableDrawer>
-              {props.location.pathname.includes('store') &&
-                <AppBar position="fixed" color="primary" className={classes.appBar}>
-                  <Toolbar>
-                    <Grid container spacing={0} justify={"space-evenly"}>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
-                          <Grid item><StorefrontRounded /> </Grid>
-                          <Grid item><span>Store</span></Grid>
-                        </Grid>
+            </SwipeableDrawer>
+            {props.location.pathname.includes('store') &&
+              <AppBar position="fixed" color="primary" className={classes.appBar}>
+                <Toolbar>
+                  <Grid container spacing={0} justify={"space-evenly"}>
+                    <Grid item>
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
+                        <Grid item><StorefrontRounded /> </Grid>
+                        <Grid item><span>Store</span></Grid>
                       </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
-                          <Grid item><SearchRounded /></Grid>
-                          <Grid item><span>Search</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
-                          <Grid item><ViewModuleRounded /> </Grid>
-                          <Grid item><span>Department</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
-                          <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
-                          <Grid item><span>Cart</span></Grid>
-                        </Grid>
-                      </Grid>
-                      {isLoggedIn &&
-                        <Grid item>
-                          <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
-                            <Grid item ><AccountBoxRounded /> </Grid>
-                            <Grid item><span>Profile</span></Grid>
-                          </Grid>
-                        </Grid>
-                      }
-
                     </Grid>
-                  </Toolbar>
-                </AppBar>
-              }
-            </Grid>
+                    <Grid item>
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
+                        <Grid item><SearchRounded /></Grid>
+                        <Grid item><span>Search</span></Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid item>
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
+                        <Grid item><ViewModuleRounded /> </Grid>
+                        <Grid item><span>Department</span></Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid item>
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
+                        <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
+                        <Grid item><span>Cart</span></Grid>
+                      </Grid>
+                    </Grid>
+                    {isLoggedIn &&
+                      <Grid item>
+                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
+                          <Grid item ><AccountBoxRounded /> </Grid>
+                          <Grid item><span>Profile</span></Grid>
+                        </Grid>
+                      </Grid>
+                    }
+
+                  </Grid>
+                </Toolbar>
+              </AppBar>
+            }
           </Grid>
-        </Toolbar>
+        </Grid>
+        {/* </Toolbar> */}
       </AppBar>
       }
       <Cart />

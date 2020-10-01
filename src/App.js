@@ -6,9 +6,12 @@ import { AppStateProvider } from "./context";
 import containers from './state';
 import { CookiesProvider } from 'react-cookie';
 
+
 const Layout = React.lazy(() => import('./components/Layout'))
 const Store = React.lazy(() => import('./views/Store'))
+const Home = React.lazy(() => import('./views/Home'))
 const StoreListing = React.lazy(() => import('./views/Store/StoreListing'))
+const StoreDetail = React.lazy(() => import('./views/Store/StoreDetail'))
 const StoreDepartments = React.lazy(() => import('./views/Store/StoreDepartments'))
 const StoreDepartmentsCategory = React.lazy(() => import('./views/Store/StoreDepartmentsCategory'))
 const Checkout = React.lazy(() => import('./views/Checkout'))
@@ -30,9 +33,9 @@ function App({ isDark }) {
             <Suspense fallback={<Backdrop open={true}> <CircularProgress color="inherit" /> </Backdrop>}>
               <Layout>
                 <Switch>
-                  <Route exact path="/" component={Store} />
+                  <Route exact path="/" component={Home} />
                   <Route exact path="/stores" component={StoreListing} />
-                  <Route exact path="/store/:storeName/(storefront)?" component={Store} />
+                  <Route exact path="/store/:storeName/(storefront)?" component={StoreDetail} />
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />
                   <Route exact path="/store/:storeName/departments/:categoryId" component={StoreDepartmentsCategory} />
                   <Route exact path="/checkout" component={Checkout} />

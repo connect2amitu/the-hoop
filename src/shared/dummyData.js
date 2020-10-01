@@ -694,7 +694,7 @@ export const STORES = [
     categories: [
       {
         category_id: 1,
-        name: "The Hoop - Dairy & Eggs",
+        name: "Offers",
         products: [
           {
             id: 1,

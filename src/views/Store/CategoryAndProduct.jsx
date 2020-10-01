@@ -295,8 +295,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   productImage: {
-    height: 100,
-    width: 100,
+    height: 120,
+    width: 170,
     margin: "auto",
     cursor: "pointer",
     borderRadius: 10,
@@ -548,7 +548,7 @@ const CategoryAndProduct = (props) => {
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item
                       // onClick={() => openModal({ ...product, quantity: 1 })} 
-                      className={classes.productImage} style={{ backgroundImage: `url(${product.image})` }}  ></Grid>
+                      className={classes.productImage} style={{ backgroundImage: `url(https://picsum.photos/300/100?random=${index})` }}  ></Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
                     <Grid item>
                       <FormControl variant="outlined" className={classes.selectBox}>
