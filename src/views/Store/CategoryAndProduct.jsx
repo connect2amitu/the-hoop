@@ -161,7 +161,7 @@ const CategoryAndProduct = (props) => {
   };
 
   const addToCartHandler = (product, sub_prod_id) => {
-
+    navigator.vibrate(100)
     var _product = Object.assign({}, product);
     if (state && state[`product-${_product.id}`]) {
       var temp = state[`product-${product.id}`];
@@ -265,7 +265,6 @@ const CategoryAndProduct = (props) => {
     })
   }
 
-  const { products = [] } = props;
 
   const { category } = props;
   console.log('category.products[0] =>', category.products[0]);
@@ -284,7 +283,6 @@ const CategoryAndProduct = (props) => {
                 <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item component={Button}
-                      // onClick={() => openModal({ ...product, quantity: 1 })} 
                       className={classes.productImage} style={{ backgroundImage: `url(http://lorempixel.com/400/200/food/${index})` }}  ></Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
                     <Grid item>
@@ -307,18 +305,6 @@ const CategoryAndProduct = (props) => {
                           }
                         </Select>
                       </FormControl>
-                      {/* <pre>{JSON.stringify(state && state[`product-${product.id}`] ? state[`product-${product.id}`] : product.data[0], null, 2)}</pre> */}
-                      {/* <TextField
-                        name={`product-${product.id}`}
-                        value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
-                        onChange={(e) => handleChange(e, product.id)}
-                        id="select" label="" select>
-                        {
-                          product.data.map((option, index) =>
-                            <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
-                          )
-                        }
-                      </TextField> */}
                     </Grid>
                     <Grid item>
                       <Grid container alignItems={"center"} justify={"space-between"}>

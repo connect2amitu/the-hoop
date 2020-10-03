@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab } from '@material-ui/core'
+import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, AccountBoxRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, AccountBoxRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
 
 
@@ -12,21 +12,9 @@ import Cart from '../../views/Cart';
 import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-
+import FormDialog from '../Location';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('sm')]: {
-      backgroundColor: theme.palette.secondary.main,
-    },
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: theme.palette.primary.main,
-    },
-    [theme.breakpoints.up('lg')]: {
-      backgroundColor: green[500],
-    },
-  },
   appbar: {
     background: "#f8f9fa !important",
     color: "#000",
@@ -113,6 +101,15 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     margin: '0 auto',
   },
+  rightSideDrawer: {
+    width: 260
+  },
+  badge: {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  }
 }));
 
 
@@ -124,7 +121,7 @@ const Header = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
-  const { toggleCart, toggleStore } = useAppState("global");
+  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("global");
   const { isLoggedIn } = useAppState("userAuth");
   const { cart } = useAppState("cart");
   const { store } = useAppState("store");
@@ -140,7 +137,7 @@ const Header = (props) => {
   };
 
   useEffect(() => {
-    if (!cookies.location) {
+    if (!location) {
       props.history.push("/location")
     }
   }, [])
@@ -166,7 +163,7 @@ const Header = (props) => {
       {hideHeader() && <AppBar position="fixed" className={classes.appbar}>
         {/* <Toolbar> */}
         <Grid container justify={"space-between"} alignItems={"center"}>
-          <Grid item xs={4} className={classes.logoSection}>
+          <Grid item className={classes.logoSection}>
             <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}>
               <img src={require('../../assets/images/logo/thehooplogo.svg')} alt=""
                 style={{
@@ -177,28 +174,13 @@ const Header = (props) => {
               />
             </NavLink>
           </Grid>
-          {/* <Grid item xs={4} className={classes.logoSection}>
-            <Tabs
-              value={value}
-              indicatorColor="primary"
-              textColor="primary"
-              onChange={handleChange}
-              aria-label="disabled tabs example"
-            >
-              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="Bingo" />
-              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="Sudoku" />
-              <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="My Coupon" />
-            </Tabs>
-
-
-          </Grid> */}
-          <Grid item xs={4} className={classes.desktop}>
+          <Grid item className={classes.desktop}>
             <Grid container spacing={1} justify={"flex-end"} alignItems={"center"}>
               <Grid item>
                 <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
               </Grid>
               <Grid item>
-                <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
+                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
               </Grid>
               <Grid item>
                 <Badge color="secondary" badgeContent={cart.count} showZero>
@@ -216,19 +198,56 @@ const Header = (props) => {
             </Grid>
           </Grid>
           <Grid item className={classes.mobile}>
-            <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
+
+            <Grid container spacing={0} alignItems={"center"}>
+              {/* <Grid item>
+                  <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
+                </Grid> */}
+              <Grid item>
+                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
+              </Grid>
+              <Grid item>
+                <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
+              </Grid>
+            </Grid>
             <SwipeableDrawer
               anchor={"right"}
+
               open={mobileOpen}
               onClose={handleDrawerToggle}
               onOpen={handleDrawerToggle}
             >
-              <Grid container spacing={1} direction={"column"}>
+              <List classes={{ root: classes.rightSideDrawer }}>
+                <ListItem button>
+                  <ListItemIcon>{<StorefrontRounded />}</ListItemIcon>
+                  <ListItemText primary={"Store"} />
+                </ListItem>
+
+                <ListItem button onClick={() => { toggleLocation(); handleDrawerToggle() }}>
+                  <ListItemIcon>{<LocationOnRounded />}</ListItemIcon>
+                  <ListItemText primary={location?.area_name} />
+                </ListItem>
+                <ListItem button onClick={() => { toggleCart(); handleDrawerToggle() }}>
+                  <ListItemIcon>{
+                    <Badge color="secondary" badgeContent={cart.count} showZero><ShoppingCartRounded /></Badge>}</ListItemIcon>
+                  <ListItemText primary={`My Cart`} />
+
+                </ListItem>
+                {!isLoggedIn && <ListItem button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" >
+                  <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
+                  <ListItemText primary={"Login"} />
+                </ListItem>}
+                {isLoggedIn && <ListItem button onClick={() => handleDrawerToggle()}  >
+                  <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
+                  <ListItemText primary={"Account"} />
+                </ListItem>}
+              </List>
+              {/* <Grid container spacing={1} direction={"column"}>
                 <Grid item>
                   <Button color="inherit" onClick={() => { toggleStore(); handleDrawerToggle() }} ><StorefrontRounded /> Store</Button>
                 </Grid>
                 <Grid item>
-                  <Button color="inherit"><LocationOnRounded /> Varachha road</Button>
+                  <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
                 </Grid>
                 <Grid item>
                   <Badge color="secondary" badgeContent={cart.count} showZero>
@@ -241,7 +260,7 @@ const Header = (props) => {
                 {isLoggedIn && <Grid item>
                   <Button component={NavLink} to="/account" onClick={() => handleDrawerToggle()} color="secondary" variant={"contained"}> Account</Button>
                 </Grid>}
-              </Grid>
+              </Grid> */}
             </SwipeableDrawer>
             {props.location.pathname.includes('store') &&
               <AppBar position="fixed" color="primary" className={classes.appBar}>
@@ -294,6 +313,8 @@ const Header = (props) => {
       {/* store */}
       <StoreListing classes={classes} stores={stores} setStores={setStores} />
 
+      {/* Location */}
+      <FormDialog />
 
       {/* Search */}
       <Dialog fullScreen open={open} onClose={handleClose}>
