@@ -546,7 +546,7 @@ const CategoryAndProduct = (props) => {
               category.products.map((product, index) =>
                 <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
-                    <Grid item
+                    <Grid item component={Button}
                       // onClick={() => openModal({ ...product, quantity: 1 })} 
                       className={classes.productImage} style={{ backgroundImage: `url(https://picsum.photos/300/100?random=${index})` }}  ></Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>

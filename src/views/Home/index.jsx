@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Slider from "react-slick";
 import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 import { NavLink } from 'react-router-dom';
+import { useAppState } from '../../context';
 
 
 
@@ -193,6 +194,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Home = () => {
+  const { stores } = useAppState("store");
+  console.log('store =>', stores)
 
 
   const classes = useStyles();
@@ -219,25 +222,25 @@ const Home = () => {
         }
       </Slider> */}
       <Grid container direction={"column"}>
-        <Grid item>
-          <Typography variant={"h5"} className={classes.heading}>Stores</Typography>
+        <Grid item={12}>
+          <Typography variant={"h4"}>Stores</Typography>
         </Grid>
         <Grid item>
           <Grid container direction={"column"}>
             <Grid item xs={12}>
               <Grid container justify={"space-between"}>
                 {
-                  [...new Array(15)].map((o, index) =>
-                    <Button component={NavLink} to={`/store/${"thehoop"}`} className={classes.shopCart}>
+                  stores && stores.map((o, index) =>
+                    <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
                       < div >
                         <div className={classes.bannerWrapper}>
                           <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
                         </div>
                         <div className={classes.storeProfile}>
-                          <img src={`https://randomuser.me/api/portraits/women/${index}.jpg`} className={classes.storeImage} alt="testing" />
+                          <img src={o.image} className={classes.storeImage} alt="testing" />
                           <div className={classes.storeDetail} >
-                            <h3 className={classes.storeName} >Store Name - {index}</h3>
-                            <p className={classes.description} >{`description of the store ${index} and location of the store`}</p>
+                            <h3 className={classes.storeName} >{o.name}</h3>
+                            <p className={classes.description} >{`description of the store ${o.name} and location of the store`}</p>
                           </div>
                         </div>
                       </div>
