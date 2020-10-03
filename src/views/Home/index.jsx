@@ -1,6 +1,9 @@
-import { Avatar, Container, Grid, makeStyles, styled, Typography } from '@material-ui/core';
+import { Avatar, Button, Container, Grid, makeStyles, styled, Typography } from '@material-ui/core';
 import React, { useState } from 'react'
 import Slider from "react-slick";
+import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -123,13 +126,19 @@ const useStyles = makeStyles((theme) => ({
   },
   categorySlider: { marginTop: 15 },
   shopCart: {
+    display: "block",
+    padding: 0,
     width: "32%",
-    borderRadius: 5,
+    borderRadius: 12,
     position: "relative",
     backgroundColor: "#f1f1f1",
     marginTop: 10,
     marginBottom: 10,
-    height: 200,
+    textTransform: "capitalize",
+    fontSize: "12px",
+    textAlign: "start",
+    // height: 200,
+    boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 8px",
     [theme.breakpoints.up('md')]: {
       width: "32%"
     },
@@ -153,6 +162,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     width: "100%",
     height: 110,
+    borderRadius: "12px 12px 0 0",
   },
   shopTopBanner: {
     height: 125,
@@ -190,16 +200,16 @@ const Home = () => {
 
   return (
     <Container maxWidth={"lg"} className={classes.mainContainer}>
-      <Grid container>
+      {/* <Grid container>
         <Grid item xs={12} className={classes.videoContainer}>
           <video className={classes.videoSlider} autoPlay loop>
             <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
             <source src="https://parachutemontreal.ca/workspace/uploads/accueil-slideshow/v2-1-.webm" type="video/webm" />
           </video>
         </Grid>
-      </Grid>
+      </Grid> */}
 
-      <Slider {...categorySettings} className={classes.categorySlider}>
+      {/* <Slider {...categorySettings} className={classes.categorySlider}>
         {
           [...new Array(15)].map(o =>
             <div style={{ padding: 15 }}>
@@ -207,81 +217,38 @@ const Home = () => {
             </div>
           )
         }
-      </Slider>
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography variant={"h5"} className={classes.heading}>Top Restraurant</Typography>
+      </Slider> */}
+      <Grid container direction={"column"}>
+        <Grid item>
+          <Typography variant={"h5"} className={classes.heading}>Stores</Typography>
         </Grid>
-        <Grid item xs={12}>
-          <Grid container spacing={2}>
-            <Grid item xs={9}>
-              <Grid container direction={"column"}>
-                <Grid item xs={12}>
-                  <Grid container justify={"space-between"}>
-                    {
-                      [...new Array(15)].map((o, index) =>
-                        <div className={classes.shopCart}>
-                          <div className={classes.bannerWrapper}>
-                            <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
-                          </div>
-                          <div className={classes.storeProfile}>
-                            <img src={`https://randomuser.me/api/portraits/women/${index}.jpg`} className={classes.storeImage} alt="testing" />
-                            <div className={classes.storeDetail} >
-                              <h3 className={classes.storeName} >Store Name - {index}</h3>
-                              <p className={classes.description} >{`description of the store ${index} and location of the store`}</p>
-                            </div>
+        <Grid item>
+          <Grid container direction={"column"}>
+            <Grid item xs={12}>
+              <Grid container justify={"space-between"}>
+                {
+                  [...new Array(15)].map((o, index) =>
+                    <Button component={NavLink} to={`/store/${"thehoop"}`} className={classes.shopCart}>
+                      < div >
+                        <div className={classes.bannerWrapper}>
+                          <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
+                        </div>
+                        <div className={classes.storeProfile}>
+                          <img src={`https://randomuser.me/api/portraits/women/${index}.jpg`} className={classes.storeImage} alt="testing" />
+                          <div className={classes.storeDetail} >
+                            <h3 className={classes.storeName} >Store Name - {index}</h3>
+                            <p className={classes.description} >{`description of the store ${index} and location of the store`}</p>
                           </div>
                         </div>
-                      )
-                    }
-                  </Grid>
-                </Grid>
-                <Grid item xs={12}>
-                  <div className={classes.bannerAds}>
-                    Add
-              </div>
-                </Grid>
-                <Grid item xs={12}>
-                  <Grid container>
-                    <Grid item xs={12}>
-                      <Typography variant={"h5"} className={classes.heading}>Top Store</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Grid container justify={"space-between"}>
-                        {
-                          [...new Array(15)].map((o, index) =>
-                            <div className={classes.shopCart}>
-                              <div className={classes.bannerWrapper}>
-                                <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
-                              </div>
-                              <div className={classes.storeProfile}>
-                                <img src={`https://randomuser.me/api/portraits/women/${index}.jpg`} className={classes.storeImage} alt="testing" />
-                                <div className={classes.storeDetail} >
-                                  <h3 className={classes.storeName} >Store Name - {index}</h3>
-                                  <p className={classes.description} >{`description of the store ${index} and location of the store`}</p>
-                                </div>
-                              </div>
-                            </div>
-                          )
-                        }
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Grid>
-
+                      </div>
+                    </Button>
+                  )
+                }
               </Grid>
             </Grid>
-            <Grid item xs={3}>
-              <div className={classes.rightSideAds}>
-                <Typography variant={"h4"}>Add section</Typography>
-              </div>
-            </Grid>
-
-
-
           </Grid>
         </Grid>
-      </Grid>
+      </Grid >
     </Container >
   )
 }

@@ -296,7 +296,7 @@ const useStyles = makeStyles((theme) => ({
   },
   productImage: {
     height: 120,
-    width: 170,
+    width: 150,
     margin: "auto",
     cursor: "pointer",
     borderRadius: 10,
@@ -512,6 +512,8 @@ const CategoryAndProduct = (props) => {
   }
 
   const confirmDelete = (sub_prod_id) => {
+    console.log('sub_prod_id =>', sub_prod_id)
+
     confirmAlert({
       title: 'Remove Item',
       message: 'Are you sure you want to remove this item from cart?',
@@ -535,7 +537,7 @@ const CategoryAndProduct = (props) => {
   console.log('category =>', category);
 
   return (
-    <Container>
+    <>
       <Grid container className={classes.categoryHeading} justify={"space-between"}>
         <Grid item xs={12}>
           <Typography variant={"h4"} className={classes.categoryName}>{category.name} </Typography>
@@ -544,7 +546,7 @@ const CategoryAndProduct = (props) => {
           <Grid container >
             {
               category.products.map((product, index) =>
-                <Grid item xs={6} sm={4} md={3} key={index}>
+                <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item
                       // onClick={() => openModal({ ...product, quantity: 1 })} 
@@ -554,13 +556,14 @@ const CategoryAndProduct = (props) => {
                       <FormControl variant="outlined" className={classes.selectBox}>
                         <Select
                           classes={{ root: classes.select }}
-                          labelId="demo-simple-select-outlined-label"
-                          id="demo-simple-select-outlined"
+                          labelId={`product-${product.id}`}
+                          id={`product-${product.id}`}
                           defaultValue={product.data[0]}
+                          // value={state && state[`product-${product.id}`] && state[`product-${product.id}`]}
                           onChange={(e) => handleChange(e, product.id)}
                           inputProps={{
                             name: `product-${product.id}`,
-                            id: 'age-native-simple',
+                            id: `product-${product.id}`,
                           }}
                         >
                           {
@@ -647,7 +650,7 @@ const CategoryAndProduct = (props) => {
           </Grid>
         </DialogContent>
       </Dialog>}
-    </Container>
+    </>
   )
 }
 

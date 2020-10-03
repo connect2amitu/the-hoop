@@ -30,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "#f8f9fa !important",
     color: "#000",
-    padding: "10px 0 0 0"
+    padding: "10px",
+    [theme.breakpoints.down('sm')]: {
+      padding: "5px 10px",
+    },
   },
   appBarForSearch: {
     position: 'relative',
@@ -174,7 +177,7 @@ const Header = (props) => {
               />
             </NavLink>
           </Grid>
-          <Grid item xs={4} className={classes.logoSection}>
+          {/* <Grid item xs={4} className={classes.logoSection}>
             <Tabs
               value={value}
               indicatorColor="primary"
@@ -187,10 +190,8 @@ const Header = (props) => {
               <Tab style={{ textTransform: "capitalize", fontWeight: 600 }} label="My Coupon" />
             </Tabs>
 
-            {/* <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> Bingo </NavLink>
-              <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> Sudoku </NavLink>
-              <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}> My Coupon </NavLink> */}
-          </Grid>
+
+          </Grid> */}
           <Grid item xs={4} className={classes.desktop}>
             <Grid container spacing={1} justify={"flex-end"} alignItems={"center"}>
               <Grid item>

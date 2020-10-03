@@ -137,422 +137,716 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 1,
+        name: "Offers",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 2,
+        name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 3,
+        name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 4,
+        name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 5,
+        name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 6,
+        name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Walmart - Dairy & Eggs",
+        category_id: 7,
+        name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -710,7 +1004,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -718,7 +1012,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -726,7 +1020,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -734,7 +1028,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -742,7 +1036,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -750,7 +1044,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -758,7 +1052,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -766,7 +1060,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -774,7 +1068,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -782,7 +1076,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -790,7 +1084,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -804,7 +1098,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -812,7 +1106,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -820,7 +1114,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -828,7 +1122,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -836,7 +1130,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -844,7 +1138,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -852,7 +1146,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -860,7 +1154,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -868,7 +1162,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -876,7 +1170,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -884,7 +1178,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -892,7 +1186,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -906,7 +1200,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -914,7 +1208,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -922,7 +1216,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -930,7 +1224,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -938,7 +1232,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -946,7 +1240,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -954,7 +1248,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -962,7 +1256,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -970,7 +1264,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -978,7 +1272,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -986,7 +1280,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -994,7 +1288,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -1008,7 +1302,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -1016,7 +1310,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -1024,7 +1318,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -1032,7 +1326,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -1040,7 +1334,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -1048,7 +1342,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -1056,7 +1350,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -1064,7 +1358,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -1072,7 +1366,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -1080,7 +1374,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -1088,7 +1382,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -1096,7 +1390,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -1110,7 +1404,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -1118,7 +1412,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -1126,7 +1420,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -1134,7 +1428,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -1142,7 +1436,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -1150,7 +1444,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -1158,7 +1452,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -1166,7 +1460,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -1174,7 +1468,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -1182,7 +1476,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -1190,7 +1484,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -1198,7 +1492,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -1212,7 +1506,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -1220,7 +1514,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -1228,7 +1522,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -1236,7 +1530,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -1244,7 +1538,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -1252,7 +1546,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -1260,7 +1554,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -1268,7 +1562,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -1276,7 +1570,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -1284,7 +1578,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -1292,7 +1586,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -1300,7 +1594,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -1314,7 +1608,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
@@ -1322,7 +1616,7 @@ export const STORES = [
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
@@ -1330,7 +1624,7 @@ export const STORES = [
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
@@ -1338,7 +1632,7 @@ export const STORES = [
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 5,
@@ -1346,7 +1640,7 @@ export const STORES = [
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 6,
@@ -1354,7 +1648,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 7,
@@ -1362,7 +1656,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 8,
@@ -1370,7 +1664,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 9,
@@ -1378,7 +1672,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 10,
@@ -1386,7 +1680,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 11,
@@ -1394,7 +1688,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 12,
@@ -1402,7 +1696,7 @@ export const STORES = [
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
-            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -1543,380 +1837,716 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 1,
+        name: "Offers",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 2,
+        name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 3,
+        name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 4,
+        name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 5,
+        name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 6,
+        name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "BigBasket - Dairy & Eggs",
+        category_id: 7,
+        name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -2434,6 +3064,721 @@ export const STORES = [
           },
         ]
       },
+    ], categories: [
+      {
+        category_id: 1,
+        name: "Offers",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 2,
+        name: "Vegitables",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 3,
+        name: "Pets",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 4,
+        name: "Grocceries",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 5,
+        name: "Bath",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 6,
+        name: "Electonics",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
+      {
+        category_id: 7,
+        name: "Others",
+        products: [
+          {
+            id: 1,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 2,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
+            price: 100,
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 3,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
+            price: 100,
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
+            name: "Sprouts Large Grade A Cage Free Eggs",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 10,
+            name: "Clover Milk, Vitamin D",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 11,
+            name: "Oatly! Oatmilk, The Original",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 12,
+            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+        ]
+      },
     ],
     departments: [
       {
@@ -2571,380 +3916,716 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 1,
+        name: "Offers",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 2,
+        name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 3,
+        name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 4,
+        name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 5,
+        name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 6,
+        name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "Appsomania - Dairy & Eggs",
+        category_id: 7,
+        name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -3085,380 +4766,716 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 1,
+        name: "Offers",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 2,
+        name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 3,
+        name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 4,
+        name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 5,
+        name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 6,
+        name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "JioMart - Dairy & Eggs",
+        category_id: 7,
+        name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -3599,380 +5616,716 @@ export const STORES = [
     type: "delivery",
     categories: [
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 1,
+        name: "Offers",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 1, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 2, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 3, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 4, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 5, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 6, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 7, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 8, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 9, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 10, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 11, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 12, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 13, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 14, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 15, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 16, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 17, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 18, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 19, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 20, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 21, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 22, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 23, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 24, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 25, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 26, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 27, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 28, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 29, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 30, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 31, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 32, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 33, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 34, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 35, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 36, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 2,
+        name: "Vegitables",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 37, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 38, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 39, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 40, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 41, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 42, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 43, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 44, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 45, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 46, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 47, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 48, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 49, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 50, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 51, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 52, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 53, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 54, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 55, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 56, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 57, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 58, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 59, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 60, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 61, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 62, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 63, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 64, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 65, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 66, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 67, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 68, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 69, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 70, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 71, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 72, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 3,
+        name: "Pets",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 73, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 74, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 75, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 76, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 77, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 78, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 79, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 80, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 81, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 82, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 83, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 84, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 85, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 86, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 87, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 88, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 89, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 90, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 91, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 92, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 93, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 94, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 95, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 96, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 97, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 98, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 99, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 100, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 101, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 102, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 103, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 104, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 105, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 106, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 107, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 108, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 4,
+        name: "Grocceries",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 109, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 110, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 111, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 112, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 113, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 114, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 115, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 116, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 117, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 118, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 119, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 120, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 121, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 122, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 123, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 124, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 125, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 126, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 127, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 128, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 129, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 130, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 131, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 132, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 133, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 134, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 135, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 136, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 137, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 138, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 139, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 140, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 141, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 142, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 143, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 144, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 5,
+        name: "Bath",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 145, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 146, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 147, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 148, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 149, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 150, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 151, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 152, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 153, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 154, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 155, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 156, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 157, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 158, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 159, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 160, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 161, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 162, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 163, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 164, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 165, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 166, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 167, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 168, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 169, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 170, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 171, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 172, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 173, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 174, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 175, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 176, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 177, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 178, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 179, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 180, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 6,
+        name: "Electonics",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 181, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 182, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 183, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 184, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 185, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 186, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 187, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 188, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 189, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 190, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 191, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 192, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 193, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 194, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 195, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 196, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 197, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 198, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 199, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 200, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 201, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 202, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 203, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 204, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 205, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 206, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 207, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 208, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 209, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 210, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 211, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 212, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 213, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 214, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 215, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 216, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
       {
-        name: "D-Mart - Dairy & Eggs",
+        category_id: 7,
+        name: "Others",
         products: [
           {
             id: 1,
             name: "Sprouts Large Brown Cage Free Grade A Eggs",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 217, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 218, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 219, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 2,
-            name: "Clover Milk, Organic, Whole",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 1",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 8,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 220, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 221, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 222, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 2",
             price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
+            discount: 4,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 223, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 224, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 225, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
             id: 4,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 3",
+            price: 100,
+            discount: 9,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 226, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 227, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 228, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 5,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 4",
+            price: 100,
+            discount: 10,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 229, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 230, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 231, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 6,
+            name: "Sprouts Large Brown Cage Free Grade A Eggs 5",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 232, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 233, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 234, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 7,
+            name: "Clover Milk, Organic, Whole",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 235, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 236, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 237, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 8,
+            name: "Sprouts Organic Extra Firm Tofu",
+            price: 100,
+            discount: 5,
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 238, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 239, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 240, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
+          },
+          {
+            id: 9,
             name: "Sprouts Large Grade A Cage Free Eggs",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 241, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 242, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 243, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 10,
             name: "Clover Milk, Vitamin D",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 244, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 245, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 246, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 11,
             name: "Oatly! Oatmilk, The Original",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 247, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 248, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 249, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
           {
-            id: 5,
+            id: 12,
             name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
             price: 100,
             discount: 5,
-            image: "https://picsum.photos/200/300"
+            image: "https://picsum.photos/200/300",
+            data: [{ "sub_prod_id": 250, "qty": 1, "unit": "Kg", "rate": 65, "product_url": "bitter-gourd-small-1-kg" }, { "sub_prod_id": 251, "qty": 500, "unit": "Gram", "rate": 33, "product_url": "bitter-gourd-small-500-g" }, { "sub_prod_id": 252, "qty": 250, "unit": "Gram", "rate": 17, "product_url": "bitter-gourd-small-250-g" }]
           },
         ]
       },
@@ -4103,521 +6456,7 @@ export const STORES = [
         image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31561/c90c203c-19ee-4605-bb63-4c6feeaa5bc8.jpg",
       },
     ]
-  },
-  {
-    id: 8,
-    name: "Testing",
-    slug: "testing",
-    image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1289/9f79fb62-4b6d-43d8-bd13-8fa60e3528fa.png",
-    tags: ["Organic", "Groceries", "Butcher Shop"],
-    type: "delivery",
-    categories: [
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-      {
-        name: "Testing - Dairy & Eggs",
-        products: [
-          {
-            id: 1,
-            name: "Sprouts Large Brown Cage Free Grade A Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 2,
-            name: "Clover Milk, Organic, Whole",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 3,
-            name: "Sprouts Organic Extra Firm Tofu",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 4,
-            name: "Sprouts Large Grade A Cage Free Eggs",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Clover Milk, Vitamin D",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Oatly! Oatmilk, The Original",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-          {
-            id: 5,
-            name: "Vital Farms Vital Farms Pasture-Raised (Alfresco) Eggs 18",
-            price: 100,
-            discount: 5,
-            image: "https://picsum.photos/200/300"
-          },
-        ]
-      },
-    ],
-    departments: [
-      {
-        category_id: 1,
-        category_name: "Special Dietary Needs",
-        products_categories: [
-          {
-            id: 1,
-            name: "Gluten Free",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31575/e19895a2-f411-4e11-8402-cdd24fc63536.jpg",
-      },
-      {
-        category_id: 2,
-        category_name: "Party Supplies & Crafts",
-        products_categories: [
-          {
-            id: 1,
-            name: "Arts & Crafts",
-            value: "arts-crafts"
-          },
-          {
-            id: 2,
-            name: "Baby Shower",
-            value: "baby-shower"
-          },
-          {
-            id: 3,
-            name: "Balloons & Accessories",
-            value: "balloons-accessories"
-          },
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31569/8cf086e9-66d0-43fc-ae34-aed5e4cfc499.jpg",
-      },
-      {
-        category_id: 3,
-        category_name: "Office & Electronics",
-        products_categories: [
-          {
-            id: 1,
-            name: "Cell Phone Tablets & Accessories",
-            value: "gluten-Free"
-          },
-          {
-            id: 2,
-            name: "Computers & Computer Accessories",
-            value: "gluten-Free"
-          },
-          {
-            id: 3,
-            name: "Gaming",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31565/158260a8-3d74-4f19-92c9-700e6b1462a8.jpg",
-      },
-      {
-        category_id: 4,
-        category_name: "School Lunch Box Essentials",
-        products_categories: [
-          {
-            id: 1,
-            name: "Lunchbox Top Picks",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31572/94b5076d-c277-4108-8df3-66397bc7ca16.jpg",
-      },
-      {
-        category_id: 5,
-        category_name: "Toys",
-        products_categories: [
-          {
-            id: 1,
-            name: "Action Figures & Playsets",
-            value: "gluten-Free"
-          },
-          {
-            id: 2,
-            name: "Deodorants",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2guulkeunn7d8.cloudfront.net/assets/department_images/toys-bf104964e93efa1127147411c744112b2ba59e2fdef87b349ce05c1dc73e9068.png",
-      },
-      {
-        category_id: 6,
-        category_name: "Health & Nutrition",
-        products_categories: [
-          {
-            id: 1,
-            name: "Desserts",
-            value: "gluten-Free"
-          },
-          {
-            id: 2,
-            name: "Baguettes Loaves & Breadsticks",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31560/b5c9e892-88e6-4a6b-9eb3-9dc84c00a7b4.jpg",
-      },
-      {
-        category_id: 7,
-        category_name: "Home Kitchen & Dine",
-        products_categories: [
-          {
-            id: 1,
-            name: "Bath",
-            value: "gluten-Free"
-          },
-          {
-            id: 2,
-            name: "Bedding",
-            value: "gluten-Free"
-          },
-          {
-            id: 3,
-            name: "Bakeware",
-            value: "gluten-Free"
-          }
-        ],
-        image: "https://d2d8wwwkmhfcva.cloudfront.net/120x/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/department/image/31561/c90c203c-19ee-4605-bb63-4c6feeaa5bc8.jpg",
-      },
-    ]
-  },
+  }
 ]
 
 
