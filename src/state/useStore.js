@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { STORES } from "../shared/dummyData";
+import { DUMMY_DEPARTMENTS, STORES } from "../shared/dummyData";
 
 function reducer(state, action) {
   return { ...state, ...action };
@@ -9,7 +9,8 @@ const initialArgs = {
   stores: STORES,
   store: null,
   openStores: false,
-  departments: []
+  departments: [],
+  isLoading: true
 };
 
 const useStore = () => {
@@ -17,12 +18,15 @@ const useStore = () => {
 
   const getStoreBySlug = (slug) => {
     var data = STORES.find(data => data.slug === slug) || null;
-    setState({ ...state, store: data })
+    setState({ isLoading: true })
+    setTimeout(() => {
+      setState({ store: data, isLoading: false })
+    }, 1000);
   }
 
   const getStoreDepartment = (slug) => {
     var data = STORES.find(data => data.slug === slug) || null;
-    setState({ ...state, store: data, departments: data.departments })
+    setState({ departments: DUMMY_DEPARTMENTS })
   }
 
   return {

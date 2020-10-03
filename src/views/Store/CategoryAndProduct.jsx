@@ -109,6 +109,8 @@ const CategoryAndProduct = (props) => {
 
 
   const handleChange = (event, pid) => {
+    console.log('event.target =>', event.target)
+
     const name = event.target.name;
 
     if (state && state[name]) {
@@ -247,8 +249,6 @@ const CategoryAndProduct = (props) => {
   }
 
   const confirmDelete = (sub_prod_id) => {
-    console.log('123 =>', 123)
-
     confirmAlert({
       title: 'Remove Item',
       message: 'Are you sure you want to remove this item from cart?',
@@ -285,7 +285,7 @@ const CategoryAndProduct = (props) => {
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item component={Button}
                       // onClick={() => openModal({ ...product, quantity: 1 })} 
-                      className={classes.productImage} style={{ backgroundImage: `url(https://picsum.photos/300/100?random=${index})` }}  ></Grid>
+                      className={classes.productImage} style={{ backgroundImage: `url(http://lorempixel.com/400/200/food/${index})` }}  ></Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
                     <Grid item>
                       <FormControl variant="outlined" className={classes.selectBox}>
@@ -293,7 +293,7 @@ const CategoryAndProduct = (props) => {
                           classes={{ root: classes.select }}
                           labelId={`product-${product.id}`}
                           id={`product-${product.id}`}
-                          defaultValue={product.data[0]}
+                          value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
                           onChange={(e) => handleChange(e, product.id)}
                           inputProps={{
                             name: `product-${product.id}`,
@@ -307,6 +307,18 @@ const CategoryAndProduct = (props) => {
                           }
                         </Select>
                       </FormControl>
+                      {/* <pre>{JSON.stringify(state && state[`product-${product.id}`] ? state[`product-${product.id}`] : product.data[0], null, 2)}</pre> */}
+                      {/* <TextField
+                        name={`product-${product.id}`}
+                        value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
+                        onChange={(e) => handleChange(e, product.id)}
+                        id="select" label="" select>
+                        {
+                          product.data.map((option, index) =>
+                            <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
+                          )
+                        }
+                      </TextField> */}
                     </Grid>
                     <Grid item>
                       <Grid container alignItems={"center"} justify={"space-between"}>
@@ -325,65 +337,64 @@ const CategoryAndProduct = (props) => {
               )
             }
           </Grid>
-        </Grid>
+        </Grid >
 
         {/* <Grid item><NavLink to={`/store/${props.match.params.storeName}/departments/${category.category_id}`} className={classes.viewmore} >view more</NavLink></Grid> */}
-      </Grid>
+      </Grid >
       {/* <CarouselSlider style={{ width: "100%" }} className="slider" {...settings}> */}
-      <Grid container spacing={1}>
-
-      </Grid>
       {/* </CarouselSlider> */}
 
-      {modalData && <Dialog
-        maxWidth={"lg"}
-        open={open}
-        fullWidth
-        // TransitionComponent={Fade}
-        onClose={handleClose}
-        scroll={"paper"}
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-      >
-        <DialogTitle id="scroll-dialog-title" >
-          <Grid container justify={"space-between"} alignItems={"center"}>
-            <Grid item className={classes.productTitle}>{modalData.name}</Grid>
-            <Grid item> <IconButton onClick={handleClose} ><CloseRounded /></IconButton></Grid>
+      {
+        modalData && <Dialog
+          maxWidth={"lg"}
+          open={open}
+          fullWidth
+          // TransitionComponent={Fade}
+          onClose={handleClose}
+          scroll={"paper"}
+          aria-labelledby="scroll-dialog-title"
+          aria-describedby="scroll-dialog-description"
+        >
+          <DialogTitle id="scroll-dialog-title" >
+            <Grid container justify={"space-between"} alignItems={"center"}>
+              <Grid item className={classes.productTitle}>{modalData.name}</Grid>
+              <Grid item> <IconButton onClick={handleClose} ><CloseRounded /></IconButton></Grid>
 
-          </Grid>
-        </DialogTitle>
-        <DialogContent dividers>
-          <Grid container>
-            <Grid item xs={12} sm={4}>
-              <Grid container justify={"center"}>
-                <Grid item>
-                  <img src={`https://thehoop.in/admin/${modalData.image}`} style={{ width: "250px", height: "250px" }} alt="aaa" />
+            </Grid>
+          </DialogTitle>
+          <DialogContent dividers>
+            <Grid container>
+              <Grid item xs={12} sm={4}>
+                <Grid container justify={"center"}>
+                  <Grid item>
+                    <img src={`https://thehoop.in/admin/${modalData.image}`} style={{ width: "250px", height: "250px" }} alt="aaa" />
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={12} sm={8}>
+                <Grid container direction={"column"} spacing={1}>
+                  <Grid item><Typography variant={"h5"}>{modalData.name}</Typography></Grid>
+                  <Grid item><Typography variant={"h6"}>MRP : {modalData.data[0].rate}/-</Typography></Grid>
+                  <Grid item><Button variant={"contained"} color={"primary"} onClick={() => { addToCart(modalData, store); handleClose() }} >Add to cart</Button></Grid>
+                  <Grid item>
+                    <Card>
+                      <CardContent>
+                        <Typography variant={"h6"}>{"Quick Overview"}</Typography>
+                        <p>Bitter Gourd is a vegetable grown in tropical climate. It is the source of several nutrients known to be the healthiest vegetable in the food kingdom. It can be taken inside the body in form of juice, vegetable or pickle. It helps in regulating blood sugar levels and lowers bad cholesterol levels, inhibits cancer fighting properties. People also use for this vegetable for glowing skin and shiny hair, helps in weight loss, intestinal problems and so on. It is low in calories, high in fiber content and includes twice the calcium of spinach. It is known to be liver friendly and rich in antioxidants, Vitamin A and C.</p><p><br />
+                          <font><b>Features:</b></font>
+                          <font> Dark green coloured, narrow in shape with pointed ends and surface covered with jagged, triangular teeth and ridges.</font></p><p><font><br />
+                          </font><font><b>Usage:</b> </font><font>Wash Bitter Gourd in Water, make the surface smooth with the help of a peeler. Slice the bitter gourd and remove big seeds before cooking.<br />
+                            <br />
+                          </font></p>
+                      </CardContent>
+                    </Card>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={8}>
-              <Grid container direction={"column"} spacing={1}>
-                <Grid item><Typography variant={"h5"}>{modalData.name}</Typography></Grid>
-                <Grid item><Typography variant={"h6"}>MRP : {modalData.data[0].rate}/-</Typography></Grid>
-                <Grid item><Button variant={"contained"} color={"primary"} onClick={() => { addToCart(modalData, store); handleClose() }} >Add to cart</Button></Grid>
-                <Grid item>
-                  <Card>
-                    <CardContent>
-                      <Typography variant={"h6"}>{"Quick Overview"}</Typography>
-                      <p>Bitter Gourd is a vegetable grown in tropical climate. It is the source of several nutrients known to be the healthiest vegetable in the food kingdom. It can be taken inside the body in form of juice, vegetable or pickle. It helps in regulating blood sugar levels and lowers bad cholesterol levels, inhibits cancer fighting properties. People also use for this vegetable for glowing skin and shiny hair, helps in weight loss, intestinal problems and so on. It is low in calories, high in fiber content and includes twice the calcium of spinach. It is known to be liver friendly and rich in antioxidants, Vitamin A and C.</p><p><br />
-                        <font><b>Features:</b></font>
-                        <font> Dark green coloured, narrow in shape with pointed ends and surface covered with jagged, triangular teeth and ridges.</font></p><p><font><br />
-                        </font><font><b>Usage:</b> </font><font>Wash Bitter Gourd in Water, make the surface smooth with the help of a peeler. Slice the bitter gourd and remove big seeds before cooking.<br />
-                          <br />
-                        </font></p>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </DialogContent>
-      </Dialog>}
+          </DialogContent>
+        </Dialog>
+      }
     </>
   )
 }

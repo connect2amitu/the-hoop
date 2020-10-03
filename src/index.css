@@ -43,3 +43,7 @@ code {
 .slick-slide {
   outline: none;
 }
+
+.react-confirm-alert-overlay {
+  z-index: 1304 !important;
+}

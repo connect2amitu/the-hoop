@@ -129,7 +129,6 @@ const useStyles = makeStyles((theme) => ({
   shopCart: {
     display: "block",
     padding: 0,
-    width: "32%",
     borderRadius: 12,
     position: "relative",
     backgroundColor: "#f1f1f1",
@@ -139,17 +138,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     textAlign: "start",
     // height: 200,
-    boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 8px",
-    [theme.breakpoints.up('md')]: {
-      width: "32%"
-    },
-    [theme.breakpoints.down('sm')]: {
-      width: "45%",
-      margin: 10,
-    },
-    [theme.breakpoints.down('xs')]: {
-      width: "100%"
-    },
+    // boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 8px",
+    // [theme.breakpoints.up('md')]: {
+    //   width: "32%"
+    // },
+    // [theme.breakpoints.down('sm')]: {
+    //   width: "45%",
+    //   margin: 10,
+    // },
+    // [theme.breakpoints.down('xs')]: {
+    //   width: "100%"
+    // },
     "&:hover": {
       cursor: "pointer"
     },
@@ -228,23 +227,25 @@ const Home = () => {
         <Grid item>
           <Grid container direction={"column"}>
             <Grid item xs={12}>
-              <Grid container justify={"space-between"}>
+              <Grid container justify={"flex-start"} spacing={1}>
                 {
                   stores && stores.map((o, index) =>
-                    <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
-                      < div >
-                        <div className={classes.bannerWrapper}>
-                          <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
-                        </div>
-                        <div className={classes.storeProfile}>
-                          <img src={o.image} className={classes.storeImage} alt="testing" />
-                          <div className={classes.storeDetail} >
-                            <h3 className={classes.storeName} >{o.name}</h3>
-                            <p className={classes.description} >{`description of the store ${o.name} and location of the store`}</p>
+                    <Grid item xs={12} sm={4}>
+                      <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
+                        < div >
+                          <div className={classes.bannerWrapper}>
+                            <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
+                          </div>
+                          <div className={classes.storeProfile}>
+                            <img src={o.image} className={classes.storeImage} alt="testing" />
+                            <div className={classes.storeDetail} >
+                              <h3 className={classes.storeName} >{o.name}</h3>
+                              <p className={classes.description} >{`description of the store ${o.name} and location of the store`}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Button>
+                      </Button>
+                    </Grid>
                   )
                 }
               </Grid>

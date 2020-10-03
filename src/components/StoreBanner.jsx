@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from '../assets/scss/StoreBanner.module.scss'
-import { Grid, Avatar } from '@material-ui/core';
+import { Grid, Avatar, TextField } from '@material-ui/core';
 
 export default function StoreBanner(props) {
   const { storeName = "No Name", storeInfo = "no info for now", storeLogo = "" } = props
@@ -12,7 +12,7 @@ export default function StoreBanner(props) {
         <div className={classes.banner} style={{ backgroundImage: `url(${require('../assets/images/storeBanner.png')})` }} />
         <Grid container className={classes.innerWrapper} direction={"column"} justify={"center"} alignItems={"center"}>
           <Grid item>
-            <Avatar className={classes.logo} src={storeLogo} />
+            <div className={classes.logo} style={{ backgroundImage: `url(${storeLogo})` }} />
           </Grid>
           <Grid item className={classes.storefront}>
             <h1 >{storeName}</h1>

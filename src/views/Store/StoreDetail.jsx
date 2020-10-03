@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { styled, Container, Button, Grid, makeStyles, Avatar, Typography } from '@material-ui/core';
+import { styled, Container, Button, Grid, makeStyles, Avatar, Typography, CircularProgress } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import CategoryAndProduct from './CategoryAndProduct';
 import { useAppState } from '../../context';
@@ -11,7 +11,7 @@ const MyContainer = styled(Container)({
   padding: 15
 });
 
-
+//#region 
 // const categorySettings = {
 //   dots: true,
 //   infinite: true,
@@ -83,26 +83,36 @@ const MyContainer = styled(Container)({
 //   ]
 // };
 
-
+//#endregion
 
 
 const useStyles = makeStyles((theme) => ({
   rightSideAds: { width: "100%", height: "100%", marginTop: 10, backgroundColor: "#F2F2F2" },
+  categoryWrap: { overflow: "scroll hidden", flexWrap: "nowrap" },
   categoryItem: {
     height: "100px",
     width: "100px",
     borderRadius: 10,
     outline: "none",
-    margin: "0 auto"
+    margin: "0 auto",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
   },
   categorySlider: { marginTop: 15, padding: "0 20px" },
   tCenter: { textAlign: "center" },
+  loader: {
+    position: "absolute",
+    left: "45%",
+    top: "42%",
+  },
 }));
 
 
 const Store = (props) => {
-  const { store, getStoreBySlug } = useAppState("store");
+  const { store, getStoreBySlug, isLoading, departments, getStoreDepartment } = useAppState("store");
   const classes = useStyles();
+  console.log('departments =>', departments)
 
   const settings = {
     dots: true,
@@ -113,27 +123,25 @@ const Store = (props) => {
     slidesToScroll: 1
   };
   useEffect(() => {
-    if (!props.match.params.storeName) {
-      props.history.push("/store/thehoop");
-    } else {
-      getStoreBySlug(props.match.params.storeName)
-    }
-  }, [props.match.params.storeName, props.history])
+    getStoreBySlug(props.match.params.storeName)
+    getStoreDepartment()
+  }, [props.match.params.storeName])
+
   return (
     <React.Fragment>
-      {store && <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
-      <MyContainer maxWidth={"lg"} fixed={true}>
-        <Grid container wrap={"nowrap"} style={{ overflow: "scroll hidden" }}>
+      {!isLoading && store && <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
+      {!isLoading ? <MyContainer maxWidth={"lg"} fixed={true}>
+        <Grid container>
           <Grid item={12}>
             <Typography variant={"h4"}>Departments</Typography>
           </Grid>
         </Grid>
-        <Grid container wrap={"nowrap"} style={{ overflow: "scroll hidden" }}>
+        <Grid container className={classes.categoryWrap}>
           {
-            [...new Array(15)].map(o =>
+            [...departments, ...departments].map((o, index) =>
               <Grid item style={{ padding: "15px 5px" }} >
-                <Button style={{ backgroundImage: `url(${require("../../assets/images/storeBanner.png")})` }} className={classes.categoryItem} alt="sdfgdg" />
-                <Typography variant={"body1"} className={classes.tCenter} >Snack</Typography>
+                <Button style={{ backgroundImage: `url(http://lorempixel.com/400/200/cats/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
+                <Typography variant={"subtitle2"} className={classes.tCenter} >{o.category_name}</Typography>
               </Grid>
             )
           }
@@ -152,8 +160,8 @@ const Store = (props) => {
             </Grid>
           </>
         }
-      </MyContainer>
-
+      </MyContainer> : <CircularProgress className={classes.loader} />
+      }
     </React.Fragment >
   )
 }
