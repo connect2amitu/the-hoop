@@ -512,8 +512,6 @@ const CategoryAndProduct = (props) => {
   }
 
   const confirmDelete = (sub_prod_id) => {
-    console.log('sub_prod_id =>', sub_prod_id)
-
     confirmAlert({
       title: 'Remove Item',
       message: 'Are you sure you want to remove this item from cart?',
@@ -559,11 +557,10 @@ const CategoryAndProduct = (props) => {
                           labelId={`product-${product.id}`}
                           id={`product-${product.id}`}
                           defaultValue={product.data[0]}
-                          // value={state && state[`product-${product.id}`] && state[`product-${product.id}`]}
                           onChange={(e) => handleChange(e, product.id)}
                           inputProps={{
                             name: `product-${product.id}`,
-                            id: `product-${product.id}`,
+                            // id: `product-${product.id}`,
                           }}
                         >
                           {
