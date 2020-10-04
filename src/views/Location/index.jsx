@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
-  const { locations, getLocations, setLocation } = useAppState("global");
+  const { locations, getLocations, setLocation } = useAppState("useGlobal");
 
 
   const [cookies, setCookie] = useCookies();

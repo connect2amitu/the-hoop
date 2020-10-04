@@ -4,10 +4,10 @@ import useCart from './useCart'
 import useAuth from './useAuth'
 
 const containers = {
-  global: useGlobal,
-  store: useStore,
-  cart: useCart,
-  userAuth: useAuth,
+  useGlobal,
+  useStore,
+  useCart,
+  useAuth,
 };
 
 export default containers

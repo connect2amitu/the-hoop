@@ -19,8 +19,8 @@
 
 // export default function Cart(props) {
 //   const classes = useStyles();
-//   const { toggleCart, openCart } = useAppState("global");
-//   const { cart, removeCart } = useAppState("cart");
+//   const { toggleCart, openCart } = useAppState("useGlobal");
+//   const { cart, removeCart } = useAppState("useCart");
 
 //   return (
 //     <SwipeableDrawer
@@ -177,10 +177,10 @@ const useStyles = makeStyles((theme) => ({
 
 function Cart(props) {
   const classes = useStyles();
-  const { toggleCart, openCart } = useAppState("global");
+  const { toggleCart, openCart } = useAppState("useGlobal");
   const [cookies, setCookie] = useCookies();
 
-  const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
+  const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("useCart");
 
   const confirmDelete = (sub_prod_id) => {
     confirmAlert({

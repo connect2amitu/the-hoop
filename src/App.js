@@ -5,6 +5,7 @@ import { darkTheme, theme } from './theme';
 import { AppStateProvider } from "./context";
 import containers from './state';
 import { CookiesProvider } from 'react-cookie';
+import PrivateRoute from './components/PrivateRoute';
 
 
 const Layout = React.lazy(() => import('./components/Layout'))
@@ -41,7 +42,7 @@ function App({ isDark }) {
                   <Route exact path="/checkout" component={Checkout} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
-                  <Route exact path="/account" component={Account} />
+                  <PrivateRoute exact path="/account" component={Account} />
                   <Route exact path="*" component={Page404} />
                 </Switch>
               </Layout>

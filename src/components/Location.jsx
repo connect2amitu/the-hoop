@@ -8,7 +8,7 @@ import { useAppState } from '../context';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export default function FormDialog() {
-  const { locations, location, getLocations, toggleLocation, locationBox, setLocation } = useAppState("global");
+  const { locations, location, getLocations, toggleLocation, locationBox, setLocation } = useAppState("useGlobal");
 
   useEffect(() => {
     getLocations()

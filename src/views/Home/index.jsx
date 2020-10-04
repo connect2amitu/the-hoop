@@ -193,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Home = () => {
-  const { stores } = useAppState("store");
+  const { stores } = useAppState("useStore");
   console.log('store =>', stores)
 
 
@@ -230,7 +230,7 @@ const Home = () => {
               <Grid container justify={"flex-start"} spacing={1}>
                 {
                   stores && stores.map((o, index) =>
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} sm={6} md={3} key={index}>
                       <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
                         < div >
                           <div className={classes.bannerWrapper}>

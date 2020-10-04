@@ -13,7 +13,7 @@ const MyContainer = styled(Container)({
 
 const StoreDepartments = (props) => {
 
-  const { getStoreDepartment, departments, store } = useAppState("store");
+  const { getStoreDepartment, departments, store } = useAppState("useStore");
 
   useEffect(() => {
     getStoreDepartment(props.match.params.storeName)

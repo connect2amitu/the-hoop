@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Store = (props) => {
-  const { store, getStoreBySlug, isLoading, departments, getStoreDepartment } = useAppState("store");
+  const { store, getStoreBySlug, isLoading, departments, getStoreDepartment } = useAppState("useStore");
   const classes = useStyles();
   console.log('departments =>', departments)
 

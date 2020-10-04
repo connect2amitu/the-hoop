@@ -121,10 +121,10 @@ const Header = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
-  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("global");
-  const { isLoggedIn } = useAppState("userAuth");
-  const { cart } = useAppState("cart");
-  const { store } = useAppState("store");
+  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("useGlobal");
+  const { isLoggedIn } = useAppState("useAuth");
+  const { cart } = useAppState("useCart");
+  const { store } = useAppState("useStore");
   console.log('store =>', store);
   const [value, setValue] = React.useState(-1);
 
@@ -189,10 +189,10 @@ const Header = (props) => {
                      My Cart</Button>
                 </Badge>
               </Grid>
-              {!isLoggedIn && <Grid item>
+              {!cookies.token && <Grid item>
                 <Button component={NavLink} to="/login" color="secondary" variant={"contained"}> Login</Button>
               </Grid>}
-              {isLoggedIn && <Grid item>
+              {cookies.token && <Grid item>
                 <Button component={NavLink} to="/account" color="secondary" variant={"contained"}> Account</Button>
               </Grid>}
             </Grid>
@@ -233,11 +233,11 @@ const Header = (props) => {
                   <ListItemText primary={`My Cart`} />
 
                 </ListItem>
-                {!isLoggedIn && <ListItem button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" >
+                {!cookies.token && <ListItem button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" >
                   <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
                   <ListItemText primary={"Login"} />
                 </ListItem>}
-                {isLoggedIn && <ListItem button onClick={() => handleDrawerToggle()}  >
+                {cookies.token && <ListItem button component={NavLink} to="/account" onClick={() => handleDrawerToggle()}  >
                   <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
                   <ListItemText primary={"Account"} />
                 </ListItem>}

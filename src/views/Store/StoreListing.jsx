@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
 
 const StoreListing = (props) => {
   const classes = useStyles();
-  const { openStore, toggleStore } = useAppState("global");
-  const { stores } = useAppState("store");
+  const { openStore, toggleStore } = useAppState("useGlobal");
+  const { stores } = useAppState("useStore");
   return (
     <SwipeableDrawer
       disableSwipeToOpen="false"

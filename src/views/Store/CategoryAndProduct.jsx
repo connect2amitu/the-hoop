@@ -96,8 +96,8 @@ const CategoryAndProduct = (props) => {
   const [modalData, setModalData] = useState(null)
   const [open, setOpen] = useState(false)
   const classes = useStyles();
-  const { addToCart, cart_items, updateProductQty } = useAppState("cart");
-  const { store } = useAppState("store");
+  const { addToCart, cart_items, updateProductQty } = useAppState("useCart");
+  const { store } = useAppState("useStore");
 
 
   const [state, setState] = React.useState(null);

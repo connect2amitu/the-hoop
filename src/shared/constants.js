@@ -15,3 +15,6 @@ var date = new Date();
 date.setDate(date.getDate() + 30);
 
 export const COOKIE_OPTION = { path: '/', expires: date }
+
+export const SECRET_KEY = "thehoop"
+

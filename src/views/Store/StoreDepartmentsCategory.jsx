@@ -11,7 +11,7 @@ const MyContainer = styled(Container)({
 });
 
 export default function StoreDepartmentsCategory(props) {
-  const { store, getStoreBySlug } = useAppState("store");
+  const { store, getStoreBySlug } = useAppState("useStore");
   useEffect(() => {
     if (!props.match.params.storeName) {
       props.history.push("/store/thehoop");

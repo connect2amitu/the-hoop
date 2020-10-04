@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container, styled, Grid, Card } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
@@ -6,15 +6,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
-import { FilterNoneRounded, EditLocationRounded, LiveHelpRounded, SettingsApplicationsRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded } from '@material-ui/icons';
+import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded } from '@material-ui/icons';
 import { useAppState } from '../../context';
+import { useCookies } from 'react-cookie';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,12 +28,20 @@ const MyContainer = styled(Container)({
 
 export default function Account(props) {
   const classes = useStyles();
-  const { logout } = useAppState("userAuth");
+  const { logout } = useAppState("useAuth");
+  const [cookies, setCookie] = useCookies();
+
 
   const logoutAccount = () => {
     logout();
     props.history.push('/login');
   }
+
+  useEffect(() => {
+    if (!cookies.isVerified) {
+      props.history.push("/");
+    }
+  }, [])
 
   return (
     <MyContainer>

@@ -13,7 +13,7 @@ const MyContainer = styled(Container)({
 
 
 const Store = (props) => {
-  const { store, getStoreBySlug } = useAppState("store");
+  const { store, getStoreBySlug } = useAppState("useStore");
   const settings = {
     dots: true,
     infinite: true,
