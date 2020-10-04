@@ -99,7 +99,7 @@ function Login(props) {
   const [generatedOTP, setGeneratedOTP] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
   const [timerId, setTimerId] = useState(null)
-  const { setLoginUser, saveOTP, user, phone, otp } = useAppState("useAuth");
+  const { setLoginUser, saveOTP, user, phone, otp, verifyToken } = useAppState("useAuth");
   const [cookies, setCookie] = useCookies();
 
   var timeLeft = 60;
@@ -122,7 +122,7 @@ function Login(props) {
   // }, [])
 
   useEffect(() => {
-    if (decodToken(cookies.token)) {
+    if (verifyToken()) {
       props.history.push("/");
     }
   }, [])

@@ -4,27 +4,19 @@ import { useAppState } from '../context';
 import jwt from "jsonwebtoken";
 
 function PrivateRoute(props) {
-  const { isLoggedIn, logout } = useAppState('useAuth')
+  const { logout, verifyToken } = useAppState('useAuth')
   const { component: Component, ...rest } = props;
+  console.log('verifyToken() =>', verifyToken())
+
   useEffect(() => {
-    if (localStorage.token) {
-      try {
-        jwt.verify(localStorage.token, 'secret', function (err, decoded) {
-          if (err) {
-            logout()
-          }
-        });
-      } catch (error) {
-        logout()
-      }
-    } else {
+    if (!verifyToken()) {
       logout()
     }
   })
 
   return (
     <Route {...rest} render={(props) => (
-      isLoggedIn
+      verifyToken()
         ? <Component {...rest}{...props} />
         : <Redirect to="/login" />
     )} />

@@ -202,6 +202,7 @@ function Cart(props) {
 
   return (
     <SwipeableDrawer
+      disableSwipeToOpen={true}
       anchor={"right"}
       open={openCart}
       onClose={() => toggleCart()}

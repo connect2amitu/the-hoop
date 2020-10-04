@@ -1,6 +1,7 @@
 import { useReducer, useEffect } from "react";
 import { useCookies } from 'react-cookie';
 import { COOKIE_OPTION } from "../shared/constants";
+import { SECRET_KEY } from '../shared/constants'
 import jwt from "jsonwebtoken";
 
 function reducer(state, action) {
@@ -30,11 +31,11 @@ const useAuth = () => {
   }, [])
 
 
-  const setLoginUser = () => {
-    setCookie('isVerified', true, COOKIE_OPTION);
-    setCookie('otp', "", COOKIE_OPTION);
-    var token = jwt.sign({ isVerified: true, phoneNumber: state.phone }, 'secret', { expiresIn: "100d" });
-    localStorage.setItem('token', token)
+  const setLoginUser = (phoneNumber) => {
+    console.log('amittttttttttttttt =>', state);
+
+    var token = jwt.sign({ isVerified: true, phoneNumber }, SECRET_KEY, { expiresIn: "100d" });
+    setCookie('otp', "", token);
     setCookie('token', token, COOKIE_OPTION);
     setState({ ...state, token })
   }
@@ -42,16 +43,29 @@ const useAuth = () => {
   const saveOTP = (otp, phone) => {
     setCookie('phone', phone, COOKIE_OPTION);
     setCookie('otp', otp, COOKIE_OPTION);
-    setState({ ...state, otp })
+    setState({ otp, phone })
+  }
+
+  const verifyToken = () => {
+    try {
+      var decoded = jwt.verify(state.token, SECRET_KEY);
+      console.log('decoded =>', decoded);
+      return true;
+    } catch (error) {
+      console.log('error =>', error);
+
+      return false
+    }
   }
 
   const logout = () => {
-    removeCookie("token")
+    setCookie('token', "");
     localStorage.clear()
     setState({ ...initialArgs })
   }
   return {
     setLoginUser,
+    verifyToken,
     saveOTP,
     logout,
     ...state,

@@ -29,19 +29,11 @@ const MyContainer = styled(Container)({
 export default function Account(props) {
   const classes = useStyles();
   const { logout } = useAppState("useAuth");
-  const [cookies, setCookie] = useCookies();
-
 
   const logoutAccount = () => {
     logout();
-    props.history.push('/login');
+    props.history.push('/');
   }
-
-  useEffect(() => {
-    if (!cookies.isVerified) {
-      props.history.push("/");
-    }
-  }, [])
 
   return (
     <MyContainer>

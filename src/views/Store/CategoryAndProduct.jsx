@@ -267,9 +267,6 @@ const CategoryAndProduct = (props) => {
 
 
   const { category } = props;
-  console.log('category.products[0] =>', category.products[0]);
-  console.log('category =>', category);
-
   return (
     <>
       <Grid container className={classes.categoryHeading} justify={"space-between"}>
