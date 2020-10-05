@@ -29,8 +29,21 @@ const useStore = () => {
     setState({ departments: DUMMY_DEPARTMENTS })
   }
 
+  const getStoreCategory = (slug, categoryId = "") => {
+    var data = STORES.find(data => data.slug === slug) || null;
+    console.log('data =>', data);
+
+    if (data && categoryId) {
+      data = data.categories.find(data => data.category_id === categoryId)
+    }
+    console.log('getStoreCategory data =>', data);
+
+    setState({ departments: DUMMY_DEPARTMENTS })
+  }
+
   return {
     getStoreBySlug,
+    getStoreCategory,
     getStoreDepartment,
     ...state,
   };

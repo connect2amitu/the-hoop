@@ -8,7 +8,7 @@ function reducer(state, action) {
 }
 
 const initialArgs = {
-  openCart: false,
+  openCart: true,
   openStore: false,
   isDarkTheme: true,
   isLoading: false,

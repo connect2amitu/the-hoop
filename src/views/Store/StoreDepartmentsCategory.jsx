@@ -11,14 +11,15 @@ const MyContainer = styled(Container)({
 });
 
 export default function StoreDepartmentsCategory(props) {
-  const { store, getStoreBySlug } = useAppState("useStore");
+  const { store, getStoreCategory } = useAppState("useStore");
+
   useEffect(() => {
-    if (!props.match.params.storeName) {
-      props.history.push("/store/thehoop");
-    } else {
-      getStoreBySlug(props.match.params.storeName)
-    }
-  }, [props.match.params.storeName, props.history])
+    getStoreCategory(props.match.params.storeName, props.match.params.categoryId)
+  }, [props.match.params.storeName])
+
+
+  console.log('123store =>', store)
+
   return (
     <MyContainer>
       {store && store.categories.map((category, index) =>

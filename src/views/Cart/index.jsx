@@ -119,8 +119,8 @@
 //     </SwipeableDrawer >
 //   )
 // }
-import React from 'react'
-import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField, AppBar, Toolbar } from '@material-ui/core'
+import React, { useEffect, useState } from 'react'
+import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField, AppBar, Toolbar, Avatar } from '@material-ui/core'
 import { AddRounded, ClearRounded, CloseRounded, DeleteRounded, RemoveRounded } from '@material-ui/icons';
 import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
@@ -178,10 +178,15 @@ const useStyles = makeStyles((theme) => ({
 function Cart(props) {
   const classes = useStyles();
   const { toggleCart, openCart } = useAppState("useGlobal");
+  const { getCarts } = useAppState("useCart");
   const [cookies, setCookie] = useCookies();
-
+  // const [carts, setCarts] = useState([])
   const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("useCart");
+  const carts = getCarts()
 
+  useEffect(() => {
+    // setCarts(getCarts())
+  })
   const confirmDelete = (sub_prod_id) => {
     confirmAlert({
       title: 'Remove Item',
@@ -199,6 +204,7 @@ function Cart(props) {
     })
   }
 
+  console.log('aaaacarts =>', carts)
 
   return (
     <SwipeableDrawer
@@ -224,9 +230,107 @@ function Cart(props) {
               <IconButton color={"secondary"} variant={"contained"} onClick={() => toggleCart()} ><CloseRounded /></IconButton>
             </Grid>
           </Grid>
-          <Divider />
         </ListSubheader>
         <Grid container direction={"column"} spacing={1} style={{ marginBottom: "60px" }}>
+          {
+            carts.map((cart, index) =>
+              <>
+                <Grid item style={{ padding: "10px 10px 0 10px", }}>
+                  <Grid container justify={"space-between"}>
+                    <Grid item xs={2}>
+                      <Avatar src={cart.store.image} />
+                    </Grid>
+                    <Grid item xs={10}>
+                      <Grid container justify={"space-between"}>
+                        <Grid item>
+                          <Grid container direction={"column"}>
+                            <Grid item>
+                              <Typography variant={"h5"}>{cart.store.name}</Typography>
+                            </Grid>
+                            {/* <Grid item>
+                              {cart.store.name}
+                            </Grid> */}
+                          </Grid>
+                        </Grid>
+                        <Grid item>
+                          <Typography variant={"h6"}>&#8377; {cart.total}</Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                <Divider />
+                {cart.items.map((cart, index) =>
+                  <Grid item key={index}>
+                    <Card style={{ padding: "10px", }}>
+                      <Grid container justify={"space-between"}>
+                        <Grid item>
+                          <Grid container spacing={1}>
+                            <Grid item>
+                              <Grid container alignItems={"center"}>
+                                <Grid item>
+                                  <img src={`${cart.image}`} style={{ borderRadius: 5, width: 50, height: 50 }} variant={"square"} alt="" />
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                            <Grid item>
+                              <Grid container direction={"column"}>
+                                <Grid item>
+                                  <Typography variant={"caption"}>{cart.product_name}</Typography>
+                                </Grid>
+                                <Grid item>
+                                  <Grid container direction={"column"}>
+                                    <Grid item>
+                                      <Typography variant={"caption"}>  Available in - {cart.unitQty} {cart.unit} </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                      <Typography variant={"h6"}> &#8377;{cart.rate} x  {cart.qty} = &#8377;{cart.rate * cart.qty}  </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                      <>
+                                        {cart.qty > 1 ? <RemoveRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(cart.sub_prod_id, -1)} /> : <DeleteRounded className={classes.qtyChangeBtn} color={"primary"} onClick={() => confirmDelete(cart.sub_prod_id)} />}
+                                        <TextField disabled InputProps={{
+                                          classes: {
+                                            disabled: classes.disabled
+                                          }
+                                        }} className={classes.qtyInput} value={cart.qty} id="outlined-search" label="" type="text" variant="outlined" />
+                                        <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(cart.sub_prod_id, 1)} />
+                                      </>
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                        <Grid item>
+                          <IconButton onClick={() => removeCart(index)
+                            // confirmAlert({
+                            //   title: 'Remove Item',
+                            //   message: 'Are you sure you want to remove this item from cart?',
+                            //   buttons: [
+                            //     {
+                            //       label: 'Yes',
+                            //       onClick: () => removeCart(index)
+                            //     },
+                            //     {
+                            //       label: 'No',
+                            //       onClick: () => console.info("no")
+                            //     }
+                            //   ]
+                            // })
+                          }><ClearRounded color={"primary"} /></IconButton>
+                        </Grid>
+
+                      </Grid>
+                    </Card>
+                  </Grid>
+                )}
+              </>
+            )
+          }
+        </Grid>
+        {/* <Grid container direction={"column"} spacing={1} style={{ marginBottom: "60px" }}>
           {
             orderBy(cart_items, ['id'], ['asc']).map((cart, index) =>
               <Grid item key={index}>
@@ -330,49 +434,17 @@ function Cart(props) {
               </Grid>
             )
           }
-        </Grid>
+        </Grid> */}
         {grand_total > 0 ? (props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
           <AppBar position="fixed" color="primary" onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} className={classes.appBar}>
             <Toolbar>
               <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }}>
-                {/* <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
-                          <Grid item><StorefrontRounded /> </Grid>
-                          <Grid item><span>Store</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
-                          <Grid item><SearchRounded /></Grid>
-                          <Grid item><span>Search</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
-                          <Grid item><ViewModuleRounded /> </Grid>
-                          <Grid item><span>Department</span></Grid>
-                        </Grid>
-                      </Grid> */}
                 <Grid item>
                   <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
                 </Grid>
                 <Grid item>
                   <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >&#8377; {grand_total}/-</Button>
-
-                  {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
-                          <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
-                          <Grid item><span>Cart</span></Grid>
-                        </Grid> */}
                 </Grid>
-                {/* {isLoggedIn &&
-                        <Grid item>
-                          <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
-                            <Grid item ><AccountBoxRounded /> </Grid>
-                            <Grid item><span>Profile</span></Grid>
-                          </Grid>
-                        </Grid>
-                      } */}
-
               </Grid>
             </Toolbar>
           </AppBar>

@@ -36,6 +36,7 @@ export const DUMMY_DEPARTMENTS = [
   {
     category_id: 3,
     category_name: "Office & Electronics",
+    slug: "office-electronics",
     products_categories: [
       {
         id: 1,
@@ -139,6 +140,7 @@ export const STORES = [
       {
         category_id: 1,
         name: "Offers",
+        slug: "offers",
         products: [
           {
             id: 1,
@@ -241,6 +243,7 @@ export const STORES = [
       {
         category_id: 2,
         name: "Vegitables",
+        slug: "Vegitables",
         products: [
           {
             id: 1,
@@ -343,6 +346,7 @@ export const STORES = [
       {
         category_id: 3,
         name: "Pets",
+        slug: "Pets",
         products: [
           {
             id: 1,
@@ -445,6 +449,7 @@ export const STORES = [
       {
         category_id: 4,
         name: "Grocceries",
+        slug: "Grocceries",
         products: [
           {
             id: 1,
@@ -547,6 +552,7 @@ export const STORES = [
       {
         category_id: 5,
         name: "Bath",
+        slug: "Bath",
         products: [
           {
             id: 1,
@@ -989,6 +995,7 @@ export const STORES = [
       {
         category_id: 1,
         name: "Offers",
+        slug: "offers",
         products: [
           {
             id: 8,
@@ -1091,6 +1098,7 @@ export const STORES = [
       {
         category_id: 2,
         name: "Vegitables",
+        slug: "vegitables",
         products: [
           {
             id: 9,
@@ -1193,6 +1201,7 @@ export const STORES = [
       {
         category_id: 3,
         name: "Pets",
+        slug: "pets",
         products: [
           {
             id: 10,
@@ -1295,6 +1304,7 @@ export const STORES = [
       {
         category_id: 4,
         name: "Grocceries",
+        slug: "groceries",
         products: [
           {
             id: 11,
@@ -1397,6 +1407,7 @@ export const STORES = [
       {
         category_id: 5,
         name: "Bath",
+        slug: "bath",
         products: [
           {
             id: 12,

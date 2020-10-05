@@ -12,7 +12,8 @@ const initialArgs = {
   otp: "",
   phone: "",
   user: "",
-  token: ""
+  token: "",
+  isLoggedIn: false
 };
 
 const useAuth = () => {
@@ -21,11 +22,15 @@ const useAuth = () => {
 
 
   useEffect(() => {
+    console.log('use auth verifyToken() =>', verifyToken());
+    console.log('state =>', state);
+
     setState({
       ...state,
       otp: cookies.otp ? cookies.otp : 0,
       phone: cookies.phone || "",
       user: cookies.user || false,
+      isLoggedIn: verifyToken() || false,
       token: cookies.token || "false"
     })
   }, [])
@@ -35,40 +40,40 @@ const useAuth = () => {
     console.log('amittttttttttttttt =>', state);
 
     var token = jwt.sign({ isVerified: true, phoneNumber }, SECRET_KEY, { expiresIn: "100d" });
-    setCookie('otp', "", token);
-    setCookie('token', token, COOKIE_OPTION);
+    removeCookie("otp");
+    setCookie("token", token, COOKIE_OPTION);
     setState({ ...state, token })
   }
 
   const saveOTP = (otp, phone) => {
     setCookie('phone', phone, COOKIE_OPTION);
     setCookie('otp', otp, COOKIE_OPTION);
-    setState({ otp, phone })
+    setState({ ...state, otp, phone })
   }
 
   const verifyToken = () => {
     try {
-      var decoded = jwt.verify(state.token, SECRET_KEY);
-      console.log('decoded =>', decoded);
+      var decoded = jwt.verify(cookies.token, SECRET_KEY);
+      console.log('123decoded =>', decoded);
       return true;
     } catch (error) {
       console.log('error =>', error);
-
       return false
     }
   }
 
   const logout = () => {
-    setCookie('token', "");
+    removeCookie("token")
+    removeCookie("otp")
     localStorage.clear()
     setState({ ...initialArgs })
   }
   return {
+    ...state,
     setLoginUser,
     verifyToken,
     saveOTP,
     logout,
-    ...state,
   };
 };
 

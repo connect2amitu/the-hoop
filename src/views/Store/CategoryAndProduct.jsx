@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Grid, Dialog, Button, DialogTitle, DialogContent, Container, IconButton, Typography, Card, CardContent, makeStyles, Select, FormControl, MenuItem, TextField } from '@material-ui/core';
 import { CloseRounded, AddRounded, RemoveRounded, DeleteRounded } from '@material-ui/icons';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
 import { findIndex, find } from 'lodash';
 import { confirmAlert } from 'react-confirm-alert'; // Import
@@ -28,6 +28,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up(1000)]: {
       width: "200px !important"
     }
+  },
+  productImageWrapper: {
+    height: 120,
+    width: "100%",
+    textAlign: "center"
   },
   productImage: {
     height: 120,
@@ -96,8 +101,9 @@ const CategoryAndProduct = (props) => {
   const [modalData, setModalData] = useState(null)
   const [open, setOpen] = useState(false)
   const classes = useStyles();
-  const { addToCart, cart_items, updateProductQty } = useAppState("useCart");
+  const { addToCart, cart_items, grand_total, updateProductQty } = useAppState("useCart");
   const { store } = useAppState("useStore");
+  console.log('grand_total =>', grand_total)
 
 
   const [state, setState] = React.useState(null);
@@ -161,6 +167,8 @@ const CategoryAndProduct = (props) => {
   };
 
   const addToCartHandler = (product, sub_prod_id) => {
+    console.log('store =>', store)
+
     navigator.vibrate(100)
     var _product = Object.assign({}, product);
     if (state && state[`product-${_product.id}`]) {
@@ -174,7 +182,7 @@ const CategoryAndProduct = (props) => {
         qty: 1,
       }
 
-      addToCart(data, sub_prod_id)
+      addToCart(data, sub_prod_id, store)
     } else {
       let data = {
         ..._product,
@@ -185,7 +193,7 @@ const CategoryAndProduct = (props) => {
         qty: 1,
       }
 
-      addToCart(data, sub_prod_id)
+      addToCart(data, sub_prod_id, store)
     }
 
   }
@@ -276,11 +284,12 @@ const CategoryAndProduct = (props) => {
         <Grid item xs={12}>
           <Grid container >
             {
-              category.products.map((product, index) =>
+              category.products.slice(0, 4).map((product, index) =>
                 <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
-                    <Grid item component={Button}
-                      className={classes.productImage} style={{ backgroundImage: `url(http://lorempixel.com/400/200/food/${index})` }}  ></Grid>
+                    <Grid item className={classes.productImageWrapper} >
+                      <Button className={classes.productImage} style={{ backgroundImage: `url(http://lorempixel.com/400/200/food/${index})` }} />
+                    </Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
                     <Grid item>
                       <FormControl variant="outlined" className={classes.selectBox}>

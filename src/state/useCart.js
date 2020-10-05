@@ -124,7 +124,7 @@
 
 // export default useCart;
 import { useReducer, useEffect } from "react";
-import { findIndex } from "lodash";
+import { chain, findIndex, groupBy, mapValues, omit, reduce } from "lodash";
 import { useCookies } from "react-cookie";
 import { COOKIE_OPTION } from "../shared/constants";
 
@@ -248,8 +248,27 @@ const useCart = () => {
     })
   }
 
+  const getCarts = () => {
 
-  const addToCart = (product, sub_prod_id) => {
+    var data = mapValues(groupBy(state.cart_items, 'store_slug'),
+      clist => clist.map(cart => omit(cart, 'store_slug')))
+
+    var storeCart = [];
+    Object.keys(data).forEach((store, index) => {
+      storeCart.push({
+        store: data[store][0].store,
+        total: data[store].reduce((a, b) => a + ((b['rate'] * b['qty']) || 0), 0),
+        items: data[store]
+      })
+    });
+    console.log('storeCart =>', storeCart);
+
+    return storeCart;
+  }
+
+  const addToCart = (product, sub_prod_id, store) => {
+    console.log('store =>', store);
+
 
     //#region 
     // var retailer_list = state.cart.items;
@@ -315,6 +334,8 @@ const useCart = () => {
     //#endregion
 
     var _cart_items = Object.assign([], state.cart_items);
+    console.log('_cart_items =>', _cart_items);
+
 
     var index = findIndex(_cart_items, { sub_prod_id: sub_prod_id })
 
@@ -323,14 +344,19 @@ const useCart = () => {
       _cart_items[index] = {
         ...product,
         qty: _cart_items[index].qty + 1,
-        rate: product.rate
+        rate: product.rate,
+        store_id: store.id,
+        store_slug: store.slug,
+        store: { store_id: store.id, name: store.name, image: store.image, slug: store.slug }
       }
     } else {
-      _cart_items.push(product);
+      _cart_items.push({ ...product, store_id: store.id, store_slug: store.slug, store: { store_id: store.id, name: store.name, image: store.image, slug: store.slug } });
     }
+
     // setCookie('cart_items', _cart_items, COOKIE_OPTION);
     localStorage.setItem("cart_items", JSON.stringify(_cart_items))
-
+    // localStorage.setItem("cart_items2", JSON.stringify()
+    // console.log('_cart_items =>', _cart_items);
 
     setState({
       ...state,
@@ -341,6 +367,7 @@ const useCart = () => {
 
   return {
     addToCart,
+    getCarts,
     clearCart,
     setOrderResponse,
     updateProductQty,

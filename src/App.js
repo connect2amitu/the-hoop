@@ -38,7 +38,7 @@ function App({ isDark }) {
                   <Route exact path="/stores" component={StoreListing} />
                   <Route exact path="/store/:storeName/(storefront)?" component={StoreDetail} />
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />
-                  <Route exact path="/store/:storeName/departments/:categoryId" component={StoreDepartmentsCategory} />
+                  <Route exact path="/store/:storeName/departments/:slug/:categoryId" component={StoreDepartmentsCategory} />
                   <Route exact path="/checkout" component={Checkout} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />

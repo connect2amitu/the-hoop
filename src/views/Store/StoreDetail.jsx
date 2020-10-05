@@ -126,6 +126,8 @@ const Store = (props) => {
     getStoreBySlug(props.match.params.storeName)
     getStoreDepartment()
   }, [props.match.params.storeName])
+  console.log('store =>', store)
+
 
   return (
     <React.Fragment>
@@ -143,19 +145,34 @@ const Store = (props) => {
                 <Button style={{ backgroundImage: `url(http://lorempixel.com/400/200/cats/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
                 <Typography variant={"subtitle2"} className={classes.tCenter} >{o.category_name}</Typography>
               </Grid>
+
             )
           }
         </Grid>
         {
           store?.categories && <>
-            <Grid container spacing={2} direction={"column"} alignItems={"center"} justify={"center"}>
-              <Grid item xs={12}>
-                <CategoryAndProduct category={store.categories[0]} store={store} />
-              </Grid>
-              {store.categories.slice(1).map((category, index) =>
+            <Grid container spacing={2} direction={"column"} alignItems={"flex-start"} justify={"center"}>
+              <>
                 <Grid item xs={12}>
-                  <CategoryAndProduct key={index} category={category} store={store} />
+                  <CategoryAndProduct category={store.categories[0]} store={store} />
                 </Grid>
+                <Grid item xs={12} style={{ width: "100%", textAlign: "center" }}>
+                  <Button style={{ textAlign: "center" }} color={"primary"}
+                    component={NavLink}
+                    to={`/store/${`thehoop`}/departments/${store.categories[0].category_id}/${store.categories[0].slug}`} variant={"outlined"}>View more </Button>
+                </Grid>
+              </>
+              {store.categories.slice(1).map((category, index) =>
+                <>
+                  <Grid item xs={12}>
+                    <CategoryAndProduct key={index} category={category} store={store} />
+                  </Grid>
+                  <Grid item xs={12} style={{ width: "100%", textAlign: "center" }}>
+                    <Button style={{ textAlign: "center" }} color={"primary"}
+                      component={NavLink}
+                      to={`/store/${`thehoop`}/departments/${category.category_id}/${category.slug}`} variant={"outlined"}>View more </Button>
+                  </Grid>
+                </>
               )}
             </Grid>
           </>
