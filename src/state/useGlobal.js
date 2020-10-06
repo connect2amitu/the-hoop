@@ -8,7 +8,7 @@ function reducer(state, action) {
 }
 
 const initialArgs = {
-  openCart: true,
+  openCart: false,
   openStore: false,
   isDarkTheme: true,
   isLoading: false,
@@ -24,7 +24,12 @@ const useGlobal = (appState) => {
 
   useEffect(() => {
     setState({ ...state, location: cookies.location })
+    console.log('window.location =>', window.location);
+
   }, [])
+  useEffect(() => {
+    console.log('window.location =>', window.location);
+  })
 
   const toggleCart = () => {
     setState({ openCart: !state.openCart })

@@ -30,11 +30,6 @@ export default function Account(props) {
   const classes = useStyles();
   const { logout } = useAppState("useAuth");
 
-  const logoutAccount = () => {
-    logout();
-    props.history.push('/');
-  }
-
   return (
     <MyContainer>
       <Grid container spacing={2}>
@@ -74,7 +69,7 @@ export default function Account(props) {
               </ListItemIcon>
               <ListItemText primary="Your account settings" />
             </ListItem>
-            <ListItem button onClick={() => logoutAccount()}>
+            <ListItem button onClick={() => logout()}>
               <ListItemIcon>
                 <PowerSettingsNewRounded />
               </ListItemIcon>

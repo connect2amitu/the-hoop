@@ -999,7 +999,7 @@ export const STORES = [
         products: [
           {
             id: 8,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1007,7 +1007,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1015,7 +1015,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1023,7 +1023,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1031,7 +1031,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1039,7 +1039,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1102,7 +1102,7 @@ export const STORES = [
         products: [
           {
             id: 9,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1110,7 +1110,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1118,7 +1118,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1126,7 +1126,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1134,7 +1134,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1142,7 +1142,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1205,7 +1205,7 @@ export const STORES = [
         products: [
           {
             id: 10,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1213,7 +1213,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1221,7 +1221,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1229,7 +1229,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1237,7 +1237,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1245,7 +1245,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1308,7 +1308,7 @@ export const STORES = [
         products: [
           {
             id: 11,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1316,7 +1316,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1324,7 +1324,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1332,7 +1332,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1340,7 +1340,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1348,7 +1348,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1411,7 +1411,7 @@ export const STORES = [
         products: [
           {
             id: 12,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1419,7 +1419,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1427,7 +1427,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1435,7 +1435,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1443,7 +1443,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1451,7 +1451,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1513,7 +1513,7 @@ export const STORES = [
         products: [
           {
             id: 13,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1521,7 +1521,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1529,7 +1529,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1537,7 +1537,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1545,7 +1545,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1553,7 +1553,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",
@@ -1615,7 +1615,7 @@ export const STORES = [
         products: [
           {
             id: 14,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1623,7 +1623,7 @@ export const STORES = [
           },
           {
             id: 2,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 1",
+            name: "The Hoop Sprouts",
             price: 100,
             discount: 8,
             image: "https://picsum.photos/200/300",
@@ -1631,7 +1631,7 @@ export const STORES = [
           },
           {
             id: 3,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 2",
+            name: "The Hoop Sprouts 2",
             price: 100,
             discount: 4,
             image: "https://picsum.photos/200/300",
@@ -1639,7 +1639,7 @@ export const STORES = [
           },
           {
             id: 4,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 3",
+            name: "The Hoop Sprouts 3",
             price: 100,
             discount: 9,
             image: "https://picsum.photos/200/300",
@@ -1647,7 +1647,7 @@ export const STORES = [
           },
           {
             id: 5,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 4",
+            name: "The Hoop Sprouts 4",
             price: 100,
             discount: 10,
             image: "https://picsum.photos/200/300",
@@ -1655,7 +1655,7 @@ export const STORES = [
           },
           {
             id: 6,
-            name: "The Hoop Sprouts Large Brown Cage Free Grade A Eggs 5",
+            name: "The Hoop Sprouts 5",
             price: 100,
             discount: 5,
             image: "https://picsum.photos/200/300",

@@ -65,6 +65,8 @@ const useAuth = () => {
   const logout = () => {
     removeCookie("token")
     removeCookie("otp")
+    console.log('logout called =>');
+
     localStorage.clear()
     setState({ ...initialArgs })
   }

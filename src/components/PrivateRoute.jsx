@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Redirect, Route, withRouter } from 'react-router-dom';
 import { useAppState } from '../context';
-import jwt from "jsonwebtoken";
 
 function PrivateRoute(props) {
   const { logout, verifyToken } = useAppState('useAuth')
@@ -18,7 +17,7 @@ function PrivateRoute(props) {
     <Route {...rest} render={(props) => (
       verifyToken()
         ? <Component {...rest}{...props} />
-        : <Redirect to="/login" />
+        : <Redirect to="/" />
     )} />
   )
 }

@@ -142,7 +142,7 @@ const Store = (props) => {
           {
             [...departments, ...departments].map((o, index) =>
               <Grid item style={{ padding: "15px 5px" }} >
-                <Button style={{ backgroundImage: `url(http://lorempixel.com/400/200/cats/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
+                <Button style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
                 <Typography variant={"subtitle2"} className={classes.tCenter} >{o.category_name}</Typography>
               </Grid>
 
