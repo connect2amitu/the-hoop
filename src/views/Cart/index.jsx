@@ -338,7 +338,7 @@ function Cart(props) {
           } */}
         </Grid>
         {grand_total > 0 ? (props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
-          <AppBar position="sticky" color="primary" onClick={() => { toggleCart(); props.history.push(!verifyToken() ? "/login" : "/checkout") }} className={classes.appBar}>
+          <AppBar position="fixed" color="primary" onClick={() => { toggleCart(); props.history.push(!verifyToken() ? "/login" : "/checkout") }} className={classes.appBar}>
             <Toolbar>
               <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { toggleCart(); props.history.push(!verifyToken() ? "/login" : "/checkout") }}>
                 <Grid item>

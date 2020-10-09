@@ -23,7 +23,7 @@ export default function FormDialog() {
       <DialogTitle id="form-dialog-title">Location</DialogTitle>
       <DialogContent>
         <Autocomplete
-
+          defaultValue={location}
           style={{ width: "100%", outline: "none" }}
           id="combo-box-demo"
           options={locations}

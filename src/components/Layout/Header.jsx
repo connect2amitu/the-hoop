@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon } from '@material-ui/core'
+import React, { useRef, useState } from 'react'
+import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon, Popper, Grow, Paper, ClickAwayListener, MenuList, MenuItem, Fade, Zoom, CircularProgress } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
-
+import cls from 'classnames'
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,6 +13,7 @@ import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import FormDialog from '../Location';
+import { Skeleton } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -109,6 +110,20 @@ const useStyles = makeStyles((theme) => ({
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '0 4px',
+  },
+  storeDetail: {
+    textAlign: "center"
+  },
+  storeName: {
+    fontSize: 15,
+    margin: 0,
+    paddingLeft: 15,
+    fontWeight: 600,
+    color: theme.palette.primary.main
+  },
+  chooseZip: {
+    fontSize: 11,
+    color: `${theme.palette.secondary.main}`
   }
 }));
 
@@ -117,14 +132,37 @@ const Header = (props) => {
 
   console.log('props =>', props);
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
-  const { toggleCart, toggleStore, location, toggleLocation } = useAppState("useGlobal");
+  const { toggleCart, toggleStore, location, toggleLocation, openStoreDetailBox, toggleStoreDetailBox } = useAppState("useGlobal");
+
+
   const { verifyToken } = useAppState("useAuth");
   const { cart, cart_items } = useAppState("useCart");
-  const { store } = useAppState("useStore");
+  const { store, isLoading } = useAppState("useStore");
+  const anchorRef = useRef(null);
+
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = useRef(open);
+  useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus();
+    }
+
+    prevOpen.current = open;
+  }, [open]);
+
 
 
   useEffect(() => {
@@ -141,13 +179,24 @@ const Header = (props) => {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const hideHeader = () => {
     return !props.location.pathname.match(/(login|location)/)
   }
+
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpen(false);
+    }
+  }
+
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
 
   return (
     <>
@@ -168,9 +217,20 @@ const Header = (props) => {
           {props.location.pathname.includes('store') &&
             <>
               <Grid item className={classes.mobile}>
-                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
+                <IconButton component={NavLink} to="/stores" color={"secondary"}><HomeRounded /></IconButton>
               </Grid>
-
+              <Grid item className={classes.storeDetail}>
+                {!isLoading ?
+                  <Grid container alignItems={"flex-start"}>
+                    <Grid item>
+                      <Typography className={classes.storeName} onClick={() => toggleStore()}>{store && store.name}</Typography>
+                    </Grid>
+                    <Grid item><KeyboardArrowDown color={"primary"} /> </Grid>
+                  </Grid>
+                  : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
+                }
+                <p className={cls(classes.chooseZip, classes.storeName)} >Delivery in {location?.area_pincode}</p>
+              </Grid>
             </>
 
           }
@@ -201,66 +261,43 @@ const Header = (props) => {
 
             <Grid container spacing={2} alignItems={"center"}>
               <Grid item >
-                <IconButton color={"secondary"}><NotificationsRounded /></IconButton>
+                <IconButton color={"secondary"}
+                  ref={anchorRef}
+                  aria-controls={open ? 'menu-list-grow' : undefined}
+                  aria-haspopup="true"
+                  onClick={handleToggle}
+                ><NotificationsRounded /></IconButton>
+                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                  {({ TransitionProps, placement }) => (
+                    <Grow
+                      {...TransitionProps}
+                      style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                    >
+                      <Paper>
+                        <ClickAwayListener onClickAway={handleClose}>
+                          <MenuList style={{ width: 320 }} autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                            <MenuItem onClick={handleClose}>Order #5894565 Confirmed</MenuItem>
+                            <MenuItem onClick={handleClose}>Notifications 123</MenuItem>
+                            <MenuItem onClick={handleClose}>Notifications 123</MenuItem>
+                          </MenuList>
+                        </ClickAwayListener>
+                      </Paper>
+                    </Grow>
+                  )}
+                </Popper>
               </Grid>
-              {/* <Grid item>
-                <Badge color="primary" badgeContent={cart.count} showZero>
-                  <ShoppingCartRounded onClick={() => toggleCart()} />
-                </Badge>
-              </Grid> */}
-              {/* <Grid item>
-                  <Button color="inherit" onClick={() => toggleStore()} ><StorefrontRounded /> Store</Button>
-                </Grid> */}
-              {/* <Grid item>
-                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
-              </Grid> */}
-              {/* <Grid item>
-                <IconButton onClick={handleDrawerToggle}><MenuRounded style={{ fill: "#000" }} /></IconButton>
-              </Grid> */}
             </Grid>
-            {/* <SwipeableDrawer
-              anchor={"right"}
 
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              onOpen={handleDrawerToggle}
-            >
-              <List classes={{ root: classes.rightSideDrawer }}>
-                <ListItem button>
-                  <ListItemIcon>{<StorefrontRounded />}</ListItemIcon>
-                  <ListItemText primary={"Store"} />
-                </ListItem>
-
-                <ListItem button onClick={() => { toggleLocation(); handleDrawerToggle() }}>
-                  <ListItemIcon>{<LocationOnRounded />}</ListItemIcon>
-                  <ListItemText primary={location?.area_name} />
-                </ListItem>
-                <ListItem button onClick={() => { toggleCart(); handleDrawerToggle() }}>
-                  <ListItemIcon>{
-                    <Badge color="secondary" badgeContent={cart.count} showZero><ShoppingCartRounded /></Badge>}</ListItemIcon>
-                  <ListItemText primary={`My Cart`} />
-
-                </ListItem>
-                {!verifyToken() && <ListItem button component={NavLink} onClick={() => handleDrawerToggle()} to="/login" >
-                  <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
-                  <ListItemText primary={"Login"} />
-                </ListItem>}
-                {verifyToken() && <ListItem button component={NavLink} to="/account" onClick={() => handleDrawerToggle()}  >
-                  <ListItemIcon>{<AccountCircleRounded />}</ListItemIcon>
-                  <ListItemText primary={"Account"} />
-                </ListItem>}
-              </List>
-            </SwipeableDrawer> */}
             {props.location.pathname.includes('store') &&
               <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
                   <Grid container spacing={0} justify={"space-evenly"}>
-                    <Grid item>
+                    {/* <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
                         <Grid item><StorefrontRounded /> </Grid>
                         <Grid item><span>Store</span></Grid>
                       </Grid>
-                    </Grid>
+                    </Grid> */}
 
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
@@ -289,6 +326,8 @@ const Header = (props) => {
         {/* </Toolbar> */}
       </AppBar>
       }
+
+      {/* Cart */}
       <Cart />
 
       {/* store */}
@@ -298,17 +337,24 @@ const Header = (props) => {
       <FormDialog />
 
       {/* Search */}
-      <Dialog fullScreen open={open} onClose={handleClose}>
+      {/* <Dialog fullScreen open={openStoreDetailBox} onClose={toggleStoreDetailBox} TransitionComponent={Fade}>
         {<AppBar className={classes.appBarForSearch}>
           <Toolbar>
-            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
-              <KeyboardArrowLeftRounded />
-            </IconButton>
-            <TextField fullWidth variant="standard" required id="standard-required" label="" defaultValue="" />
+            <Grid container justify={"space-between"} alignItems={"center"}>
+              <Grid item>
+                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
+              </Grid>
+              <Grid item>
+                <IconButton edge="start" color="inherit" onClick={toggleStoreDetailBox} aria-label="close">
+                  <CloseRounded />
+                </IconButton>
+              </Grid>
+            </Grid>
           </Toolbar>
         </AppBar>}
-      </Dialog>
-      {hideHeader() && <Toolbar />}
+      </Dialog> */}
+
+      { hideHeader() && <Toolbar />}
     </>
   )
 }

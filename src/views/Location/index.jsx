@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
-  const { locations, getLocations, setLocation } = useAppState("useGlobal");
+  const { locations, location, getLocations, setLocation } = useAppState("useGlobal");
 
 
   const [cookies, setCookie] = useCookies();
@@ -90,6 +90,7 @@ function Location(props) {
         <Grid item className={classes.title}><Typography variant={"h4"}>Find Area</Typography></Grid>
         <Grid item>
           <Autocomplete
+            defaultValue={location}
             classes={{ root: classes.inputFocused }}
             style={{ width: "100%", outline: "none" }}
             id="combo-box-demo"
@@ -106,7 +107,7 @@ function Location(props) {
               fullWidth
               label="Select Area"
               style={{ background: "#fff", borderColor: "#fff", }}
-              variant="filled" />
+              variant="outlined" />
             }
           />
         </Grid>

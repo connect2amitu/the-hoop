@@ -10,6 +10,7 @@ function reducer(state, action) {
 const initialArgs = {
   openCart: false,
   openStore: false,
+  openStoreDetailBox: true,
   isDarkTheme: true,
   isLoading: false,
   locationBox: false,
@@ -47,6 +48,10 @@ const useGlobal = (appState) => {
     setState({ openStore: !state.openStore })
   }
 
+  const toggleStoreDetailBox = () => {
+    setState({ openStoreDetailBox: !state.openStoreDetailBox })
+  }
+
   const toggleLocation = () => {
     setState({ locationBox: !state.locationBox })
   }
@@ -61,6 +66,7 @@ const useGlobal = (appState) => {
 
   return {
     toggleCart,
+    toggleStoreDetailBox,
     setLocation,
     toggleLocation,
     getLocations,

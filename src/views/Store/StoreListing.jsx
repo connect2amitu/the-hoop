@@ -1,7 +1,10 @@
-import React from 'react'
-import { SwipeableDrawer, Container, Grid, Paper, makeStyles, Button } from '@material-ui/core';
+import React, { useEffect, useState } from 'react'
+import { SwipeableDrawer, Container, Grid, Paper, makeStyles, Button, Typography, TextField } from '@material-ui/core';
 import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
+import { LocationOnRounded } from '@material-ui/icons';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { useCookies } from 'react-cookie';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -9,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: "calc(100vh - 120px)"
   },
   storeContainer: {
-    padding: "20px"
+    padding: "0 20px"
   },
   storeImage: {
     [theme.breakpoints.down(768)]: {
@@ -41,14 +44,26 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       alignItems: "center"
     }
+  },
+  chooseStore: {
+    margin: "10px 0",
+    position: "relative",
+    textAlign: "center",
+    fontSize: 18,
+    fontWeight: 700
   }
 }));
 
 
 const StoreListing = (props) => {
   const classes = useStyles();
-  const { openStore, toggleStore } = useAppState("useGlobal");
+  const { openStore, toggleStore, location, toggleLocation, locations, getLocations, setLocation } = useAppState("useGlobal");
   const { stores } = useAppState("useStore");
+
+  useEffect(() => {
+    getLocations()
+  }, [])
+
 
   return (
     <SwipeableDrawer
@@ -57,12 +72,52 @@ const StoreListing = (props) => {
       open={openStore}
       onClose={() => toggleStore()}
       onOpen={() => toggleStore()}
-      style={{ height: `440px` }}
+      // style={{ height: `440px` }}
       classes={{
         paperAnchorBottom: classes.storeDrawerHeight
       }}
     >
       <Container className={classes.storeContainer}>
+        <Grid container direction={"column"}>
+          <Grid item>
+            <Typography className={classes.chooseStore}> Choose a store </Typography>
+          </Grid>
+          <Grid item>
+            {/*  <Button color={"primary"} variant={"contained"} style={{ width: "100%" }} onClick={() => toggleLocation()}>
+              <Grid container justify={"space-between"}>
+                <Grid item>
+                  {location?.area_name}
+                </Grid>
+                <Grid item>
+                  <LocationOnRounded />
+                </Grid>
+              </Grid> 
+            </Button>*/}
+            <Autocomplete
+              defaultValue={location}
+              classes={{ root: classes.inputFocused }}
+              style={{ width: "100%", outline: "none" }}
+              id="locations"
+              color={"secondary"}
+              options={locations}
+              getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}
+              onChange={(event, newValue) => {
+                console.log('newValue =>', newValue)
+
+                setLocation(newValue)
+              }}
+              renderInput={(params) => <TextField
+                {...params}
+                color={"secondary"}
+                required
+                fullWidth
+                // label=""
+                style={{ background: "#fff", borderColor: "#fff", }}
+                variant="outlined" />
+              }
+            />
+          </Grid>
+        </Grid>
         <Grid container>
           {
             stores.map((store, index) =>
