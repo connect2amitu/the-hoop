@@ -22,8 +22,6 @@ const useAuth = () => {
 
 
   useEffect(() => {
-    console.log('use auth verifyToken() =>', verifyToken());
-    console.log('state =>', state);
 
     setState({
       ...state,
@@ -37,8 +35,6 @@ const useAuth = () => {
 
 
   const setLoginUser = (phoneNumber) => {
-    console.log('amittttttttttttttt =>', state);
-
     var token = jwt.sign({ isVerified: true, phoneNumber }, SECRET_KEY, { expiresIn: "100d" });
     removeCookie("otp");
     setCookie("token", token, COOKIE_OPTION);
@@ -54,7 +50,6 @@ const useAuth = () => {
   const verifyToken = () => {
     try {
       var decoded = jwt.verify(cookies.token, SECRET_KEY);
-      console.log('123decoded =>', decoded);
       return true;
     } catch (error) {
       console.log('error =>', error);
@@ -65,8 +60,6 @@ const useAuth = () => {
   const logout = () => {
     removeCookie("token")
     removeCookie("otp")
-    console.log('logout called =>');
-
     localStorage.clear()
     setState({ ...initialArgs })
   }

@@ -103,8 +103,6 @@ const CategoryAndProduct = (props) => {
   const classes = useStyles();
   const { addToCart, cart_items, grand_total, updateProductQty } = useAppState("useCart");
   const { store } = useAppState("useStore");
-  console.log('grand_total =>', grand_total)
-
 
   const [state, setState] = React.useState(null);
 
@@ -115,8 +113,6 @@ const CategoryAndProduct = (props) => {
 
 
   const handleChange = (event, pid) => {
-    console.log('event.target =>', event.target)
-
     const name = event.target.name;
 
     if (state && state[name]) {
@@ -167,8 +163,6 @@ const CategoryAndProduct = (props) => {
   };
 
   const addToCartHandler = (product, sub_prod_id) => {
-    console.log('store =>', store)
-
     navigator.vibrate(100)
     var _product = Object.assign({}, product);
     if (state && state[`product-${_product.id}`]) {

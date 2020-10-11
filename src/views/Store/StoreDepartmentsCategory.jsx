@@ -17,9 +17,6 @@ export default function StoreDepartmentsCategory(props) {
     getStoreCategory(props.match.params.storeName, props.match.params.categoryId)
   }, [props.match.params.storeName])
 
-
-  console.log('123store =>', store)
-
   return (
     <MyContainer>
       {store && store.categories.map((category, index) =>

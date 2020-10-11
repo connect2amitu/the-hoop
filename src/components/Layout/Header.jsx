@@ -130,8 +130,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = (props) => {
 
-  console.log('props =>', props);
-
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
@@ -214,10 +212,10 @@ const Header = (props) => {
               />
             </NavLink>
           </Grid>}
-          {props.location.pathname.includes('store') &&
+          {props.location.pathname.match('store') &&
             <>
               <Grid item className={classes.mobile}>
-                <IconButton component={NavLink} to="/stores" color={"secondary"}><HomeRounded /></IconButton>
+                <IconButton component={NavLink} to="/" color={"secondary"}><HomeRounded /></IconButton>
               </Grid>
               <Grid item className={classes.storeDetail}>
                 {!isLoading ?
@@ -292,12 +290,12 @@ const Header = (props) => {
               <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
                   <Grid container spacing={0} justify={"space-evenly"}>
-                    {/* <Grid item>
+                    <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
-                        <Grid item><StorefrontRounded /> </Grid>
-                        <Grid item><span>Store</span></Grid>
+                        <Grid item><LocationOnRounded /> </Grid>
+                        <Grid item><span>Near Me</span></Grid>
                       </Grid>
-                    </Grid> */}
+                    </Grid>
 
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >

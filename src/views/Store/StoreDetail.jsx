@@ -112,8 +112,6 @@ const useStyles = makeStyles((theme) => ({
 const Store = (props) => {
   const { store, getStoreBySlug, isLoading, departments, getStoreDepartment } = useAppState("useStore");
   const classes = useStyles();
-  console.log('departments =>', departments)
-
   const settings = {
     dots: true,
     infinite: true,
@@ -126,8 +124,6 @@ const Store = (props) => {
     getStoreBySlug(props.match.params.storeName)
     getStoreDepartment()
   }, [props.match.params.storeName])
-  console.log('store =>', store)
-
 
   return (
     <React.Fragment>

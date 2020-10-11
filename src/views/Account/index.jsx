@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react'
-import { Container, styled, Grid, Card } from '@material-ui/core'
+import React, { useEffect, useState } from 'react'
+import { Container, styled, Grid, Card, Divider } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded } from '@material-ui/icons';
+import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded, EditAttributesRounded, EditRounded } from '@material-ui/icons';
 import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
+import FullScreenDialog from '../../components/FullScreenDialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +30,12 @@ const MyContainer = styled(Container)({
 export default function Account(props) {
   const classes = useStyles();
   const { logout } = useAppState("useAuth");
+  const [open, setOpen] = useState(false);
+  const [heading, setHeading] = useState("");
+  const handleOpen = (heading = "") => {
+    setOpen(!open);
+    setHeading(heading)
+  };
 
   return (
     <MyContainer>
@@ -45,25 +52,25 @@ export default function Account(props) {
             }
             className={classes.root}
           >
-            <ListItem button>
+            <ListItem button onClick={() => handleOpen("Orders")}>
               <ListItemIcon>
                 <FilterNoneRounded />
               </ListItemIcon>
               <ListItemText primary="Orders" />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={() => handleOpen("Address")}>
               <ListItemIcon>
                 <LocationOnRounded />
               </ListItemIcon>
-              <ListItemText primary="Addresses" />
+              <ListItemText primary="Addresses" secondary={<Grid container justify={"space-between"} alignItems={"center"}><Grid item>101, parimal society, varachha road</Grid><Grid item><EditRounded /></Grid></Grid>} />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={() => handleOpen("Help")}>
               <ListItemIcon>
                 <HelpOutlineRounded />
               </ListItemIcon>
               <ListItemText primary="Help" />
             </ListItem>
-            <ListItem button>
+            <ListItem button onClick={() => handleOpen("Settings")}>
               <ListItemIcon>
                 <SettingsRounded />
               </ListItemIcon>
@@ -83,6 +90,13 @@ export default function Account(props) {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, corrupti officiis. Dolores reiciendis dignissimos rem aspernatur placeat ab similique at modi? Culpa iusto maxime voluptates error reprehenderit velit voluptatum omnis.</p>
         </Card></Grid>
       </Grid>
+      <FullScreenDialog open={open} heading={heading} handleOpen={handleOpen} >
+        <Container>
+          <Grid container>
+            {heading}
+          </Grid>
+        </Container>
+      </FullScreenDialog>
     </MyContainer>
   )
 }

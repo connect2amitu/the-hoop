@@ -35,7 +35,6 @@ function App({ isDark }) {
               <Layout>
                 <Switch>
                   <Route exact path="/" component={Home} />
-                  <Route exact path="/stores" component={Home} />
                   {/* <Route exact path="/stores" component={StoreListing} /> */}
                   <Route exact path="/store/:storeName/(storefront)?" component={StoreDetail} />
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />

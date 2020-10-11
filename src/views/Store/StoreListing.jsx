@@ -102,8 +102,6 @@ const StoreListing = (props) => {
               options={locations}
               getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}
               onChange={(event, newValue) => {
-                console.log('newValue =>', newValue)
-
                 setLocation(newValue)
               }}
               renderInput={(params) => <TextField

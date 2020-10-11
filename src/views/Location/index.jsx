@@ -4,6 +4,8 @@ import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { COOKIE_OPTION } from '../../shared/constants';
+import Axios from 'axios';
+import FullScreenDialog from '../../components/FullScreenDialog';
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
@@ -66,8 +68,8 @@ const useStyles = makeStyles((theme) => ({
 function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
+  const [currentLocation, setCurrentLocation] = useState("no")
   const { locations, location, getLocations, setLocation } = useAppState("useGlobal");
-
 
   const [cookies, setCookie] = useCookies();
 
@@ -75,6 +77,22 @@ function Location(props) {
     if (cookies.location) {
       props.history.push("/")
     }
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+        Axios.get(`https://us1.locationiq.com/v1/reverse.php?key=pk.47aba238c8794c14276ca9bd49c406ff&format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`).then(resp => {
+          console.log('resp =>', resp)
+          setCurrentLocation(resp.data.display_name)
+        }).catch(e => {
+          console.log('e =>', e)
+
+        })
+      },
+      function (error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+      }
+    );
     getLocations()
   }, [])
 

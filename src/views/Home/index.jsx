@@ -194,9 +194,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const { stores } = useAppState("useStore");
-  console.log('store =>', stores)
-
-
   const classes = useStyles();
 
 

@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     height: 28,
     background: "#fff",
     border: "1px solid #e9e9eb",
-    marginLeft: 16,
+    marginLeft: "auto",
     fontSize: "0.86rem",
     color: "#7e808c",
     position: "relative",
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     lineHeight: "26px",
     color: theme.palette.secondary.main,
-    fontSize: "1rem"
+    fontSize: "12px"
   }
 }));
 
@@ -142,8 +142,6 @@ function Cart(props) {
       ]
     })
   }
-
-  console.log('aaaacarts =>', carts)
 
   return (
     <SwipeableDrawer
@@ -181,11 +179,11 @@ function Cart(props) {
                         <Grid item xs={2}>
                           <Avatar src={cart.store.image} />
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={7}>
                           <Typography variant={"h5"}>{cart.store.name}</Typography>
                         </Grid>
-                        <Grid item xs={2}>
-                          <Typography variant={"h5"}>&#8377; {cart.total}</Typography>
+                        <Grid item xs={3}>
+                          <Typography style={{ textAlign: "right" }} variant={"h5"}>&#8377; {cart.total}</Typography>
                         </Grid>
                       </Grid>
                     </Grid>

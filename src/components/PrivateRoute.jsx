@@ -5,8 +5,6 @@ import { useAppState } from '../context';
 function PrivateRoute(props) {
   const { logout, verifyToken } = useAppState('useAuth')
   const { component: Component, ...rest } = props;
-  console.log('verifyToken() =>', verifyToken())
-
   useEffect(() => {
     if (!verifyToken()) {
       logout()

@@ -261,14 +261,10 @@ const useCart = () => {
         items: data[store]
       })
     });
-    console.log('storeCart =>', storeCart);
-
     return storeCart;
   }
 
   const addToCart = (product, sub_prod_id, store) => {
-    console.log('store =>', store);
-
 
     //#region 
     // var retailer_list = state.cart.items;
@@ -334,8 +330,6 @@ const useCart = () => {
     //#endregion
 
     var _cart_items = Object.assign([], state.cart_items);
-    console.log('_cart_items =>', _cart_items);
-
 
     var index = findIndex(_cart_items, { sub_prod_id: sub_prod_id })
 
