@@ -5,11 +5,8 @@ import CategoryAndProduct from './CategoryAndProduct';
 import { useAppState } from '../../context';
 import Slider from "react-slick";
 import StoreBanner from '../../components/StoreBanner'
-const MyContainer = styled(Container)({
-  paddingBottom: "90px",
-  marginTop: "210px",
-  padding: 15
-});
+import cls from 'classnames'
+import MyContainer from '../../components/Layout/MyContainer';
 
 //#region 
 // const categorySettings = {
@@ -90,8 +87,8 @@ const useStyles = makeStyles((theme) => ({
   rightSideAds: { width: "100%", height: "100%", marginTop: 10, backgroundColor: "#F2F2F2" },
   categoryWrap: { overflow: "scroll hidden", flexWrap: "nowrap" },
   categoryItem: {
-    height: "100px",
-    width: "100px",
+    height: "60px",
+    width: "60px",
     borderRadius: 10,
     outline: "none",
     margin: "0 auto",
@@ -101,11 +98,29 @@ const useStyles = makeStyles((theme) => ({
   },
   categorySlider: { marginTop: 15, padding: "0 20px" },
   tCenter: { textAlign: "center" },
+  categoryName: { fontSize: 10 },
   loader: {
     position: "absolute",
     left: "45%",
     top: "42%",
   },
+  slickItem: {
+    maxWidth: "100%",
+    height: "100%",
+    width: "100%",
+    borderRadius: 10,
+    outline: "none",
+    [theme.breakpoints.down('460')]: {
+      height: 115
+    },
+    [theme.breakpoints.between('460', '960')]: {
+      height: 123
+    },
+    [theme.breakpoints.between('460', '960')]: {
+      height: 133
+    },
+    // backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: 200, width: "100%", borderRadius: 7
+  }
 }));
 
 
@@ -115,6 +130,7 @@ const Store = (props) => {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: false,
     speed: 500,
     autoplay: true,
     slidesToShow: 1,
@@ -130,6 +146,15 @@ const Store = (props) => {
       {!isLoading && store && <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
       {!isLoading ? <MyContainer maxWidth={"lg"} fixed={true}>
         <Grid container>
+          <Slider {...settings}>
+            {[...new Array(3)].map((o, index) =>
+              <div style={{ margin: "0 20px", borderRadius: 10 }}>
+                <img src={`https://placeimg.com/640/480/${index}`} className={classes.slickItem} alt="sdfgdg" />
+              </div>
+            )}
+          </Slider>
+        </Grid>
+        <Grid container>
           <Grid item={12}>
             <Typography variant={"h4"}>Departments</Typography>
           </Grid>
@@ -139,7 +164,7 @@ const Store = (props) => {
             [...departments, ...departments].map((o, index) =>
               <Grid item style={{ padding: "15px 5px" }} >
                 <Button style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
-                <Typography variant={"subtitle2"} className={classes.tCenter} >{o.category_name}</Typography>
+                <Typography variant={"subtitle2"} className={cls(classes.tCenter, classes.categoryName)} >{o.category_name}</Typography>
               </Grid>
 
             )

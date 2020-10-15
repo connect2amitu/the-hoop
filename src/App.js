@@ -18,6 +18,10 @@ const StoreDepartmentsCategory = React.lazy(() => import('./views/Store/StoreDep
 const Checkout = React.lazy(() => import('./views/Checkout'))
 const Login = React.lazy(() => import('./views/Login'))
 const Account = React.lazy(() => import('./views/Account'))
+const Orders = React.lazy(() => import('./views/Account/Orders'))
+const Address = React.lazy(() => import('./views/Account/Address'))
+const AddNewAddress = React.lazy(() => import('./views/Account/AddNewAddress'))
+const Payments = React.lazy(() => import('./views/Account/Payments'))
 const Location = React.lazy(() => import('./views/Location'))
 const Page404 = React.lazy(() => import('./components/404'))
 
@@ -43,6 +47,10 @@ function App({ isDark }) {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <PrivateRoute exact path="/account" component={Account} />
+                  <PrivateRoute exact path="/account/orders" component={Orders} />
+                  <PrivateRoute exact path="/account/addresses" component={Address} />
+                  <PrivateRoute exact path="/account/addaddress" component={AddNewAddress} />
+                  <PrivateRoute exact path="/account/payments" component={Payments} />
                   <Route exact path="*" component={Page404} />
                 </Switch>
               </Layout>

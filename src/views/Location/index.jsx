@@ -81,9 +81,11 @@ function Location(props) {
       function (position) {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        Axios.get(`https://us1.locationiq.com/v1/reverse.php?key=pk.47aba238c8794c14276ca9bd49c406ff&format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`).then(resp => {
+        Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBgH29Pldnf8x3FQpXNB-9XK3U7Z2_FGr8`).then(resp => {
           console.log('resp =>', resp)
-          setCurrentLocation(resp.data.display_name)
+          console.log('resp.data.results[0].formatted_address =>', resp.data.results[0].formatted_address)
+
+          setCurrentLocation(resp.data.results[0].formatted_address)
         }).catch(e => {
           console.log('e =>', e)
 
@@ -104,6 +106,7 @@ function Location(props) {
 
   return (
     <div className={classes.mainWrapper} >
+      <p style={{ color: "white" }}>{currentLocation}</p>
       <Grid container direction={"column"} spacing={1} className={classes.container}>
         <Grid item className={classes.title}><Typography variant={"h4"}>Find Area</Typography></Grid>
         <Grid item>

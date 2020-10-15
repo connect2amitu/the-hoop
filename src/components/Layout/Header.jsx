@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon, Popper, Grow, Paper, ClickAwayListener, MenuList, MenuItem, Fade, Zoom, CircularProgress } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown, LocalMallRounded, StoreMallDirectoryRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
 import cls from 'classnames'
 
@@ -212,8 +212,11 @@ const Header = (props) => {
               />
             </NavLink>
           </Grid>}
+
+
           {props.location.pathname.match('store') &&
             <>
+              {/* Top bar for mobile store page */}
               <Grid item className={classes.mobile}>
                 <IconButton component={NavLink} to="/" color={"secondary"}><HomeRounded /></IconButton>
               </Grid>
@@ -227,7 +230,7 @@ const Header = (props) => {
                   </Grid>
                   : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
                 }
-                <p className={cls(classes.chooseZip, classes.storeName)} >Delivery in {location?.area_pincode}</p>
+                <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>Delivery in {location?.area_pincode}</p>
               </Grid>
             </>
 
@@ -243,7 +246,7 @@ const Header = (props) => {
               <Grid item>
                 <Badge color="secondary" badgeContent={cart.count} showZero>
                   <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
-                    <ShoppingCartRounded />
+                    <LocalMallRounded />
                      My Cart</Button>
                 </Badge>
               </Grid>
@@ -292,7 +295,7 @@ const Header = (props) => {
                   <Grid container spacing={0} justify={"space-evenly"}>
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
-                        <Grid item><LocationOnRounded /> </Grid>
+                        <Grid item><StoreMallDirectoryRounded /> </Grid>
                         <Grid item><span>Near Me</span></Grid>
                       </Grid>
                     </Grid>
@@ -305,7 +308,7 @@ const Header = (props) => {
                     </Grid>
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
-                        <Badge badgeContent={cart_items.length} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
+                        <Badge badgeContent={cart_items.length} color="secondary"><Grid item><LocalMallRounded /></Grid></Badge>
                         <Grid item><span>Cart</span></Grid>
                       </Grid>
                     </Grid>
@@ -333,24 +336,6 @@ const Header = (props) => {
 
       {/* Location */}
       <FormDialog />
-
-      {/* Search */}
-      {/* <Dialog fullScreen open={openStoreDetailBox} onClose={toggleStoreDetailBox} TransitionComponent={Fade}>
-        {<AppBar className={classes.appBarForSearch}>
-          <Toolbar>
-            <Grid container justify={"space-between"} alignItems={"center"}>
-              <Grid item>
-                <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
-              </Grid>
-              <Grid item>
-                <IconButton edge="start" color="inherit" onClick={toggleStoreDetailBox} aria-label="close">
-                  <CloseRounded />
-                </IconButton>
-              </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>}
-      </Dialog> */}
 
       { hideHeader() && <Toolbar />}
     </>

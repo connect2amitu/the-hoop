@@ -4,12 +4,7 @@ import { Container, Button, styled, Grid, Avatar } from '@material-ui/core'
 import Departments from '../../components/Departments';
 import { useEffect } from 'react';
 import useAppState from '../../context/useAppState';
-
-const MyContainer = styled(Container)({
-  paddingBottom: "90px",
-  marginTop: "10px",
-});
-
+import MyContainer from '../../components/Layout/MyContainer';
 
 const StoreDepartments = (props) => {
 

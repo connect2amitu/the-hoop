@@ -6584,3 +6584,30 @@ export const CART = {
     }
   ]
 }
+
+export const ADDRESSES = [
+  {
+    name: "Amit",
+    phone: "+919586253639",
+    address: "101,parimal society, near bhagirath society",
+    pinCode: "395006",
+    houseNumber: "101",
+    roadAreaColony: "varachha road",
+    city: "Surat",
+    state: "Gujarat",
+    landmark: "LH road",
+    addressType: "Home",
+  },
+  {
+    name: "Prabhat",
+    phone: "+919586253639",
+    address: "45, Dindoli",
+    pinCode: "395011",
+    houseNumber: "45",
+    roadAreaColony: "Dindoli road",
+    city: "Surat",
+    state: "Gujarat",
+    landmark: "Sk road",
+    addressType: "Work/Office",
+  }
+]

@@ -5,11 +5,8 @@ import { NavLink } from 'react-router-dom';
 import CategoryAndProduct from './CategoryAndProduct';
 import { useAppState } from '../../context';
 import Slider from "react-slick";
+import MyContainer from '../../components/Layout/MyContainer';
 
-const MyContainer = styled(Container)({
-  paddingBottom: "90px",
-  marginTop: "210px",
-});
 
 
 const Store = (props) => {

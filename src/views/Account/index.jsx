@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { Container, styled, Grid, Card, Divider } from '@material-ui/core'
+import { Container, styled, Grid, Card, Divider, Avatar, Button, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded, EditAttributesRounded, EditRounded } from '@material-ui/icons';
+import { FilterNoneRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded, EditAttributesRounded, EditRounded, ShoppingBasketRounded, ContactMailRounded, LocalMallRounded, PaymentRounded } from '@material-ui/icons';
 import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
 import FullScreenDialog from '../../components/FullScreenDialog';
+import { red } from '@material-ui/core/colors';
+import { NavLink } from 'react-router-dom';
+import MyContainer from '../../components/Layout/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,12 +23,33 @@ const useStyles = makeStyles((theme) => ({
   nested: {
     paddingLeft: theme.spacing(4),
   },
+  btnMenu: {
+    height: 90,
+    width: 90,
+    textTransform: "capitalize",
+    fontSize: 12
+  },
+  menuWrapper: {
+    marginTop: 15
+  },
+  avatar: {
+    height: 70,
+    width: 70,
+    color: theme.palette.getContrastText(red[500]),
+    backgroundColor: red[500],
+  },
+  userName: {
+    fontSize: 16,
+    fontWeight: 600
+  },
+  userDetail: {
+    fontSize: 12,
+  },
+  userWrapper: {
+    margin: "15px 0",
+  },
 }));
 
-const MyContainer = styled(Container)({
-  padding: "10px",
-  marginTop: "10px",
-});
 
 export default function Account(props) {
   const classes = useStyles();
@@ -39,56 +63,50 @@ export default function Account(props) {
 
   return (
     <MyContainer>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
-          <List
-            fullWidth
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            subheader={
-              <ListSubheader component="div" id="nested-list-subheader">
-                Account
-        </ListSubheader>
-            }
-            className={classes.root}
-          >
-            <ListItem button onClick={() => handleOpen("Orders")}>
-              <ListItemIcon>
-                <FilterNoneRounded />
-              </ListItemIcon>
-              <ListItemText primary="Orders" />
-            </ListItem>
-            <ListItem button onClick={() => handleOpen("Address")}>
-              <ListItemIcon>
-                <LocationOnRounded />
-              </ListItemIcon>
-              <ListItemText primary="Addresses" secondary={<Grid container justify={"space-between"} alignItems={"center"}><Grid item>101, parimal society, varachha road</Grid><Grid item><EditRounded /></Grid></Grid>} />
-            </ListItem>
-            <ListItem button onClick={() => handleOpen("Help")}>
-              <ListItemIcon>
-                <HelpOutlineRounded />
-              </ListItemIcon>
-              <ListItemText primary="Help" />
-            </ListItem>
-            <ListItem button onClick={() => handleOpen("Settings")}>
-              <ListItemIcon>
-                <SettingsRounded />
-              </ListItemIcon>
-              <ListItemText primary="Your account settings" />
-            </ListItem>
-            <ListItem button onClick={() => logout()}>
-              <ListItemIcon>
-                <PowerSettingsNewRounded />
-              </ListItemIcon>
-              <ListItemText primary="Logout" />
-            </ListItem>
-          </List>
-
+      <Grid container className={classes.userWrapper} alignItems={"center"} spacing={1}>
+        <Grid item><Avatar className={classes.avatar}>PS</Avatar></Grid>
+        <Grid item>
+          <Grid container direction={"column"}>
+            <Grid item><Typography className={classes.userName}>Prabhat Suthar</Typography></Grid>
+            <Grid item><Typography className={classes.userDetail}>+91 9586253639 * sutharprabhat@gmail.com</Typography></Grid>
+            {/* <Grid item>View Detail</Grid> */}
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={8}><Card>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, corrupti officiis. Dolores reiciendis dignissimos rem aspernatur placeat ab similique at modi? Culpa iusto maxime voluptates error reprehenderit velit voluptatum omnis.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, corrupti officiis. Dolores reiciendis dignissimos rem aspernatur placeat ab similique at modi? Culpa iusto maxime voluptates error reprehenderit velit voluptatum omnis.</p>
-        </Card></Grid>
+      </Grid>
+      <Divider />
+      <Grid container className={classes.menuWrapper} justify={"space-between"}>
+        <Grid item >
+          <Button variant={"contained"} className={classes.btnMenu} component={NavLink} to="/account/orders">
+            <Grid container justify={"center"} alignItems={"center"}>
+              <Grid item><LocalMallRounded /></Grid>
+              <Grid item>Orders</Grid>
+            </Grid>
+          </Button>
+        </Grid>
+        <Grid item >
+          <Button variant={"contained"} className={classes.btnMenu} component={NavLink} to="/account/addresses">
+            <Grid container justify={"center"} alignItems={"center"}>
+              <Grid item><ContactMailRounded /></Grid>
+              <Grid item>Address</Grid>
+            </Grid>
+          </Button>
+        </Grid>
+        <Grid item >
+          <Button variant={"contained"} className={classes.btnMenu} component={NavLink} to="/account/payments">
+            <Grid container justify={"center"} alignItems={"center"}>
+              <Grid item><PaymentRounded /></Grid>
+              <Grid item>Payment</Grid>
+            </Grid>
+          </Button>
+        </Grid>
+        <Grid item >
+          <Button onClick={logout} variant={"contained"} className={classes.btnMenu}>
+            <Grid container justify={"center"} alignItems={"center"}>
+              <Grid item><ContactMailRounded /></Grid>
+              <Grid item>Logout</Grid>
+            </Grid>
+          </Button>
+        </Grid>
       </Grid>
       <FullScreenDialog open={open} heading={heading} handleOpen={handleOpen} >
         <Container>
@@ -97,6 +115,6 @@ export default function Account(props) {
           </Grid>
         </Container>
       </FullScreenDialog>
-    </MyContainer>
+    </MyContainer >
   )
 }

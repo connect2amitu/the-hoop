@@ -3,12 +3,8 @@ import CategoryAndProduct from './CategoryAndProduct'
 import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import { styled, Container } from '@material-ui/core';
+import MyContainer from '../../components/Layout/MyContainer';
 
-const MyContainer = styled(Container)({
-  padding: "10px",
-  marginTop: "10px",
-  marginBottom: "30px",
-});
 
 export default function StoreDepartmentsCategory(props) {
   const { store, getStoreCategory } = useAppState("useStore");
