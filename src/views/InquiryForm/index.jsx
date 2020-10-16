@@ -62,14 +62,12 @@ export default function Checkout(props) {
 
 
   const requestHandler = (value) => {
-    console.log('value =>', value);
     var payload = {
       name: value.name,
       address: value.address,
       mobile: value.mobile,
       area: value.location.area_id
     }
-    console.log('payload =>', payload);
 
     requestForSample(payload).then(resp => {
       TOAST.success(<span>your request ID is {resp.request_no} <br />shortly you will get all other information</span>)

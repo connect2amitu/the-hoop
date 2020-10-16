@@ -53,8 +53,6 @@ const Store = (props) => {
     slidesToScroll: 1
   };
 
-  console.log('banner =>', banner);
-
   return (
     <React.Fragment>
       {

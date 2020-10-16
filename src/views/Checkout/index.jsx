@@ -40,7 +40,7 @@ export default function Checkout(props) {
   const [loading, setLoading] = useState("")
   const [paymentMode, setPaymentMode] = useState(0);
   const { location } = useAppState("global");
-  const { grand_total, cart_items, setOrderResponse } = useAppState("cart");
+  const { grand_total, cart_items, setOrderResponse, discount } = useAppState("cart");
   const classes = useStyles();
 
 
@@ -267,17 +267,27 @@ export default function Checkout(props) {
                             <Typography>Price ({cart_items.length} item)</Typography>
                           </Grid>
                           <Grid item>
-                            <Typography variant={"h5"}>{grand_total}/-</Typography>
+                            <Typography >{grand_total} &#8377; </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
+                      {discount > 0 && <Grid item>
+                        <Grid container justify={"space-between"}>
+                          <Grid item>
+                            <Typography>Discount</Typography>
+                          </Grid>
+                          <Grid item>
+                            <Typography >{grand_total * (discount / 100)} &#8377; </Typography>
+                          </Grid>
+                        </Grid>
+                      </Grid>}
                       <Grid item>
                         <Grid container justify={"space-between"}>
                           <Grid item>
-                            <Typography>Delivery Charges</Typography>
+                            <Typography>Payable Amount</Typography>
                           </Grid>
                           <Grid item>
-                            <Typography>0/-</Typography>
+                            <Typography variant={"h5"}>{Math.ceil(grand_total - grand_total * (discount / 100))} &#8377; </Typography>
                           </Grid>
                         </Grid>
                       </Grid>

@@ -2,8 +2,6 @@ import Axios from "axios";
 
 export const fetchBanner = async () => {
   var data = await Axios.get(`https://thehoop.in/admin/temp/hoop_slider.php`).then(resp => {
-    console.log('resp.data.data =>', resp.data.data);
-
     return resp.data.data;
   }).catch(e => {
     console.log('await e =>', e);

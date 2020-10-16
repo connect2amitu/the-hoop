@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
-  const { locations, getLocations, setLocation } = useAppState("global");
+  const { locations, location, getLocations, setLocation } = useAppState("global");
 
 
   const [cookies, setCookie] = useCookies();
@@ -93,6 +93,7 @@ function Location(props) {
             classes={{ root: classes.inputFocused }}
             style={{ width: "100%", outline: "none" }}
             id="combo-box-demo"
+            defaultValue={location}
             color={"secondary"}
             options={locations}
             getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}

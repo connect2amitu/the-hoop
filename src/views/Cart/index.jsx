@@ -1,6 +1,6 @@
 import React from 'react'
 import { SwipeableDrawer, makeStyles, List, ListSubheader, Grid, IconButton, Divider, Card, Typography, ListItem, ListItemText, Button, TextField, AppBar, Toolbar } from '@material-ui/core'
-import { AddRounded, ClearRounded, CloseRounded, DeleteRounded, RemoveRounded } from '@material-ui/icons';
+import { AddRounded, ClearRounded, CloseRounded, DeleteRounded, LocalOfferRounded, RemoveRounded } from '@material-ui/icons';
 import { NavLink, withRouter } from 'react-router-dom';
 import { useAppState } from '../../context';
 import { confirmAlert } from 'react-confirm-alert'; // Import
@@ -59,7 +59,7 @@ function Cart(props) {
   const { toggleCart, openCart } = useAppState("global");
   const [cookies, setCookie] = useCookies();
 
-  const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
+  const { removeCart, cart_items, grand_total, updateProductQty, discount } = useAppState("cart");
 
   const confirmDelete = (sub_prod_id) => {
     confirmAlert({
@@ -235,7 +235,10 @@ function Cart(props) {
                   <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
                 </Grid>
                 <Grid item>
-                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >&#8377; {grand_total}/-</Button>
+                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >
+                    {discount > 0 && <span >&#8377;<span style={{ textDecoration: "line-through", fontWeight: "lighter" }}>{grand_total}</span>&nbsp;&nbsp;</span>}
+                        &#8377;<span style={{ fontSize: 23, fontWeight: 700 }}>{Math.ceil(grand_total - grand_total * (discount / 100))}/-</span></Button>
+
 
                   {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
                           <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>

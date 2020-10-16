@@ -110,7 +110,7 @@ const Header = (props) => {
 
 
   const { toggleCart, location, toggleLocation } = useAppState("global");
-  const { cart_items, grand_total } = useAppState("cart");
+  const { cart_items, grand_total, discount } = useAppState("cart");
 
   useEffect(() => {
     if (!location) {
@@ -158,9 +158,6 @@ const Header = (props) => {
                   <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
                 </Grid>
                 <Grid item>
-                  <Button color="inherit" component={NavLink} to="/jashoda-fresh">Milk Inquiry</Button>
-                </Grid>
-                <Grid item>
                   <Badge color="secondary" badgeContent={cart_items.length} showZero>
                     <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
                       <ShoppingCartRounded />
@@ -182,9 +179,6 @@ const Header = (props) => {
                 </Grid> */}
                 <Grid item>
                   <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
-                </Grid>
-                <Grid item>
-                  <Button color="inherit" component={NavLink} to="/jashoda-fresh">Milk Inquiry</Button>
                 </Grid>
                 <Grid item>
                   <Badge color="primary" badgeContent={cart_items.length} showZero>
@@ -245,8 +239,10 @@ const Header = (props) => {
                         <Button color={"inherit"} className={classes.checkout} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} >Checkout</Button>
                       </Grid>
                       <Grid item>
-                        <Button color={"inherit"} className={classes.checkout} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} >&#8377; {grand_total}/-</Button>
-
+                        {/* <Button color={"inherit"} className={classes.checkout} onClick={() => props.history.push(!cookies.isVerified ? "/login" : "/checkout")} >&#8377; {grand_total}/-</Button> */}
+                        <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >
+                          {discount > 0 && <span >&#8377;<span style={{ textDecoration: "line-through", fontWeight: "lighter" }}>{grand_total}</span>&nbsp;&nbsp;</span>}
+                        &#8377;<span style={{ fontSize: 23, fontWeight: 700 }}>{Math.ceil(grand_total - grand_total * (discount / 100))}/-</span></Button>
                         {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
                           <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
                           <Grid item><span>Cart</span></Grid>

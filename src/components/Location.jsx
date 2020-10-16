@@ -28,6 +28,7 @@ export default function FormDialog() {
           style={{ width: "100%", outline: "none" }}
           id="combo-box-demo"
           options={locations}
+          defaultValue={location}
           getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}
           onChange={(event, newValue) => {
             setLocation(newValue);
