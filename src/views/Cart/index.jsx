@@ -177,7 +177,7 @@ function Cart(props) {
                     <Grid item>
                       <Grid container justify={"space-between"} alignItems={"center"}>
                         <Grid item xs={2}>
-                          <Avatar src={cart.store.image} />
+                          <Avatar src={cart?.store?.image} />
                         </Grid>
                         <Grid item xs={7}>
                           <Typography variant={"h5"}>{cart.store.name}</Typography>

@@ -49,7 +49,7 @@ function App({ isDark }) {
                   <PrivateRoute exact path="/account" component={Account} />
                   <PrivateRoute exact path="/account/orders" component={Orders} />
                   <PrivateRoute exact path="/account/addresses" component={Address} />
-                  <PrivateRoute exact path="/account/addaddress" component={AddNewAddress} />
+                  <PrivateRoute exact path="/account/addaddress/:id?" component={AddNewAddress} />
                   <PrivateRoute exact path="/account/payments" component={Payments} />
                   <Route exact path="*" component={Page404} />
                 </Switch>

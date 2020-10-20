@@ -6587,27 +6587,17 @@ export const CART = {
 
 export const ADDRESSES = [
   {
-    name: "Amit",
-    phone: "+919586253639",
+    id: 1,
     address: "101,parimal society, near bhagirath society",
     pinCode: "395006",
-    houseNumber: "101",
-    roadAreaColony: "varachha road",
-    city: "Surat",
-    state: "Gujarat",
     landmark: "LH road",
-    addressType: "Home",
+    addressType: "home",
   },
   {
-    name: "Prabhat",
-    phone: "+919586253639",
+    id: 2,
     address: "45, Dindoli",
     pinCode: "395011",
-    houseNumber: "45",
-    roadAreaColony: "Dindoli road",
-    city: "Surat",
-    state: "Gujarat",
     landmark: "Sk road",
-    addressType: "Work/Office",
+    addressType: "work/office",
   }
 ]

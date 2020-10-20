@@ -36,7 +36,7 @@ const StoreDepartments = (props) => {
           {
             departments.map((department, index) =>
               <Grid item key={index}>
-                <Departments category_id={department.category_id} category_name={department.category_name} image={department.image} products_categories={department.products_categories} category={`category-${index}`} />
+                <Departments category_id={department.category_id} category_name={department.category_name} image={department.image || ""} products_categories={department.products_categories} category={`category-${index}`} />
               </Grid>
             )
           }

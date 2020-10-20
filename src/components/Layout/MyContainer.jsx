@@ -6,9 +6,9 @@ const Wrapper = styled(Container)({
   marginTop: "10px",
 });
 
-export default function MyContainer({ children }) {
+export default function MyContainer({ children, style }) {
   return (
-    <Wrapper>
+    <Wrapper style={style}>
       {children}
     </Wrapper>
   )

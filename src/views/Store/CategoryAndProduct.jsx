@@ -330,7 +330,7 @@ const CategoryAndProduct = (props) => {
       {/* <CarouselSlider style={{ width: "100%" }} className="slider" {...settings}> */}
       {/* </CarouselSlider> */}
 
-      {
+      {/* {
         modalData && <Dialog
           maxWidth={"lg"}
           open={open}
@@ -380,7 +380,7 @@ const CategoryAndProduct = (props) => {
             </Grid>
           </DialogContent>
         </Dialog>
-      }
+      } */}
     </>
   )
 }

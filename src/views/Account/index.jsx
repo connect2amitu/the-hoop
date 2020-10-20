@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     width: 70,
     color: theme.palette.getContrastText(red[500]),
     backgroundColor: red[500],
+    marginRight: 15
   },
   userName: {
     fontSize: 16,
@@ -63,7 +64,7 @@ export default function Account(props) {
 
   return (
     <MyContainer>
-      <Grid container className={classes.userWrapper} alignItems={"center"} spacing={1}>
+      <Grid container className={classes.userWrapper} alignItems={"center"}>
         <Grid item><Avatar className={classes.avatar}>PS</Avatar></Grid>
         <Grid item>
           <Grid container direction={"column"}>

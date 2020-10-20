@@ -30,7 +30,7 @@ const Store = (props) => {
     <React.Fragment>
       {
         store && store !== null && <>
-          <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />
+          <StoreBanner storeLogo={store.image || ""} storeName={store.name} storeInfo={store.tags.join(" · ")} />
           <MyContainer maxWidth={false} fixed={true}>
             {/* <Grid container spacing={2} justify={"center"}>
               <Grid item>

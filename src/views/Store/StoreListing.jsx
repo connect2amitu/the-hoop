@@ -122,7 +122,7 @@ const StoreListing = (props) => {
               <Grid item xs={12} sm={3} key={index}>
                 <Button className={classes.storeCard} onClick={() => { props.history.push(`/store/${store.slug}`); toggleStore(); }} >
                   <Grid container className={classes.right} direction={"column"} alignItems={"center"} spacing={2}>
-                    <Grid item><img src={store.image} className={classes.storeImage} alt="store" height="100" width="100" /></Grid>
+                    <Grid item><img src={store.image || ""} className={classes.storeImage} alt="store" height="100" width="100" /></Grid>
                     <Grid item>
                       <Grid className={classes.meta} container direction={"column"} alignItems={"flex-start"} justify={"flex-start"}>
                         <Grid item>

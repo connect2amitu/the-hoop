@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 import { NavLink } from 'react-router-dom';
 import { useAppState } from '../../context';
+import { StarRateRounded } from '@material-ui/icons';
 
 
 
@@ -162,7 +163,31 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     width: "100%",
     height: 110,
+    position: "relative",
     borderRadius: "12px 12px 0 0",
+  },
+  distance: {
+    position: "absolute",
+    height: 24,
+    borderRadius: 4,
+    backgroundColor: "rgba(0, 0, 0, 0.32)",
+    fontSize: 12,
+    fontWeight: "bold",
+    letterSpacing: "0.12px",
+    color: "rgb(255, 255, 255)",
+    padding: "0px 8px",
+    // textTransform: "uppercase",
+    display: "flex",
+    alignItems: "center",
+    right: 5,
+    top: 5,
+    zIndex: 100
+  },
+  rating: {
+    display: "flex",
+    alignItems: "center",
+    fontSize: 12,
+    marginRight: 5
   },
   shopTopBanner: {
     height: 125,
@@ -183,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
   },
   storeDetail: { width: "75%", marginLeft: 90, },
-  storeName: { margin: 0 },
+  storeName: { margin: 0, display: "flex", alignItems: "center" },
   description: { margin: 0 },
   rightSideAds: { width: "100%", height: "100%", marginTop: 10, backgroundColor: "#F2F2F2" },
   heading: { margin: "28px 0 5px 0" },
@@ -229,14 +254,18 @@ const Home = () => {
                   stores && stores.map((o, index) =>
                     <Grid item xs={12} sm={6} md={3} key={index}>
                       <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
-                        < div >
+                        <div>
                           <div className={classes.bannerWrapper}>
+                            <span className={classes.distance}>1 km away</span>
                             <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
                           </div>
                           <div className={classes.storeProfile}>
-                            <img src={o.image} className={classes.storeImage} alt="testing" />
+                            <img src={o.image || ""} className={classes.storeImage} alt="testing" />
                             <div className={classes.storeDetail} >
-                              <h3 className={classes.storeName} >{o.name}</h3>
+                              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                                <h3 className={classes.storeName} >{o.name}</h3>
+                                <span className={classes.rating}><StarRateRounded style={{ color: "#FDCC0D" }} />4.5</span>
+                              </div>
                               <p className={classes.description} >{`description of the store ${o.name} and location of the store`}</p>
                             </div>
                           </div>

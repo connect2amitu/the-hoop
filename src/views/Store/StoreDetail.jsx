@@ -104,6 +104,9 @@ const useStyles = makeStyles((theme) => ({
     left: "45%",
     top: "42%",
   },
+  storeDetailWrapper: {
+    marginTop: 200
+  },
   slickItem: {
     maxWidth: "100%",
     height: "100%",
@@ -143,11 +146,11 @@ const Store = (props) => {
 
   return (
     <React.Fragment>
-      {!isLoading && store && <StoreBanner storeLogo={store.image} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
-      {!isLoading ? <MyContainer maxWidth={"lg"} fixed={true}>
+      {!isLoading && store && <StoreBanner storeLogo={store.image || ""} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
+      {!isLoading ? <MyContainer style={{ margin: "200px auto 50px" }} maxWidth={"lg"} fixed={true}>
         <Grid container>
           <Slider {...settings}>
-            {[...new Array(3)].map((o, index) =>
+            {[...new Array(5)].map((o, index) =>
               <div style={{ margin: "0 20px", borderRadius: 10 }}>
                 <img src={`https://placeimg.com/640/480/${index}`} className={classes.slickItem} alt="sdfgdg" />
               </div>
@@ -173,16 +176,6 @@ const Store = (props) => {
         {
           store?.categories && <>
             <Grid container spacing={2} direction={"column"} alignItems={"flex-start"} justify={"center"}>
-              <>
-                <Grid item xs={12}>
-                  <CategoryAndProduct category={store.categories[0]} store={store} />
-                </Grid>
-                <Grid item xs={12} style={{ width: "100%", textAlign: "center" }}>
-                  <Button style={{ textAlign: "center" }} color={"primary"}
-                    component={NavLink}
-                    to={`/store/${`thehoop`}/departments/${store.categories[0].category_id}/${store.categories[0].slug}`} variant={"outlined"}>View more </Button>
-                </Grid>
-              </>
               {store.categories.slice(1).map((category, index) =>
                 <>
                   <Grid item xs={12}>
