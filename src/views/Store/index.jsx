@@ -20,12 +20,8 @@ const Store = (props) => {
     slidesToScroll: 1
   };
   useEffect(() => {
-    if (!props.match.params.storeName) {
-      props.history.push("/store/thehoop");
-    } else {
-      getStoreBySlug(props.match.params.storeName)
-    }
-  }, [props.match.params.storeName, props.history])
+    getStoreBySlug(props.match.params.storeName)
+  }, [props.match.params.storeName])
   return (
     <React.Fragment>
       {

@@ -25,7 +25,6 @@ export default function Orders(props) {
 
   return (
     <MyContainer>
-      <Typography className={classes.tCenter} variant={"h4"}>Orders</Typography>
       <Grid container direction={"column"} spacing={1}>
         {
           [...new Array(5)].map((o, index) =>

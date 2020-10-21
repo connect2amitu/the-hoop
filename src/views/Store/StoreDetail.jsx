@@ -8,81 +8,6 @@ import StoreBanner from '../../components/StoreBanner'
 import cls from 'classnames'
 import MyContainer from '../../components/Layout/MyContainer';
 
-//#region 
-// const categorySettings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   autoplay: true,
-//   slidesToShow: 6,
-//   slidesToScroll: 6,
-//   responsive: [
-//     {
-//       breakpoint: 3000,
-//       settings: {
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 2000,
-//       settings: {
-//         slidesToShow: 6,
-//         slidesToScroll: 6,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 1800,
-//       settings: {
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 1500,
-//       settings: {
-//         slidesToShow: 5,
-//         slidesToScroll: 5,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 1200,
-//       settings: {
-//         slidesToShow: 4,
-//         slidesToScroll: 4,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 3,
-//         initialSlide: 3
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 2
-//       }
-//     }
-//   ]
-// };
-
-//#endregion
-
-
 const useStyles = makeStyles((theme) => ({
   rightSideAds: { width: "100%", height: "100%", marginTop: 10, backgroundColor: "#F2F2F2" },
   categoryWrap: { overflow: "scroll hidden", flexWrap: "nowrap" },
@@ -114,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
     outline: "none",
     [theme.breakpoints.down('460')]: {
-      height: 115
+      height: 165
     },
     [theme.breakpoints.between('460', '960')]: {
       height: 123
@@ -146,8 +71,8 @@ const Store = (props) => {
 
   return (
     <React.Fragment>
-      {!isLoading && store && <StoreBanner storeLogo={store.image || ""} storeName={store.name} storeInfo={store.tags.join(" · ")} />}
-      {!isLoading ? <MyContainer style={{ margin: "200px auto 50px" }} maxWidth={"lg"} fixed={true}>
+      {/* {!isLoading && store && <StoreBanner storeLogo={store.image || ""} storeName={store.name} storeInfo={store.tags.join(" · ")} />} */}
+      {!isLoading ? <MyContainer style={{ margin: "0 auto 50px" }} maxWidth={"lg"} fixed={true}>
         <Grid container>
           <Slider {...settings}>
             {[...new Array(5)].map((o, index) =>

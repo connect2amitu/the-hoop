@@ -70,10 +70,6 @@ export default function AddNewAddress(props) {
             <form onSubmit={handleSubmit}>
               <Grid container spacing={2} direction={"column"}>
 
-                <Grid item xs={12} sm={6}>
-                  <Typography variant={"h4"}>Add Address</Typography>
-                </Grid>
-
                 {/* address */}
                 <Grid item xs={12} sm={6}>
                   <TextField

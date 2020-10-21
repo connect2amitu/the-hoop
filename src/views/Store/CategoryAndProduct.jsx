@@ -282,7 +282,7 @@ const CategoryAndProduct = (props) => {
                 <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
                   <Grid container className={classes.productCard} spacing={1} direction={"column"} >
                     <Grid item className={classes.productImageWrapper} >
-                      <Button className={classes.productImage} style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} />
+                      <Button component={NavLink} to={`/store/maruti-general-store/test`} className={classes.productImage} style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} />
                     </Grid>
                     <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
                     <Grid item>
@@ -330,7 +330,7 @@ const CategoryAndProduct = (props) => {
       {/* <CarouselSlider style={{ width: "100%" }} className="slider" {...settings}> */}
       {/* </CarouselSlider> */}
 
-      {/* {
+      {
         modalData && <Dialog
           maxWidth={"lg"}
           open={open}
@@ -380,7 +380,7 @@ const CategoryAndProduct = (props) => {
             </Grid>
           </DialogContent>
         </Dialog>
-      } */}
+      }
     </>
   )
 }

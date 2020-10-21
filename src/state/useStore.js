@@ -10,13 +10,15 @@ const initialArgs = {
   store: null,
   openStores: false,
   departments: [],
-  isLoading: true
+  isLoading: false
 };
 
 const useStore = () => {
   const [state, setState] = useReducer(reducer, initialArgs);
 
   const getStoreBySlug = (slug) => {
+    console.log('getStoreBySlug slug =>', slug);
+
     var data = STORES.find(data => data.slug === slug) || null;
     setState({ isLoading: true })
     setTimeout(() => {

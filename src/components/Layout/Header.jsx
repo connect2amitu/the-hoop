@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon, Popper, Grow, Paper, ClickAwayListener, MenuList, MenuItem, Fade, Zoom, CircularProgress } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown, LocalMallRounded, StoreMallDirectoryRounded } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown, LocalMallRounded, StoreMallDirectoryRounded, Keyboard } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
 import cls from 'classnames'
 
@@ -182,6 +182,28 @@ const Header = (props) => {
     return !props.location.pathname.match(/(login|location)/)
   }
 
+  const showBackButton = () => {
+    switch (props.location.pathname) {
+      case "/account":
+        return "Account";
+      // break;
+      case "/account/addresses":
+        return "Addresses";
+      // break;
+      case "/account/payments":
+        return "Payments";
+      // break;
+      case "/account/orders":
+        return "Orders";
+      // break;
+      case "/account/addaddress":
+        return "New Address";
+      // break;
+      default:
+        return false
+    }
+  }
+
 
   function handleListKeyDown(event) {
     if (event.key === 'Tab') {
@@ -195,13 +217,16 @@ const Header = (props) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
+  console.log('props.location.pathname =>', props.location.pathname)
+  console.log('props.history.goBack =>', props.history.goBack)
+  console.log('props.location.pathname =>', props.location.pathname)
 
   return (
     <>
       {hideHeader() && <AppBar position="fixed" className={classes.appbar}>
         {/* <Toolbar> */}
         <Grid container justify={"space-between"} alignItems={"center"}>
-          {!props.location.pathname.includes('store') && <Grid item className={classes.logoSection}>
+          {props.location.pathname === "/" && <Grid item className={classes.logoSection}>
             <NavLink to={"/"} color={"inherit"} style={{ textDecoration: "none" }}>
               <img src={require('../../assets/images/logo/thehooplogo.svg')} alt=""
                 style={{
@@ -214,7 +239,7 @@ const Header = (props) => {
           </Grid>}
 
 
-          {props.location.pathname.match('store') &&
+          {props.location.pathname.match('store') && !props.match.params.product &&
             <>
               {/* Top bar for mobile store page */}
               <Grid item className={classes.mobile}>
@@ -233,8 +258,19 @@ const Header = (props) => {
                 <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>Delivery in {location?.area_pincode}</p>
               </Grid>
             </>
-
           }
+          {
+            showBackButton() &&
+            <>
+              <Grid item className={classes.mobile}>
+                <IconButton onClick={props.history.goBack} color={"secondary"}><KeyboardArrowLeftRounded /></IconButton>
+              </Grid>
+              <Grid item >
+                <Typography >{showBackButton()}</Typography>
+              </Grid>
+            </>
+          }
+
           <Grid item className={classes.desktop}>
             <Grid container spacing={1} justify={"flex-end"} alignItems={"center"}>
               <Grid item>
