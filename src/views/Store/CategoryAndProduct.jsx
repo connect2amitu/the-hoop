@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
   },
   selectBox: {
-    width: "100%",
+    width: "150px",
     fontSize: 12
   },
   productCard: {
@@ -31,12 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   productImageWrapper: {
     height: 120,
-    width: "100%",
+    // width: "100%",
     textAlign: "center"
   },
   productImage: {
-    height: 120,
-    width: 150,
+    height: 90,
+    width: 90,
     margin: "auto",
     cursor: "pointer",
     borderRadius: 10,
@@ -48,8 +48,9 @@ const useStyles = makeStyles((theme) => ({
   productNameGrid: {
     fontSize: 13,
     fontWeight: 600,
-    height: 42,
-    maxHeight: 42,
+    // height: 22,
+    // width: 300,
+    // maxHeight: 42,
     overflow: "hidden",
     textOverflow: "ellipsis"
   },
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main
   },
   select: {
-    padding: 10,
+    padding: 5,
     fontSize: 14
   },
   categoryName: {
@@ -276,44 +277,40 @@ const CategoryAndProduct = (props) => {
           <Typography variant={"h4"} className={classes.categoryName}>{category.name} </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Grid container >
+          <Grid container spacing={1} >
             {
               category.products.slice(0, 4).map((product, index) =>
-                <Grid item xs={6} sm={4} md={3} ld={3} key={index}>
-                  <Grid container className={classes.productCard} spacing={1} direction={"column"} >
-                    <Grid item className={classes.productImageWrapper} >
+                <Grid item xs={12} sm={4} md={3} ld={3} key={index}>
+                  <Grid container spacing={1}>
+                    <Grid item xs={3} md={4} className={classes.productImageWrapper} >
                       <Button component={NavLink} to={`/store/maruti-general-store/test`} className={classes.productImage} style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} />
                     </Grid>
-                    <Grid item className={classes.productNameGrid}><Typography className={classes.productName} variant={"caption"} >{product.name}</Typography></Grid>
-                    <Grid item>
-                      <FormControl variant="outlined" className={classes.selectBox}>
-                        <Select
-                          classes={{ root: classes.select }}
-                          labelId={`product-${product.id}`}
-                          id={`product-${product.id}`}
-                          value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
-                          onChange={(e) => handleChange(e, product.id)}
-                          inputProps={{
-                            name: `product-${product.id}`,
-                            // id: `product-${product.id}`,
-                          }}
-                        >
-                          {
-                            product.data.map((option, index) =>
-                              <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
-                            )
-                          }
-                        </Select>
-                      </FormControl>
-                    </Grid>
-                    <Grid item>
-                      <Grid container alignItems={"center"} justify={"space-between"}>
-                        <Grid item>
-                          <Typography className={classes.priceGrid} variant={"caption"}>
-                            &#8377;{state && state[`product-${product.id}`] ? state[`product-${product.id}`].rate : product.data[0].rate}/-
-                            </Typography>
+                    <Grid item xs={9} md={8}>
+                      <Grid container spacing={1} direction={"column"}>
+                        <Grid item className={classes.productNameGrid}>
+                          <Typography className={classes.productName} variant={"caption"} >{product.name}</Typography>
                         </Grid>
                         <Grid item>
+                          <FormControl variant="outlined" className={classes.selectBox}>
+                            <Select
+                              classes={{ root: classes.select }}
+                              labelId={`product-${product.id}`}
+                              id={`product-${product.id}`}
+                              value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
+                              onChange={(e) => handleChange(e, product.id)}
+                              inputProps={{
+                                name: `product-${product.id}`,
+                              }}
+                            >
+                              {
+                                product.data.map((option, index) =>
+                                  <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
+                                )
+                              }
+                            </Select>
+                          </FormControl>
+                        </Grid>
+                        <Grid item >
                           {showButtons(product)}
                         </Grid>
                       </Grid>

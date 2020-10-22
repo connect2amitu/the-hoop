@@ -90,8 +90,87 @@ export default function Checkout(props) {
   };
 
 
+
+  const payumoney = () => {
+    //Create a Data object that is to be passed to LAUNCH method of Bolt
+    var pd = {
+      key: "P09m2mf5",
+      txnid: "123",
+      amount: "100",
+      firstname: "amit",
+      email: "amc@narola.email",
+      phone: "+919586253639",
+      productinfo: "1kg tomato",
+      surl: "aaaa",
+      furl: "123",
+      hash: ''
+    }
+
+    // Data to be Sent to API to generate hash.
+    let data = {
+      'txnid': pd.txnid,
+      'email': pd.email,
+      'amount': pd.amount,
+      'productinfo': pd.productinfo,
+      'firstname': pd.firstname
+    }
+    let self = this;
+    // API call to get the Hash value
+    fetch(`http://localhost:8080/payment/payumoney`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(function (a) {
+        return a.json();
+      })
+      .then(function (json) {
+        pd.hash = json['hash']
+        //  With the hash value in response, we are ready to launch the bolt overlay.
+        //Function to launch BOLT  
+        console.log('pd =>', pd)
+        console.log('self =>', self)
+
+        redirectToPayU(pd);
+      });
+  }
+
+
+  const redirectToPayU = (pd) => {
+    //use window.bolt.launch if you face an error in bolt.launch
+    var bolt = window.bolt;
+    bolt.launch(pd, {
+      responseHandler: function (response) {
+        // your payment response Code goes here
+        fetch(`http://localhost:8080/payment/payumoney/response`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(response.response)
+        })
+          .then(function (a) {
+            return a.json();
+          })
+          .then(function (json) {
+            console.log(json);
+          });
+      },
+      catchException: function (response) {
+        // the code you use to handle the integration errors goes here
+        // Make any UI changes to convey the error to the user
+      }
+    });
+  }
+
+
   return (
     <MyContainer>
+      {/* <Button color={"primary"} variant={"contained"} onClick={() => payumoney()}>Pay u Money</Button> */}
       {cart_items.length >= 0 && <Formik
         initialValues={{ name: cookies.name, address: cookies.address, mobile: cookies.phone }}
         validationSchema={checkOutFormSchema}

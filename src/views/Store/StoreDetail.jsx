@@ -75,9 +75,9 @@ const Store = (props) => {
       {!isLoading ? <MyContainer style={{ margin: "0 auto 50px" }} maxWidth={"lg"} fixed={true}>
         <Grid container>
           <Slider {...settings}>
-            {[...new Array(5)].map((o, index) =>
+            {[...new Array(3)].map((o, index) =>
               <div style={{ margin: "0 20px", borderRadius: 10 }}>
-                <img src={`https://placeimg.com/640/480/${index}`} className={classes.slickItem} alt="sdfgdg" />
+                <img src={`https://thehoop.in/admin/Slider/slider${index + 1}.jpg`} className={classes.slickItem} alt="sdfgdg" />
               </div>
             )}
           </Slider>

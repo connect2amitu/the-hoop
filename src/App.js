@@ -15,6 +15,7 @@ const StoreListing = React.lazy(() => import('./views/Store/StoreListing'))
 const StoreDetail = React.lazy(() => import('./views/Store/StoreDetail'))
 const ProductDetail = React.lazy(() => import('./views/Store/ProductDetail'))
 const StoreDepartments = React.lazy(() => import('./views/Store/StoreDepartments'))
+const Offers = React.lazy(() => import('./views/Store/Offers'))
 const StoreDepartmentsCategory = React.lazy(() => import('./views/Store/StoreDepartmentsCategory'))
 const Checkout = React.lazy(() => import('./views/Checkout'))
 const Login = React.lazy(() => import('./views/Login'))
@@ -25,8 +26,6 @@ const AddNewAddress = React.lazy(() => import('./views/Account/AddNewAddress'))
 const Payments = React.lazy(() => import('./views/Account/Payments'))
 const Location = React.lazy(() => import('./views/Location'))
 const Page404 = React.lazy(() => import('./components/404'))
-
-
 
 function App({ isDark }) {
 
@@ -42,6 +41,7 @@ function App({ isDark }) {
                   <Route exact path="/" component={Home} />
                   {/* <Route exact path="/stores" component={StoreListing} /> */}
                   <Route exact path="/store/:storeName/(storefront)?" component={StoreDetail} />
+                  <Route exact path="/store/:storeName/offers" component={Offers} />
                   <Route exact path="/store/:storeName/:product" component={ProductDetail} />
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />
                   <Route exact path="/store/:storeName/departments/:slug/:categoryId" component={StoreDepartmentsCategory} />

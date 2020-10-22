@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { AppBar, Toolbar, Button, Grid, IconButton, SwipeableDrawer, Badge, Fab, Dialog, Typography, List, ListItem, ListItemText, Divider, Slide, TextField, Tabs, Tab, ListItemIcon, Popper, Grow, Paper, ClickAwayListener, MenuList, MenuItem, Fade, Zoom, CircularProgress } from '@material-ui/core'
 import { NavLink, withRouter } from 'react-router-dom'
-import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown, LocalMallRounded, StoreMallDirectoryRounded, Keyboard } from '@material-ui/icons'
+import { MenuRounded, LocationOnRounded, ShoppingCartRounded, StorefrontRounded, Brightness1Rounded, Brightness3Rounded, SearchRounded, NightsStayRounded, WbSunnyRounded, ViewModuleRounded, ShoppingBasketRounded, PersonRounded, CloseRounded, ArrowLeftRounded, KeyboardArrowLeftRounded, RoundedCorner, AccountCircleRounded, AccountCircleOutlined, Notifications, NotificationsActiveRounded, NotificationsRounded, HomeRounded, KeyboardArrowDown, LocalMallRounded, StoreMallDirectoryRounded, Keyboard, LocalOfferRounded } from '@material-ui/icons'
 import { green } from '@material-ui/core/colors';
 import cls from 'classnames'
 
@@ -187,6 +187,9 @@ const Header = (props) => {
       case "/account":
         return "Account";
       // break;
+      case "/checkout":
+        return "Checkout";
+      // break;
       case "/account/addresses":
         return "Addresses";
       // break;
@@ -217,9 +220,6 @@ const Header = (props) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  console.log('props.location.pathname =>', props.location.pathname)
-  console.log('props.history.goBack =>', props.history.goBack)
-  console.log('props.location.pathname =>', props.location.pathname)
 
   return (
     <>
@@ -280,7 +280,7 @@ const Header = (props) => {
                 <Button color="inherit" onClick={() => toggleLocation()}><LocationOnRounded /> {location?.area_name}</Button>
               </Grid>
               <Grid item>
-                <Badge color="secondary" badgeContent={cart.count} showZero>
+                <Badge color="secondary" badgeContent={cart_items.length} showZero>
                   <Button variant={"contained"} onClick={() => toggleCart()} color="primary">
                     <LocalMallRounded />
                      My Cart</Button>
@@ -335,11 +335,16 @@ const Header = (props) => {
                         <Grid item><span>Near Me</span></Grid>
                       </Grid>
                     </Grid>
-
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
                         <Grid item><ViewModuleRounded /> </Grid>
                         <Grid item><span>Department</span></Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid item>
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/offers`)} >
+                        <Grid item><LocalOfferRounded /> </Grid>
+                        <Grid item><span>Offers</span></Grid>
                       </Grid>
                     </Grid>
                     <Grid item>
