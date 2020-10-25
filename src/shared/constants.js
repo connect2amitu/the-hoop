@@ -10,6 +10,16 @@ export const MEDIA_ERROR_STATUS = 415;
 export const VALIDATION_FAILURE_STATUS = 417;
 export const DATABASE_ERROR_STATUS = 422;
 export const INTERNAL_SERVER_ERROR = 500;
+// export const RAZORPAY = {
+//   key: "rzp_test_fScNdyNX8Ats49",
+//   secret: "cZoFBr60rwF7MqKkfuskROAt"
+// };
+
+export const RAZORPAY = {
+  key: "rzp_live_HfHR7rruVAedYh",
+  secret: "wtWQQdKIMUHOim5OdKt6OKYa"
+};
+
 
 var date = new Date();
 date.setDate(date.getDate() + 30);

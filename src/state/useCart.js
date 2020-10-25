@@ -2,7 +2,6 @@ import { useReducer, useEffect } from "react";
 import { findIndex } from "lodash";
 import { useCookies } from "react-cookie";
 import { COOKIE_OPTION } from "../shared/constants";
-import moment from "moment";
 
 function reducer(state, action) {
   return { ...state, ...action };
@@ -40,15 +39,6 @@ const useCart = () => {
     if (cookies.order_id) {
       order_id = cookies.order_id
     }
-    var discount = 0;
-
-    var s = Date.parse("2020-10-17");
-    var e = Date.parse("2020-10-25");
-    // var c = Date.parse(moment(moment(), "YYYY-MM-DD").add(1, 'days').format("YYYY-MM-DD"));
-    var c = Date.parse(moment().format("YYYY-MM-DD"));
-    if ((c <= e && c >= s)) {
-      discount = 10
-    }
 
     if (localStorage.cart_items) {
       var _cart_items = JSON.parse(localStorage.cart_items)
@@ -58,7 +48,6 @@ const useCart = () => {
         order_id,
         cart_items: _cart_items,
         grand_total: _cart_items.reduce((a, b) => a + ((b['rate'] * b['qty']) || 0), 0),
-        discount
       })
     }
 

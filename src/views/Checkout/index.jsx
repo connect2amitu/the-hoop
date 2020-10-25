@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import { Container, Grid, Typography, styled, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemSecondaryAction, IconButton, ListItemIcon, Radio, Paper, makeStyles, CircularProgress } from '@material-ui/core'
-import { FileCopyRounded } from '@material-ui/icons';
+import { Container, Grid, Typography, styled, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemIcon, Radio, Paper, makeStyles, CircularProgress } from '@material-ui/core'
+import { CreditCardRounded, MoneyRounded } from '@material-ui/icons';
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { TOAST } from '../../shared/funs';
 import { useAppState } from '../../context';
-import { COOKIE_OPTION } from '../../shared/constants';
+import { COOKIE_OPTION, RAZORPAY } from '../../shared/constants';
 import { order } from '../../apis/order';
 
 const checkOutFormSchema = Yup.object().shape({
@@ -84,6 +84,58 @@ export default function Checkout(props) {
       order_data
     }
     setLoading(true);
+    if (paymentMode === 0) {
+      placeOrder(data)
+    } else {
+
+      var options = {
+        key: RAZORPAY.key, // Enter the Key ID generated from the Dashboard
+        amount: grand_total * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: "INR",
+        name: "The Hoop",
+        description: "India's Local Store",
+        image: require(`../../assets/images/logo/thehooplogo.svg`),
+        // "order_id": "order_Ft9WIgy2rbwXo3", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        handler: function (response) {
+          console.log('payment.success response =>', response)
+          placeOrder({ ...data, razorpay_payment_id: response.razorpay_payment_id })
+        },
+        modal: {
+          ondismiss: function () {
+            TOAST.info("Payment Dismissed");
+            setLoading(false);
+          }
+        },
+        prefill: {
+          "name": data.customer_name,
+          "email": data.email ? data.email : `${data.customer_mobile}@thehoop.in`,
+          "contact": data.customer_mobile
+        },
+        notes: {
+          "address": "The Hoop Office"
+        },
+        theme: {
+          "color": "#f44336"
+        }
+      };
+      var rzp1 = window.Razorpay(options);
+      console.log('rzp1 =>', rzp1)
+
+      rzp1.on('payment.failed', function (Error) {
+        setLoading(false);
+        TOAST.error("Payment Failed, please try again!")
+
+      });
+      rzp1.open(options);
+    }
+
+
+  }
+
+
+
+
+  const placeOrder = (data) => {
     order(data).then(resp => {
       TOAST.success("Order Placed Success")
       props.history.push("/success");
@@ -92,19 +144,19 @@ export default function Checkout(props) {
       setLoading(false);
       console.log('order error =>', error);
     })
-  }
+  };
 
   const handleChangePayment = (event) => {
     setPaymentMode(event);
   };
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text).then(function () {
-      TOAST.info(text + " Copied")
-    }, function (err) {
-      console.info('Async: Could not copy text: ', err);
-    });
-  };
+  // const copyToClipboard = (text) => {
+  //   navigator.clipboard.writeText(text).then(function () {
+  //     TOAST.info(text + " Copied")
+  //   }, function (err) {
+  //     console.info('Async: Could not copy text: ', err);
+  //   });
+  // };
 
 
   return (
@@ -186,8 +238,6 @@ export default function Checkout(props) {
           </Typography>
                   <div >
                     <List dense={true}>
-
-
                       <ListItem button onClick={() => handleChangePayment(0)}>
                         <ListItemIcon>
                           <Radio
@@ -199,59 +249,33 @@ export default function Checkout(props) {
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
+                          {/* <Avatar>
+                            <MoneyRounded />
+                          </Avatar> */}
                           <Avatar src={require(`../../assets/images/payment-icon/cash.png`)} />
                         </ListItemAvatar>
                         <ListItemText
                           primary="Cash On Delivery"
                         />
                       </ListItem>
-
-
                       <ListItem button onClick={() => handleChangePayment(1)}>
                         <ListItemIcon>
                           <Radio
                             checked={paymentMode === 1}
+
                             value={1}
-                            name="paytm"
+                            name="online"
                             inputProps={{ 'aria-label': 1 }}
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
-                          <Avatar src={require(`../../assets/images/payment-icon/paytm.png`)} />
+                          <Avatar>
+                            <CreditCardRounded />
+                          </Avatar>
                         </ListItemAvatar>
                         <ListItemText
-                          primary="PayTm"
-                          secondary={`Number : 8490860632`}
+                          primary="Pay Online"
                         />
-                        <ListItemSecondaryAction>
-                          <IconButton edge="end" onClick={() => copyToClipboard(`8490860632`)}>
-                            <FileCopyRounded />
-                          </IconButton>
-                        </ListItemSecondaryAction>
-                      </ListItem>
-
-                      <ListItem button onClick={() => handleChangePayment(2)}>
-                        <ListItemIcon>
-                          <Radio
-                            checked={paymentMode === 2}
-
-                            value={2}
-                            name="gpay"
-                            inputProps={{ 'aria-label': 2 }}
-                          />
-                        </ListItemIcon>
-                        <ListItemAvatar>
-                          <Avatar src={require(`../../assets/images/payment-icon/gpay.png`)} />
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary="Google Pay"
-                          secondary={`UPI ID : 8490860632@okbizaxis`}
-                        />
-                        <ListItemSecondaryAction>
-                          <IconButton edge="end" onClick={() => copyToClipboard(`8490860632@okbizaxis`)}>
-                            <FileCopyRounded />
-                          </IconButton>
-                        </ListItemSecondaryAction>
                       </ListItem>
                     </List>
                   </div>

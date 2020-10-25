@@ -30,6 +30,10 @@ const useGlobal = (appState) => {
     setState({ openCart: !state.openCart })
   }
 
+  const closeCart = () => {
+    setState({ openCart: false })
+  }
+
   const getLocations = async () => {
     setState({ ...state, isLoading: true })
 
@@ -56,6 +60,7 @@ const useGlobal = (appState) => {
 
   return {
     toggleCart,
+    closeCart,
     setLocation,
     toggleLocation,
     getLocations,

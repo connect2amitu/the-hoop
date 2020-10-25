@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Cart(props) {
   const classes = useStyles();
-  const { toggleCart, openCart } = useAppState("global");
+  const { toggleCart, closeCart, openCart } = useAppState("global");
   const [cookies, setCookie] = useCookies();
 
   const { removeCart, cart_items, grand_total, updateProductQty, discount } = useAppState("cart");
@@ -81,6 +81,7 @@ function Cart(props) {
 
   return (
     <SwipeableDrawer
+      disableSwipeToOpen={true}
       anchor={"right"}
       open={openCart}
       onClose={() => toggleCart()}
@@ -210,9 +211,9 @@ function Cart(props) {
           }
         </Grid>
         {grand_total > 0 ? (props.location.pathname === "/" || props.location.pathname.includes('store')) && grand_total > 0 &&
-          <AppBar position="fixed" color="primary" onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} className={classes.appBar}>
+          <AppBar position="fixed" color="primary" onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} className={classes.appBar}>
             <Toolbar>
-              <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }}>
+              <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }}>
                 {/* <Grid item>
                         <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
                           <Grid item><StorefrontRounded /> </Grid>
@@ -232,10 +233,10 @@ function Cart(props) {
                         </Grid>
                       </Grid> */}
                 <Grid item>
-                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
+                  <Button color={"inherit"} className={classes.checkout} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
                 </Grid>
                 <Grid item>
-                  <Button color={"inherit"} className={classes.checkout} onClick={() => { toggleCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >
+                  <Button color={"inherit"} className={classes.checkout} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >
                     {discount > 0 && <span >&#8377;<span style={{ textDecoration: "line-through", fontWeight: "lighter" }}>{grand_total}</span>&nbsp;&nbsp;</span>}
                         &#8377;<span style={{ fontSize: 23, fontWeight: 700 }}>{Math.ceil(grand_total - grand_total * (discount / 100))}/-</span></Button>
 
