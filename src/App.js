@@ -7,7 +7,6 @@ import containers from './state';
 import { CookiesProvider } from 'react-cookie';
 import PrivateRoute from './components/PrivateRoute';
 
-
 const Layout = React.lazy(() => import('./components/Layout'))
 const Store = React.lazy(() => import('./views/Store'))
 const Home = React.lazy(() => import('./views/Home'))
@@ -18,6 +17,7 @@ const StoreDepartments = React.lazy(() => import('./views/Store/StoreDepartments
 const Offers = React.lazy(() => import('./views/Store/Offers'))
 const StoreDepartmentsCategory = React.lazy(() => import('./views/Store/StoreDepartmentsCategory'))
 const Checkout = React.lazy(() => import('./views/Checkout'))
+const Success = React.lazy(() => import('./views/Checkout/Success'))
 const Login = React.lazy(() => import('./views/Login'))
 const Account = React.lazy(() => import('./views/Account'))
 const Orders = React.lazy(() => import('./views/Account/Orders'))
@@ -46,6 +46,7 @@ function App({ isDark }) {
                   <Route exact path="/store/:storeName/departments" component={StoreDepartments} />
                   <Route exact path="/store/:storeName/departments/:slug/:categoryId" component={StoreDepartmentsCategory} />
                   <Route exact path="/checkout" component={Checkout} />
+                  <Route exact path="/success" component={Success} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <PrivateRoute exact path="/account" component={Account} />

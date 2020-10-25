@@ -10,6 +10,11 @@ import { useAppState } from '../../context';
 import { COOKIE_OPTION } from '../../shared/constants';
 import { order } from '../../apis/order';
 import MyContainer from '../../components/Layout/MyContainer';
+import base64 from 'base-64';
+import Axios from 'axios';
+import { RAZORPAY } from '../../shared/constants'
+
+
 
 const checkOutFormSchema = Yup.object().shape({
   name: Yup.string().required().matches(/^[a-zA-Z ]{3,20}$/, 'Name is not valid'),
@@ -40,6 +45,13 @@ export default function Checkout(props) {
   const classes = useStyles();
 
 
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [])
   // const handleChange = (type) => {
   //   setExpanded(expanded !== type ? type : "")
   // }
@@ -64,113 +76,96 @@ export default function Checkout(props) {
       customer_address: values.address,
       customer_payment: paymentMode,
       customer_area: location.area_id,
+      amount: grand_total * 100,
+      currency: "INR",
+      receipt: "rcptid_11",
       order_data
     }
-    setLoading(true);
-    order(data).then(resp => {
-      TOAST.success("Order Placed Success")
-      props.history.push("/success");
-      setOrderResponse(resp.data)
-    }).catch(error => {
-      setLoading(false);
-      console.log('order error =>', error);
-    })
-  }
-
-  const handleChangePayment = (event) => {
-    setPaymentMode(event);
-  };
-
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text).then(function () {
-      TOAST.info(text + " Copied")
-    }, function (err) {
-      console.info('Async: Could not copy text: ', err);
-    });
-  };
 
 
+    var bytes = base64.encode(`${RAZORPAY.key}:${RAZORPAY.secret}`);
+    console.log('bytes =>', bytes)
+    console.log('grand_total =>', grand_total)
 
-  const payumoney = () => {
-    //Create a Data object that is to be passed to LAUNCH method of Bolt
-    var pd = {
-      key: "P09m2mf5",
-      txnid: "123",
-      amount: "100",
-      firstname: "amit",
-      email: "amc@narola.email",
-      phone: "+919586253639",
-      productinfo: "1kg tomato",
-      surl: "aaaa",
-      furl: "123",
-      hash: ''
-    }
-
-    // Data to be Sent to API to generate hash.
-    let data = {
-      'txnid': pd.txnid,
-      'email': pd.email,
-      'amount': pd.amount,
-      'productinfo': pd.productinfo,
-      'firstname': pd.firstname
-    }
-    let self = this;
-    // API call to get the Hash value
-    fetch(`http://localhost:8080/payment/payumoney`, {
-      method: 'POST',
+    Axios.post(`https://api.razorpay.com/v1/orders`, data, {
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(function (a) {
-        return a.json();
-      })
-      .then(function (json) {
-        pd.hash = json['hash']
-        //  With the hash value in response, we are ready to launch the bolt overlay.
-        //Function to launch BOLT  
-        console.log('pd =>', pd)
-        console.log('self =>', self)
-
-        redirectToPayU(pd);
-      });
-  }
-
-
-  const redirectToPayU = (pd) => {
-    //use window.bolt.launch if you face an error in bolt.launch
-    var bolt = window.bolt;
-    bolt.launch(pd, {
-      responseHandler: function (response) {
-        // your payment response Code goes here
-        fetch(`http://localhost:8080/payment/payumoney/response`, {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(response.response)
-        })
-          .then(function (a) {
-            return a.json();
-          })
-          .then(function (json) {
-            console.log(json);
-          });
-      },
-      catchException: function (response) {
-        // the code you use to handle the integration errors goes here
-        // Make any UI changes to convey the error to the user
+        Authorization: "Basic cnpwX3Rlc3RfY2N5ZzdNcThiWGRiY2g6Sm9UMTB3emlydDh4MzVnY01GbGgxU1Bo",
+        "Content-Type": "application/json",
       }
+    }).then(resp => {
+      console.log('placeOrderHandler =>', placeOrderHandler)
+    }).catch(e => {
+      console.log('placeOrderHandler e =>', e.responseText)
+
+    })
+
+    var options = {
+      key: RAZORPAY.key, // Enter the Key ID generated from the Dashboard
+      amount: grand_total, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "TheHoop",
+      description: "India's Local Store",
+      image: require(`../../assets/images/logo/thehooplogo.svg`),
+      // "order_id": "order_Ft9WIgy2rbwXo3", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      handler: function (response) {
+        console.log('payment.success response =>', response)
+        setLoading(true);
+        TOAST.success("Order Placed Success")
+        props.history.push("/success");
+        // setOrderResponse(resp.data)
+      },
+      modal: {
+        ondismiss: function () {
+          alert('dismissed')
+        }
+      },
+      prefill: {
+        "name": data.customer_name,
+        "email": data.email ? data.email : `${data.customer_mobile}@thehoop.in`,
+        "contact": data.customer_mobile
+      },
+      notes: {
+        "address": "The Hoop Office"
+      },
+      theme: {
+        "color": "#f44336"
+      }
+    };
+
+    var successCallback = function (payment_id) {
+      alert('payment_id: ' + payment_id);
+    };
+
+    var cancelCallback = function (error) {
+      alert(error.description + ' (Error ' + error.code + ')');
+    };
+
+    var rzp1 = window.Razorpay();
+    console.log('rzp1 =>', rzp1)
+
+    rzp1.on('payment.failed', function (Error) {
+      setLoading(false);
+      console.log('payment.failed Error =>', Error)
+
     });
+    rzp1.open(options, successCallback, cancelCallback);
   }
 
+  // const handleChangePayment = (event) => {
+  //   setPaymentMode(event);
+  // };
+
+  // const copyToClipboard = (text) => {
+  //   navigator.clipboard.writeText(text).then(function () {
+  //     TOAST.info(text + " Copied")
+  //   }, function (err) {
+  //     console.info('Async: Could not copy text: ', err);
+  //   });
+  // };
 
   return (
     <MyContainer>
-      {/* <Button color={"primary"} variant={"contained"} onClick={() => payumoney()}>Pay u Money</Button> */}
+      {/* <Button color={"primary"} variant={"contained"} onClick={() => payment()}>Payment</Button> */}
       {cart_items.length >= 0 && <Formik
         initialValues={{ name: cookies.name, address: cookies.address, mobile: cookies.phone }}
         validationSchema={checkOutFormSchema}
@@ -242,7 +237,7 @@ export default function Checkout(props) {
                   />
 
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                {/* <Grid item xs={12} sm={6}>
                   <Typography variant="h6" >
                     Pay with
           </Typography>
@@ -261,7 +256,6 @@ export default function Checkout(props) {
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
-                          {/* <Avatar src={require(`../../assets/images/payment-icon/cash.png`)} /> */}
                         </ListItemAvatar>
                         <ListItemText
                           primary="Cash On Delivery"
@@ -279,7 +273,6 @@ export default function Checkout(props) {
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
-                          {/* <Avatar src={require(`../../assets/images/payment-icon/paytm.png`)} /> */}
                         </ListItemAvatar>
                         <ListItemText
                           primary="PayTm"
@@ -303,7 +296,6 @@ export default function Checkout(props) {
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
-                          {/* <Avatar src={require(`../../assets/images/payment-icon/gpay.png`)} /> */}
                         </ListItemAvatar>
                         <ListItemText
                           primary="Google Pay"
@@ -317,9 +309,9 @@ export default function Checkout(props) {
                       </ListItem>
                     </List>
                   </div>
-                </Grid>
+                </Grid > */}
 
-                <Grid item xs={12} sm={6}>
+                <Grid Grid item xs={12} sm={6} >
                   <Paper style={{ padding: 10 }} elevation={3}>
                     <Typography variant={"h6"}>PRICE DETAILS</Typography>
                     <Grid container direction={"column"}>
@@ -345,15 +337,16 @@ export default function Checkout(props) {
                       </Grid>
                     </Grid>
                   </Paper>
-                </Grid>
+                </Grid >
 
                 <Grid item xs={12} sm={6}>
                   <Button variant={"contained"} disabled={loading} className={classes.btn} type={"submit"} fullWidth color={"primary"}>{loading ? <CircularProgress style={{ color: "#fff", height: 26, width: 26 }} /> : `Place Order`}</Button>
                 </Grid>
-              </Grid>
-            </form>
-          )}
-      </Formik>
+              </Grid >
+            </form >
+          )
+        }
+      </Formik >
       }
     </MyContainer >
   )

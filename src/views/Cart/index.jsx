@@ -180,7 +180,7 @@ function Cart(props) {
                           <Avatar src={cart?.store?.image} />
                         </Grid>
                         <Grid item xs={7}>
-                          <Typography variant={"h5"}>{cart.store.name}</Typography>
+                          <Typography variant={"h5"}>{cart.store?.name}</Typography>
                         </Grid>
                         <Grid item xs={3}>
                           <Typography style={{ textAlign: "right" }} variant={"h5"}>&#8377; {cart.total}</Typography>

@@ -11,6 +11,11 @@ export const VALIDATION_FAILURE_STATUS = 417;
 export const DATABASE_ERROR_STATUS = 422;
 export const INTERNAL_SERVER_ERROR = 500;
 
+export const RAZORPAY = {
+  key: "rzp_test_BMaQmSDBN55exk",
+  secret: "eVO15UPAhFRiUSzRAGI2nKwf"
+};
+
 var date = new Date();
 date.setDate(date.getDate() + 30);
 
