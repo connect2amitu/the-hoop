@@ -50,6 +50,7 @@ function App({ isDark }) {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <PrivateRoute exact path="/account" component={Account} />
+                  {/* <PrivateRoute exact path="/about-us" component={AboutUs} /> */}
                   <PrivateRoute exact path="/account/orders" component={Orders} />
                   <PrivateRoute exact path="/account/addresses" component={Address} />
                   <PrivateRoute exact path="/account/addaddress/:id?" component={AddNewAddress} />

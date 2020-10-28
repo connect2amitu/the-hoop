@@ -13,10 +13,22 @@ var darkTheme = createMuiTheme({
 var theme = createMuiTheme({
   palette: {
     primary: red,
-    secondary: grey
+    secondary: grey,
   },
-
+  typography: {
+    fontFamily: [
+      "SF Regular",
+      "Segoe System UI Regular",
+      "Segoe UI Regular",
+      "sans-serif",
+    ].join(','),
+  },
 });
+
+theme.typography.h4 = {
+  fontSize: "16px",
+};
+
 darkTheme = responsiveFontSizes(darkTheme);
 theme = responsiveFontSizes(theme);
 
