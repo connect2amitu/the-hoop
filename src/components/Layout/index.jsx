@@ -37,8 +37,8 @@ function Layout({ history, children }) {
     <React.Fragment>
       <Header />
       {children}
-      <IconButton>
-        <KeyboardArrowUpRounded className={classes.root} id="scrollToTop" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}></KeyboardArrowUpRounded>
+      <IconButton onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <KeyboardArrowUpRounded className={classes.root} id="scrollToTop" ></KeyboardArrowUpRounded>
       </IconButton>
     </React.Fragment >
   )

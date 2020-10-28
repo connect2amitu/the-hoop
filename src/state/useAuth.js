@@ -52,7 +52,7 @@ const useAuth = () => {
       var decoded = jwt.verify(cookies.token, SECRET_KEY);
       return true;
     } catch (error) {
-      console.log('error =>', error);
+      // console.log('error =>', error);
       return false
     }
   }

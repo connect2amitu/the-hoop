@@ -13,13 +13,13 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "fixed",
     background: `url(${require("../../assets/images/loginBg.jpg")})`,
-    backgroundPosition: "right",
+    backgroundPosition: "inherit",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     objectFit: "cover",
   },
   container: {
-    bottom: 0,
+    bottom: 300,
     position: 'absolute',
     padding: "14px 40px 0 40px",
     height: 240,
@@ -68,8 +68,8 @@ const useStyles = makeStyles((theme) => ({
 function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
-  const [currentLocation, setCurrentLocation] = useState("no")
-  const { locations, location, getLocations, setLocation } = useAppState("useGlobal");
+  const [currentLocation, setCurrentLocation] = useState("")
+  const { locations, location, getLocations, setLocation, setAddress } = useAppState("useGlobal");
 
   const [cookies, setCookie] = useCookies();
 
@@ -81,14 +81,12 @@ function Location(props) {
       function (position) {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBgH29Pldnf8x3FQpXNB-9XK3U7Z2_FGr8`).then(resp => {
-          console.log('resp =>', resp)
-          console.log('resp.data.results[0].formatted_address =>', resp.data.results[0].formatted_address)
-
-          setCurrentLocation(resp.data.results[0].formatted_address)
+        Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas`).then(resp => {
+          console.log('location resp =>', resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
+          setCurrentLocation(resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
+          setAddress(resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
         }).catch(e => {
           console.log('e =>', e)
-
         })
       },
       function (error) {
@@ -99,7 +97,10 @@ function Location(props) {
   }, [])
 
   const submit = () => {
-    setLocation(zipCode)
+    var data = { ...zipCode, address: currentLocation };
+    console.log('data =>', data)
+
+    setLocation(data)
     setCookie('location', zipCode, COOKIE_OPTION);
     props.history.push("/")
   }
@@ -119,6 +120,8 @@ function Location(props) {
             options={locations}
             getOptionLabel={(option) => `${option.area_pincode} - ${option.area_name}`}
             onChange={(event, newValue) => {
+              console.log('newValue =>', newValue)
+
               setZipcode(newValue);
             }}
             renderInput={(params) => <TextField

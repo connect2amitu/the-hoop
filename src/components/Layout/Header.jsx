@@ -122,6 +122,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main
   },
   chooseZip: {
+    whiteSpace: "nowrap",
+    width: 190,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
     fontSize: 11,
     color: `${theme.palette.secondary.main}`
   }
@@ -134,7 +138,8 @@ const Header = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [stores, setStores] = useState(false);
   const classes = useStyles();
-  const { toggleCart, toggleStore, location, toggleLocation, openStoreDetailBox, toggleStoreDetailBox } = useAppState("useGlobal");
+  const { toggleCart, toggleStore, glocation, location, toggleLocation, openStoreDetailBox, toggleStoreDetailBox } = useAppState("useGlobal");
+  console.log('location =>', location)
 
 
   const { verifyToken } = useAppState("useAuth");
@@ -169,17 +174,16 @@ const Header = (props) => {
     }
   }, [])
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-
   const hideHeader = () => {
     return !props.location.pathname.match(/(login|location)/)
+  }
+
+  const showHomeButton = () => {
+    return props.location.pathname.match(/(success|store|privacy-policy)/)
+  }
+
+  const showStoreTagButton = () => {
+    return props.location.pathname.match(/(store)/)
   }
 
   const showBackButton = () => {
@@ -239,25 +243,28 @@ const Header = (props) => {
           </Grid>}
 
 
-          {props.location.pathname.match('store') && !props.match.params.product &&
+          {showHomeButton() && !props.match.params.product &&
             <>
               {/* Top bar for mobile store page */}
               <Grid item className={classes.mobile}>
                 <IconButton component={NavLink} to="/" color={"secondary"}><HomeRounded /></IconButton>
               </Grid>
-              <Grid item className={classes.storeDetail}>
-                {!isLoading ?
-                  <Grid container alignItems={"flex-start"}>
-                    <Grid item>
-                      <Typography className={classes.storeName} onClick={() => toggleStore()}>{store && store.name}</Typography>
-                    </Grid>
-                    <Grid item><KeyboardArrowDown color={"primary"} /> </Grid>
-                  </Grid>
-                  : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
-                }
-                <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>Delivery in {location?.area_pincode}</p>
-              </Grid>
+
             </>
+          }
+          {
+            showStoreTagButton() && <Grid item className={classes.storeDetail}>
+              {!isLoading ?
+                <Grid container alignItems={"flex-start"}>
+                  <Grid item>
+                    <Typography className={classes.storeName} onClick={() => toggleStore()}>{store && store.name}</Typography>
+                  </Grid>
+                  <Grid item><KeyboardArrowDown color={"primary"} /> </Grid>
+                </Grid>
+                : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
+              }
+              <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>{glocation ? glocation : location?.area_pincode}</p>
+            </Grid>
           }
           {
             showBackButton() &&
@@ -354,7 +361,7 @@ const Header = (props) => {
                       </Grid>
                     </Grid>
                     <Grid item>
-                      <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`${verifyToken() ? `/account` : `/login`}`)} >
+                      <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/account`)} >
                         <Grid item><AccountCircleRounded /> </Grid>
                         <Grid item><span>Profile</span></Grid>
                       </Grid>

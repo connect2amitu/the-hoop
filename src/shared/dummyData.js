@@ -6592,6 +6592,7 @@ export const ADDRESSES = [
     pinCode: "395006",
     landmark: "LH road",
     addressType: "home",
+    mobile: "+91 9586253639"
   },
   {
     id: 2,
@@ -6599,5 +6600,6 @@ export const ADDRESSES = [
     pinCode: "395011",
     landmark: "Sk road",
     addressType: "work/office",
+    mobile: "+91 9586253639"
   }
 ]

@@ -54,13 +54,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Account(props) {
   const classes = useStyles();
-  const { logout } = useAppState("useAuth");
+  const { logout, verifyToken } = useAppState('useAuth')
+
   const [open, setOpen] = useState(false);
   const [heading, setHeading] = useState("");
   const handleOpen = (heading = "") => {
     setOpen(!open);
     setHeading(heading)
   };
+
+  useEffect(() => {
+    if (!verifyToken()) {
+      props.history.push("/login?redirect=account")
+    }
+  }, [])
 
   return (
     <MyContainer>

@@ -15,7 +15,7 @@ function PrivateRoute(props) {
     <Route {...rest} render={(props) => (
       verifyToken()
         ? <Component {...rest}{...props} />
-        : <Redirect to="/" />
+        : <Redirect to="/login" />
     )} />
   )
 }

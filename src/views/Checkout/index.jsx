@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { Container, Grid, Typography, styled, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemSecondaryAction, IconButton, ListItemIcon, Radio, Paper, makeStyles, CircularProgress } from '@material-ui/core'
-import { FileCopyRounded } from '@material-ui/icons';
+import { Container, Grid, Typography, styled, Button, TextField, ListItem, List, ListItemAvatar, Avatar, ListItemText, ListItemSecondaryAction, IconButton, ListItemIcon, Radio, Paper, makeStyles, CircularProgress, Divider } from '@material-ui/core'
+import { CreditCardRounded, FileCopyRounded, HomeRounded, MoneyRounded, WorkRounded } from '@material-ui/icons';
 import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { Formik } from 'formik';
@@ -13,13 +13,15 @@ import MyContainer from '../../components/Layout/MyContainer';
 import base64 from 'base-64';
 import Axios from 'axios';
 import { RAZORPAY } from '../../shared/constants'
+import AddressCard from '../../components/AddressCard';
+import { NavLink } from 'react-router-dom';
 
 
 
 const checkOutFormSchema = Yup.object().shape({
-  name: Yup.string().required().matches(/^[a-zA-Z ]{3,20}$/, 'Name is not valid'),
+  name: Yup.string().required("Required").matches(/^[a-zA-Z ]{3,20}$/, 'Name is not valid'),
   address: Yup.string()
-    .required()
+    .required("Required")
     .min(5, 'Too Short!')
     .max(100, 'Too Long!')
     .required('Required'),
@@ -41,16 +43,22 @@ export default function Checkout(props) {
   const [loading, setLoading] = useState("")
   const [paymentMode, setPaymentMode] = useState(0);
   const { location } = useAppState("useGlobal");
-  const { grand_total, cart_items, setOrderResponse } = useAppState("useCart");
+  const { grand_total, cart_items, clearCart, discount, setOrderResponse } = useAppState("useCart");
   const classes = useStyles();
+  const { isLoading, addresses, getAddresses } = useAppState("useAccount");
+
 
 
 
   useEffect(() => {
+    if (grand_total <= 0) {
+      props.history.push("/")
+    }
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;
     document.body.appendChild(script);
+
   }, [])
   // const handleChange = (type) => {
   //   setExpanded(expanded !== type ? type : "")
@@ -76,84 +84,74 @@ export default function Checkout(props) {
       customer_address: values.address,
       customer_payment: paymentMode,
       customer_area: location.area_id,
-      amount: grand_total * 100,
-      currency: "INR",
-      receipt: "rcptid_11",
       order_data
+    }
+    setLoading(true);
+    if (paymentMode === 0) {
+      placeOrder(data)
+    } else {
+
+      var options = {
+        key: RAZORPAY.key, // Enter the Key ID generated from the Dashboard
+        amount: grand_total * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        currency: "INR",
+        name: "The Hoop",
+        description: "India's Local Store",
+        image: require(`../../assets/images/logo/thehooplogo.svg`),
+        // "order_id": "order_Ft9WIgy2rbwXo3", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        handler: function (response) {
+          console.log('payment.success response =>', response)
+          placeOrder({ ...data, razorpay_payment_id: response.razorpay_payment_id })
+        },
+        modal: {
+          ondismiss: function () {
+            TOAST.info("Payment Dismissed");
+            setLoading(false);
+          }
+        },
+        prefill: {
+          "name": data.customer_name,
+          "email": data.email ? data.email : `${data.customer_mobile}@thehoop.in`,
+          "contact": data.customer_mobile
+        },
+        notes: {
+          "address": "The Hoop Office"
+        },
+        theme: {
+          "color": "#f44336"
+        }
+      };
+      var rzp1 = window.Razorpay(options);
+      console.log('rzp1 =>', rzp1)
+
+      rzp1.on('payment.failed', function (Error) {
+        setLoading(false);
+        TOAST.error("Payment Failed, please try again!")
+
+      });
+      rzp1.open(options);
     }
 
 
-    var bytes = base64.encode(`${RAZORPAY.key}:${RAZORPAY.secret}`);
-    console.log('bytes =>', bytes)
-    console.log('grand_total =>', grand_total)
-
-    Axios.post(`https://api.razorpay.com/v1/orders`, data, {
-      headers: {
-        Authorization: "Basic cnpwX3Rlc3RfY2N5ZzdNcThiWGRiY2g6Sm9UMTB3emlydDh4MzVnY01GbGgxU1Bo",
-        "Content-Type": "application/json",
-      }
-    }).then(resp => {
-      console.log('placeOrderHandler =>', placeOrderHandler)
-    }).catch(e => {
-      console.log('placeOrderHandler e =>', e.responseText)
-
-    })
-
-    var options = {
-      key: RAZORPAY.key, // Enter the Key ID generated from the Dashboard
-      amount: grand_total, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "TheHoop",
-      description: "India's Local Store",
-      image: require(`../../assets/images/logo/thehooplogo.svg`),
-      // "order_id": "order_Ft9WIgy2rbwXo3", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
-        console.log('payment.success response =>', response)
-        setLoading(true);
-        TOAST.success("Order Placed Success")
-        props.history.push("/success");
-        // setOrderResponse(resp.data)
-      },
-      modal: {
-        ondismiss: function () {
-          alert('dismissed')
-        }
-      },
-      prefill: {
-        "name": data.customer_name,
-        "email": data.email ? data.email : `${data.customer_mobile}@thehoop.in`,
-        "contact": data.customer_mobile
-      },
-      notes: {
-        "address": "The Hoop Office"
-      },
-      theme: {
-        "color": "#f44336"
-      }
-    };
-
-    var successCallback = function (payment_id) {
-      alert('payment_id: ' + payment_id);
-    };
-
-    var cancelCallback = function (error) {
-      alert(error.description + ' (Error ' + error.code + ')');
-    };
-
-    var rzp1 = window.Razorpay();
-    console.log('rzp1 =>', rzp1)
-
-    rzp1.on('payment.failed', function (Error) {
-      setLoading(false);
-      console.log('payment.failed Error =>', Error)
-
-    });
-    rzp1.open(options, successCallback, cancelCallback);
   }
 
-  // const handleChangePayment = (event) => {
-  //   setPaymentMode(event);
-  // };
+
+
+
+  const placeOrder = (data) => {
+    // order(data).then(resp => {
+    TOAST.success("Order Placed Success")
+    clearCart()
+    props.history.push("/success");
+    // }).catch(error => {
+    // setLoading(false);
+    // })
+  };
+
+
+  const handleChangePayment = (event) => {
+    setPaymentMode(event);
+  };
 
   // const copyToClipboard = (text) => {
   //   navigator.clipboard.writeText(text).then(function () {
@@ -188,6 +186,30 @@ export default function Checkout(props) {
                   <Typography variant={"h4"}>Checkout</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
+
+                  {!isLoading && addresses && addresses[0].address &&
+
+                    <Grid container className={classes.userWrapper} alignItems={"flex-start"}>
+                      <Grid item xs={1}>{true ? <HomeRounded /> : <WorkRounded />}</Grid>
+                      <Grid item xs={11}>
+                        <Grid container direction={"column"}>
+                          <Grid item><Typography variant={"h6"} >{addresses[0].addressType}</Typography></Grid>
+                          <Grid item>{addresses[0].address}</Grid>
+                          <Grid item>{addresses[0].pinCode}</Grid>
+                          <Grid item>{addresses[0].mobile}</Grid>
+                        </Grid>
+                        <Divider />
+                      </Grid>
+                    </Grid>
+                  }
+                  <Button color={"primary"} variant={"contained"} component={NavLink} to={`/account/addresses?redirect=checkout`} fullWidth>Change or Add Address</Button>
+                  {/* {
+                    !isLoading && addresses.map((o, index) =>
+                      <AddressCard id={o.id} name={o.name} phone={o.phone} address={o.address} addressType={o.addressType} />
+                    )
+                  } */}
+                </Grid>
+                {/* <Grid item xs={12} sm={6}>
                   <TextField
                     id="outlined-basic"
                     fullWidth
@@ -200,9 +222,7 @@ export default function Checkout(props) {
                     onBlur={handleBlur}
                     error={errors.name && touched.name && errors.name}
                     helperText={errors.name && touched.name && errors.name}
-
                   />
-
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -237,14 +257,14 @@ export default function Checkout(props) {
                   />
 
                 </Grid>
-                {/* <Grid item xs={12} sm={6}>
+             */}
+                <Grid item xs={12} sm={6}>
+
                   <Typography variant="h6" >
                     Pay with
           </Typography>
                   <div >
                     <List dense={true}>
-
-
                       <ListItem button onClick={() => handleChangePayment(0)}>
                         <ListItemIcon>
                           <Radio
@@ -256,62 +276,38 @@ export default function Checkout(props) {
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
+                          {/* <Avatar>
+                            <MoneyRounded />
+                          </Avatar> */}
+                          <Avatar src={require(`../../assets/images/cash.png`)} />
                         </ListItemAvatar>
                         <ListItemText
                           primary="Cash On Delivery"
                         />
                       </ListItem>
-
-
                       <ListItem button onClick={() => handleChangePayment(1)}>
                         <ListItemIcon>
                           <Radio
                             checked={paymentMode === 1}
+
                             value={1}
-                            name="paytm"
+                            name="online"
                             inputProps={{ 'aria-label': 1 }}
                           />
                         </ListItemIcon>
                         <ListItemAvatar>
+                          <Avatar>
+                            <CreditCardRounded />
+                          </Avatar>
                         </ListItemAvatar>
                         <ListItemText
-                          primary="PayTm"
-                          secondary={`Number : 8490860632`}
+                          primary="Pay Online"
                         />
-                        <ListItemSecondaryAction>
-                          <IconButton edge="end" onClick={() => copyToClipboard(`8490860632`)}>
-                            <FileCopyRounded />
-                          </IconButton>
-                        </ListItemSecondaryAction>
-                      </ListItem>
-
-                      <ListItem button onClick={() => handleChangePayment(2)}>
-                        <ListItemIcon>
-                          <Radio
-                            checked={paymentMode === 2}
-
-                            value={2}
-                            name="gpay"
-                            inputProps={{ 'aria-label': 2 }}
-                          />
-                        </ListItemIcon>
-                        <ListItemAvatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary="Google Pay"
-                          secondary={`UPI ID : 8490860632@okbizaxis`}
-                        />
-                        <ListItemSecondaryAction>
-                          <IconButton edge="end" onClick={() => copyToClipboard(`8490860632@okbizaxis`)}>
-                            <FileCopyRounded />
-                          </IconButton>
-                        </ListItemSecondaryAction>
                       </ListItem>
                     </List>
                   </div>
-                </Grid > */}
-
-                <Grid Grid item xs={12} sm={6} >
+                </Grid>
+                <Grid item xs={12} sm={6}>
                   <Paper style={{ padding: 10 }} elevation={3}>
                     <Typography variant={"h6"}>PRICE DETAILS</Typography>
                     <Grid container direction={"column"}>
@@ -321,28 +317,37 @@ export default function Checkout(props) {
                             <Typography>Price ({cart_items.length} item)</Typography>
                           </Grid>
                           <Grid item>
-                            <Typography variant={"h5"}>{grand_total}/-</Typography>
+                            <Typography >{grand_total} &#8377; </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
+                      {discount > 0 && <Grid item>
+                        <Grid container justify={"space-between"}>
+                          <Grid item>
+                            <Typography>Discount</Typography>
+                          </Grid>
+                          <Grid item>
+                            <Typography >{grand_total * (discount / 100)} &#8377; </Typography>
+                          </Grid>
+                        </Grid>
+                      </Grid>}
                       <Grid item>
                         <Grid container justify={"space-between"}>
                           <Grid item>
-                            <Typography>Delivery Charges</Typography>
+                            <Typography>Payable Amount</Typography>
                           </Grid>
                           <Grid item>
-                            <Typography>0/-</Typography>
+                            <Typography variant={"h5"}>{Math.ceil(grand_total - grand_total * ((discount || 0) / 100))} &#8377; </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
                     </Grid>
                   </Paper>
-                </Grid >
-
+                </Grid>
                 <Grid item xs={12} sm={6}>
                   <Button variant={"contained"} disabled={loading} className={classes.btn} type={"submit"} fullWidth color={"primary"}>{loading ? <CircularProgress style={{ color: "#fff", height: 26, width: 26 }} /> : `Place Order`}</Button>
                 </Grid>
-              </Grid >
+              </Grid>
             </form >
           )
         }

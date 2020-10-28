@@ -67,7 +67,7 @@ const StoreListing = (props) => {
 
   return (
     <SwipeableDrawer
-      disableSwipeToOpen="false"
+      disableSwipeToOpen={false}
       anchor={"bottom"}
       open={openStore}
       onClose={() => toggleStore()}

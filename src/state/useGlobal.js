@@ -15,7 +15,8 @@ const initialArgs = {
   isLoading: false,
   locationBox: false,
   locations: [],
-  location: ""
+  location: "",
+  glocation: "",
 };
 
 const useGlobal = (appState) => {
@@ -24,8 +25,7 @@ const useGlobal = (appState) => {
 
 
   useEffect(() => {
-    setState({ ...state, location: cookies.location })
-
+    setState({ ...state, location: cookies.location, glocation: cookies.glocation })
   }, [])
 
   const toggleCart = () => {
@@ -60,10 +60,16 @@ const useGlobal = (appState) => {
     setState({ ...state, location: location });
   }
 
+  const setAddress = (glocation) => {
+    setCookie('glocation', glocation, COOKIE_OPTION);
+    setState({ ...state, glocation });
+  }
+
   return {
     toggleCart,
     toggleStoreDetailBox,
     setLocation,
+    setAddress,
     toggleLocation,
     getLocations,
     toggleStore,

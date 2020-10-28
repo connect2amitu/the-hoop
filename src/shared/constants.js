@@ -12,8 +12,8 @@ export const DATABASE_ERROR_STATUS = 422;
 export const INTERNAL_SERVER_ERROR = 500;
 
 export const RAZORPAY = {
-  key: "rzp_test_BMaQmSDBN55exk",
-  secret: "eVO15UPAhFRiUSzRAGI2nKwf"
+  key: "rzp_test_rSJUHEi2k5dImq",
+  secret: "6rPsa9D7KfSqE7smuo79a564"
 };
 
 var date = new Date();

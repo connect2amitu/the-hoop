@@ -27,6 +27,7 @@ export default function Address(props) {
   const { isLoading, addresses, getAddresses } = useAppState("useAccount");
   const classes = useStyles();
   console.log('addresses =>', addresses)
+  console.log('props =>', props)
 
   useEffect(() => {
     // getAddresses()
@@ -38,7 +39,7 @@ export default function Address(props) {
           <AddressCard id={o.id} name={o.name} phone={o.phone} address={o.address} addressType={o.addressType} />
         )
       }
-      <Button className={classes.addNewAddress} component={NavLink} to="/account/addaddress" variant={"outlined"} fullWidth >Add a new address</Button>
+      <Button className={classes.addNewAddress} component={NavLink} to={`/account/addaddress${props.location.search}`} variant={"outlined"} fullWidth >Add a new address</Button>
       {isLoading &&
         <Backdrop className={classes.backdrop} open={isLoading}>
           <CircularProgress color="inherit" />

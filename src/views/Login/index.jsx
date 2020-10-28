@@ -3,8 +3,10 @@ import { makeStyles, Grid, Button, TextField, Typography, FormControl, OutlinedI
 import { useAppState } from '../../context';
 import { fetchOTP, resendOTP } from '../../apis/login'
 import { useEffect } from 'react';
-import { decodToken, TOAST, toHHMMSS } from '../../shared/funs';
+import { TOAST } from '../../shared/funs';
 import { useCookies } from 'react-cookie';
+import queryString from 'query-string';
+
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
@@ -12,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     position: "fixed",
     background: `url(${require("../../assets/images/loginBg.jpg")})`,
-    backgroundPosition: "right",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     objectFit: "cover",
+    backgroundPosition: "inherit",
   },
   loginContainer: {
-    bottom: 0,
+    bottom: 300,
     position: 'absolute',
     padding: "14px 40px 0 40px",
     height: 280,
@@ -93,6 +95,7 @@ function Login(props) {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false)
   const [isOTPSent, setIsOTPSent] = useState(false)
+  const parsed = queryString.parse(props.location.search);
   const [showResendBtn, setShowResendBtn] = useState(true)
   const [OTP, setOTP] = useState("")
   const [clock, setClock] = useState(false)
@@ -192,7 +195,13 @@ function Login(props) {
     if (Number(OTP) === Number(generatedOTP)) {
       setLoginUser(phoneNumber);
       // saveOTP("", phoneNumber)
-      props.history.push("/")
+
+      if (parsed.redirect) {
+        props.history.push(`/${parsed.redirect}`)
+      } else {
+        props.history.push("/")
+      }
+
       // window.location.href = `${window.location.origin}`
       return;
     } else {
@@ -233,7 +242,7 @@ function Login(props) {
               }}
               autoFocus
               required
-              color={"secondary"}
+              color={"primary"}
               id="outlined-adornment-amount"
               defaultValue=""
               onChange={(e) => setPhoneNumber(e.target.value)}

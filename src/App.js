@@ -5,8 +5,8 @@ import { darkTheme, theme } from './theme';
 import { AppStateProvider } from "./context";
 import containers from './state';
 import { CookiesProvider } from 'react-cookie';
-import PrivateRoute from './components/PrivateRoute';
 
+const PrivateRoute = React.lazy(() => import('./components/PrivateRoute'))
 const Layout = React.lazy(() => import('./components/Layout'))
 const Store = React.lazy(() => import('./views/Store'))
 const Home = React.lazy(() => import('./views/Home'))
@@ -25,6 +25,7 @@ const Address = React.lazy(() => import('./views/Account/Address'))
 const AddNewAddress = React.lazy(() => import('./views/Account/AddNewAddress'))
 const Payments = React.lazy(() => import('./views/Account/Payments'))
 const Location = React.lazy(() => import('./views/Location'))
+const PrivacyPolicy = React.lazy(() => import('./views/PrivacyPolicy/PrivacyPolicy'))
 const Page404 = React.lazy(() => import('./components/404'))
 
 function App({ isDark }) {
@@ -49,11 +50,12 @@ function App({ isDark }) {
                   <Route exact path="/success" component={Success} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
-                  <PrivateRoute exact path="/account" component={Account} />
+                  <Route exact path="/account" component={Account} />
                   <PrivateRoute exact path="/account/orders" component={Orders} />
                   <PrivateRoute exact path="/account/addresses" component={Address} />
                   <PrivateRoute exact path="/account/addaddress/:id?" component={AddNewAddress} />
                   <PrivateRoute exact path="/account/payments" component={Payments} />
+                  <PrivateRoute exact path="/privacy-policy" component={PrivacyPolicy} />
                   <Route exact path="*" component={Page404} />
                 </Switch>
               </Layout>
