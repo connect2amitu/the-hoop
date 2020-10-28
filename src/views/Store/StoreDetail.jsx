@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   categorySlider: { marginTop: 15, padding: "0 20px" },
   tCenter: { textAlign: "center" },
-  categoryName: { fontSize: 10 },
+  categoryName: { fontSize: 10,fontWeight:600 },
   loader: {
     position: "absolute",
     left: "45%",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
     outline: "none",
     [theme.breakpoints.down('460')]: {
-      height: 165
+      height: 125
     },
     [theme.breakpoints.between('460', '960')]: {
       height: 123
@@ -48,7 +48,14 @@ const useStyles = makeStyles((theme) => ({
       height: 133
     },
     // backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: 200, width: "100%", borderRadius: 7
-  }
+  },
+  viewMoreBtn:{
+    padding: "2px 10px",
+    textTransform:"none",
+    width:"100%",
+    fontSize:14,
+    },
+    viewMoreBtnWrapper:{ width: "100%", textAlign: "center" ,padding:"0 2px !important",}
 }));
 
 
@@ -106,8 +113,8 @@ const Store = (props) => {
                   <Grid item xs={12}>
                     <CategoryAndProduct key={index} category={category} store={store} />
                   </Grid>
-                  <Grid item xs={12} style={{ width: "100%", textAlign: "center" }}>
-                    <Button style={{ textAlign: "center" }} color={"primary"}
+                  <Grid item xs={12}  className={classes.viewMoreBtnWrapper} >
+                    <Button  className={classes.viewMoreBtn} color={"primary"}
                       component={NavLink}
                       to={`/store/${`thehoop`}/departments/${category.category_id}/${category.slug}`} variant={"outlined"}>View more </Button>
                   </Grid>

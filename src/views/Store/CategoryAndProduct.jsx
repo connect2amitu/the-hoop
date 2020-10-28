@@ -15,13 +15,14 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   addToCartBtn: {
-    padding: "4px 10px",
+    padding: "2px 0px",
     fontSize: "12px",
-    textTransform: "capitalize",
+    fontWeight:600,
+    letterSpacing:1
   },
   selectBox: {
     width: "150px",
-    fontSize: 12
+    fontSize: 12  
   },
   productCard: {
     padding: "10px",
@@ -46,16 +47,19 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "contain",
   },
   productNameGrid: {
-    fontSize: 13,
+    fontSize: "14px !important",
     fontWeight: 600,
     // height: 22,
-    // width: 300,
+    width: 300,
     // maxHeight: 42,
     overflow: "hidden",
     textOverflow: "ellipsis"
   },
   productName: {
-    fontWeight: 600
+    fontSize: "14px !important",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
   },
   productDescription: {
     fontSize: 11,
@@ -73,11 +77,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main
   },
   select: {
-    padding: 5,
-    fontSize: 14
+    padding: "4px 4px 4px 10px",
+    fontSize: 12,
+    fontWeight:600
+    
   },
   categoryName: {
-    margin: "31px 0 15px 0"
+    margin: "0px 0 15px 0"
   },
   qtyChangeBtn: {
     padding: 0,
@@ -219,9 +225,9 @@ const CategoryAndProduct = (props) => {
       } else {
         var subProd = find(_state_product.subProducts, { sub_prod_id: _state_product.sub_prod_id })
         if (subProd) {
-          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, subProd.sub_prod_id)}>Add to cart</Button>
+          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, subProd.sub_prod_id)}>Add</Button>
         } else {
-          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>sub Add to cart</Button>
+          return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>sub Add</Button>
         }
 
       }
@@ -246,7 +252,7 @@ const CategoryAndProduct = (props) => {
           <AddRounded className={classes.qtyChangeBtn} onClick={() => updateProductQty(test.sub_prod_id, 1)} />
         </>
       } else {
-        return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>Add to cart</Button>
+        return <Button className={classes.addToCartBtn} color={"primary"} variant={"contained"} onClick={() => addToCartHandler(product, product.data[0].sub_prod_id)}>Add</Button>
       }
     }
   }
@@ -358,7 +364,7 @@ const CategoryAndProduct = (props) => {
                 <Grid container direction={"column"} spacing={1}>
                   <Grid item><Typography variant={"h5"}>{modalData.name}</Typography></Grid>
                   <Grid item><Typography variant={"h6"}>MRP : {modalData.data[0].rate}/-</Typography></Grid>
-                  <Grid item><Button variant={"contained"} color={"primary"} onClick={() => { addToCart(modalData, store); handleClose() }} >Add to cart</Button></Grid>
+                  <Grid item><Button variant={"contained"} color={"primary"} onClick={() => { addToCart(modalData, store); handleClose() }} >Add</Button></Grid>
                   <Grid item>
                     <Card>
                       <CardContent>

@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   storeName: {
-    fontSize: 15,
+    fontSize: 14,
     margin: 0,
     paddingLeft: 15,
     fontWeight: 600,
@@ -249,7 +249,18 @@ const Header = (props) => {
               <Grid item className={classes.mobile}>
                 <IconButton component={NavLink} to="/" color={"secondary"}><HomeRounded /></IconButton>
               </Grid>
-
+              <Grid item className={classes.storeDetail}>
+                {!isLoading ?
+                  <Grid container alignItems={"flex-start"}>
+                    <Grid item>
+                      <Typography className={classes.storeName} onClick={() => toggleStore()}>{store && store.name}</Typography>
+                    </Grid>
+                    {/* <Grid item><KeyboardArrowDown color={"primary"} /> </Grid> */}
+                  </Grid>
+                  : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
+                }
+                <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>Delivery in {location?.area_pincode}</p>
+              </Grid>
             </>
           }
           {
@@ -348,12 +359,12 @@ const Header = (props) => {
                         <Grid item><span>Department</span></Grid>
                       </Grid>
                     </Grid>
-                    <Grid item>
+                    {/* <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/offers`)} >
                         <Grid item><LocalOfferRounded /> </Grid>
                         <Grid item><span>Offers</span></Grid>
                       </Grid>
-                    </Grid>
+                    </Grid> */}
                     <Grid item>
                       <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
                         <Badge badgeContent={cart_items.length} color="secondary"><Grid item><LocalMallRounded /></Grid></Badge>
