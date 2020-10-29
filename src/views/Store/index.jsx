@@ -7,6 +7,7 @@ import Slider from "react-slick";
 const MyContainer = styled(Container)({
   paddingBottom: "90px",
   marginTop: "10px",
+  minHeight: "calc(100vh - 200px)"
 });
 const useStyles = makeStyles((theme) => ({
   loader: {

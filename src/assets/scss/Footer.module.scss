@@ -1,0 +1,38 @@
+.footerWraper {
+  width           : 100%;
+  background-color: #373a40;
+  overflow-x      : hidden;
+  position        : relative;
+  z-index         : 50;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 56px;
+  }
+
+  .footer {
+    max-width       : 1800px;
+    margin          : auto;
+    width           : 100%;
+    // padding-left : 64px;
+    // padding-right: 64px;
+    padding         : 14px 64px;
+
+    @media screen and (max-width: 767px) {
+      .main {
+        flex-direction: column;
+
+      }
+    }
+
+    .quote {
+      color   : #fff;
+      // color: #000;
+    }
+
+    .link {
+      color          : #fff;
+      text-decoration: none;
+      letter-spacing : 1px;
+    }
+  }
+}

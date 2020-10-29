@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 import { IconButton, makeStyles } from '@material-ui/core'
 import { useLocation } from 'react-router-dom';
 import { KeyboardArrowUpRounded } from '@material-ui/icons';
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     display: "none",
     fontSize: "2.5rem",
+    zIndex: 99
   }
 }));
 
@@ -53,6 +55,8 @@ function Layout({ history, children }) {
         draggable
         pauseOnHover={false}
       />
+      <Footer />
+
     </React.Fragment >
   )
 }

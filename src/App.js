@@ -18,7 +18,9 @@ const Login = React.lazy(() => import('./views/Login'))
 const Account = React.lazy(() => import('./views/Account'))
 const Location = React.lazy(() => import('./views/Location'))
 const Page404 = React.lazy(() => import('./components/404'))
-
+const AboutUs = React.lazy(() => import('./views/Account/AboutUs'))
+const Refund = React.lazy(() => import('./views/Account/Refund'))
+const TnC = React.lazy(() => import('./views/Account/TnC'))
 
 
 function App({ isDark }) {
@@ -43,6 +45,9 @@ function App({ isDark }) {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <Route exact path="/account" component={Account} />
+                  <Route exact path="/about" component={AboutUs} />
+                  <Route exact path="/refund" component={Refund} />
+                  <Route exact path="/terms-of-service" component={TnC} />
                   <Route exact path="*" component={Page404} />
                 </Switch>
               </Layout>
