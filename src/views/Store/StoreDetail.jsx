@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   categorySlider: { marginTop: 15, padding: "0 20px" },
   tCenter: { textAlign: "center" },
-  categoryName: { fontSize: 10,fontWeight:600 },
+  categoryName: { fontSize: 10, fontWeight: 600 },
   loader: {
     position: "absolute",
     left: "45%",
@@ -49,13 +49,13 @@ const useStyles = makeStyles((theme) => ({
     },
     // backgroundPosition: "center", backgroundSize: "cover", padding: "0 10px", height: 200, width: "100%", borderRadius: 7
   },
-  viewMoreBtn:{
+  viewMoreBtn: {
     padding: "2px 10px",
-    textTransform:"none",
-    width:"100%",
-    fontSize:14,
-    },
-    viewMoreBtnWrapper:{ width: "100%", textAlign: "center" ,padding:"0 2px !important",}
+    textTransform: "none",
+    width: "100%",
+    fontSize: 14,
+  },
+  viewMoreBtnWrapper: { width: "100%", textAlign: "center", padding: "0 2px !important", }
 }));
 
 
@@ -83,21 +83,21 @@ const Store = (props) => {
         <Grid container>
           <Slider {...settings}>
             {[...new Array(3)].map((o, index) =>
-              <div style={{ margin: "0 20px", borderRadius: 10 }}>
+              <div key={index} style={{ margin: "0 20px", borderRadius: 10 }}>
                 <img src={`https://thehoop.in/admin/Slider/slider${index + 1}.jpg`} className={classes.slickItem} alt="sdfgdg" />
               </div>
             )}
           </Slider>
         </Grid>
         <Grid container>
-          <Grid item={12}>
+          <Grid item xs={12}>
             <Typography variant={"h4"}>Departments</Typography>
           </Grid>
         </Grid>
         <Grid container className={classes.categoryWrap}>
           {
             [...departments, ...departments].map((o, index) =>
-              <Grid item style={{ padding: "15px 5px" }} >
+              <Grid item key={index} style={{ padding: "15px 5px" }} >
                 <Button style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
                 <Typography variant={"subtitle2"} className={cls(classes.tCenter, classes.categoryName)} >{o.category_name}</Typography>
               </Grid>
@@ -109,16 +109,16 @@ const Store = (props) => {
           store?.categories && <>
             <Grid container spacing={2} direction={"column"} alignItems={"flex-start"} justify={"center"}>
               {store.categories.slice(1).map((category, index) =>
-                <>
+                <React.Fragment key={index}>
                   <Grid item xs={12}>
-                    <CategoryAndProduct key={index} category={category} store={store} />
+                    <CategoryAndProduct category={category} store={store} />
                   </Grid>
-                  <Grid item xs={12}  className={classes.viewMoreBtnWrapper} >
-                    <Button  className={classes.viewMoreBtn} color={"primary"}
+                  <Grid item xs={12} className={classes.viewMoreBtnWrapper} >
+                    <Button className={classes.viewMoreBtn} color={"primary"}
                       component={NavLink}
                       to={`/store/${`thehoop`}/departments/${category.category_id}/${category.slug}`} variant={"outlined"}>View more </Button>
                   </Grid>
-                </>
+                </React.Fragment>
               )}
             </Grid>
           </>

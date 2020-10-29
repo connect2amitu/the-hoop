@@ -345,7 +345,9 @@ const ProductDetail = (props) => {
                             </Typography>
                 </Grid>
                 <Grid item>
-                  {showButtons(product)}
+                  <Grid container alignItems={"center"}>
+                    {showButtons(product)}
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>

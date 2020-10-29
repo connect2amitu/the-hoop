@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { FilterNoneRounded, ExpandMoreRounded,SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded, EditAttributesRounded, EditRounded, ShoppingBasketRounded, ContactMailRounded, LocalMallRounded, PaymentRounded, KeyboardArrowRightRounded } from '@material-ui/icons';
+import { FilterNoneRounded, ExpandMoreRounded, SettingsRounded, PowerSettingsNewRounded, HelpOutlineRounded, LocationOnRounded, EditAttributesRounded, EditRounded, ShoppingBasketRounded, ContactMailRounded, LocalMallRounded, PaymentRounded, KeyboardArrowRightRounded } from '@material-ui/icons';
 import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
 import FullScreenDialog from '../../components/FullScreenDialog';
@@ -118,30 +118,30 @@ export default function Account(props) {
       </Grid>
       <Grid container className={classes.menuWrapper} justify={"space-between"}>
         <Grid item xs={12} >
-      <Divider />
-      </Grid>
+          <Divider />
+        </Grid>
         <Grid item xs={12} >
-        <Card component={NavLink} to="/about-us">
-        <AccordionSummary
-          expandIcon={<KeyboardArrowRightRounded />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography className={classes.heading}>General settings</Typography>
-        </AccordionSummary>
-      </Card>
-        <Card >
-        <AccordionSummary
-          expandIcon={<KeyboardArrowRightRounded />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography className={classes.heading}>General settings</Typography>
-        </AccordionSummary>
-      </Card>
-      </Grid>
+          <Card style={{ textDecoration: "none" }} component={NavLink} to="/about-us">
+            <AccordionSummary
+              expandIcon={<KeyboardArrowRightRounded />}
+              aria-controls="about-us"
+              id="about-us"
+            >
+              <Typography className={classes.heading}>About us</Typography>
+            </AccordionSummary>
+          </Card>
+          <Card style={{ textDecoration: "none" }} component={NavLink} to="/terms">
+            <AccordionSummary
+              expandIcon={<KeyboardArrowRightRounded />}
+              aria-controls="terms"
+              id="terms"
+            >
+              <Typography className={classes.heading}>Terms & Condition</Typography>
+            </AccordionSummary>
+          </Card>
+        </Grid>
       </Grid>
       {/* <h1>hey</h1> */}
-      </MyContainer >
+    </MyContainer >
   )
 }

@@ -9,9 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

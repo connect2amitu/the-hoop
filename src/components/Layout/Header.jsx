@@ -206,6 +206,12 @@ const Header = (props) => {
       case "/account/addaddress":
         return "New Address";
       // break;
+      case "/about-us":
+        return "About Us";
+      // break;
+      case "/terms":
+        return "Terms & Condition";
+      // break;
       default:
         return false
     }
@@ -251,7 +257,7 @@ const Header = (props) => {
               </Grid>
               <Grid item className={classes.storeDetail}>
                 {!isLoading ?
-                  <Grid container alignItems={"flex-start"}>
+                  <Grid container alignItems={"flex-start"} justify={"center"}>
                     <Grid item>
                       <Typography className={classes.storeName} onClick={() => toggleStore()}>{store && store.name}</Typography>
                     </Grid>
@@ -263,7 +269,7 @@ const Header = (props) => {
               </Grid>
             </>
           }
-          {
+          {/* {
             showStoreTagButton() && <Grid item className={classes.storeDetail}>
               {!isLoading ?
                 <Grid container alignItems={"flex-start"}>
@@ -276,7 +282,7 @@ const Header = (props) => {
               }
               <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>{glocation ? glocation : location?.area_pincode}</p>
             </Grid>
-          }
+          } */}
           {
             showBackButton() &&
             <>

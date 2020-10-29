@@ -20,6 +20,8 @@ const Checkout = React.lazy(() => import('./views/Checkout'))
 const Success = React.lazy(() => import('./views/Checkout/Success'))
 const Login = React.lazy(() => import('./views/Login'))
 const Account = React.lazy(() => import('./views/Account'))
+const AboutUs = React.lazy(() => import('./views/Account/AboutUs'))
+const TnC = React.lazy(() => import('./views/Account/TnC'))
 const Orders = React.lazy(() => import('./views/Account/Orders'))
 const Address = React.lazy(() => import('./views/Account/Address'))
 const AddNewAddress = React.lazy(() => import('./views/Account/AddNewAddress'))
@@ -51,6 +53,8 @@ function App({ isDark }) {
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/location" component={Location} />
                   <Route exact path="/account" component={Account} />
+                  <Route exact path="/about-us" component={AboutUs} />
+                  <Route exact path="/terms" component={TnC} />
                   <PrivateRoute exact path="/account/orders" component={Orders} />
                   <PrivateRoute exact path="/account/addresses" component={Address} />
                   <PrivateRoute exact path="/account/addaddress/:id?" component={AddNewAddress} />

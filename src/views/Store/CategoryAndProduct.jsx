@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
   addToCartBtn: {
     padding: "2px 0px",
     fontSize: "12px",
-    fontWeight:600,
-    letterSpacing:1
+    fontWeight: 600,
+    letterSpacing: 1
   },
   selectBox: {
     width: "150px",
-    fontSize: 12  
+    fontSize: 12
   },
   productCard: {
     padding: "10px",
@@ -79,8 +79,8 @@ const useStyles = makeStyles((theme) => ({
   select: {
     padding: "4px 4px 4px 10px",
     fontSize: 12,
-    fontWeight:600
-    
+    fontWeight: 600
+
   },
   categoryName: {
     margin: "0px 0 15px 0"
@@ -316,8 +316,10 @@ const CategoryAndProduct = (props) => {
                             </Select>
                           </FormControl>
                         </Grid>
-                        <Grid item >
-                          {showButtons(product)}
+                        <Grid item>
+                          <Grid container alignItems={"center"}>
+                            {showButtons(product)}
+                          </Grid>
                         </Grid>
                       </Grid>
                     </Grid>

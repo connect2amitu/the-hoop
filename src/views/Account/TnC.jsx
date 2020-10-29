@@ -1,10 +1,10 @@
 import React from 'react'
 import MyContainer from '../../components/Layout/MyContainer'
 
-export default function AboutUs() {
+export default function TnC() {
     return (
         <MyContainer>
-            About us
+            TnC
         </MyContainer>
     )
 }
