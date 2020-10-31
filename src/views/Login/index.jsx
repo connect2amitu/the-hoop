@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { makeStyles, Grid, Button, TextField, Typography, FormControl, OutlinedInput, InputAdornment, CircularProgress } from '@material-ui/core';
 import { useAppState } from '../../context';
-import { fetchOTP, resendOTP } from '../../apis/login'
+import { fetchOTP, resendOTP, verifyOTP } from '../../apis/login'
 import { useEffect } from 'react';
 import { TOAST } from '../../shared/funs';
 import { useCookies } from 'react-cookie';
@@ -107,22 +107,13 @@ function Login(props) {
 
   var timeLeft = 60;
   useEffect(() => {
-    // if (cookies.isVerified) {
-    //   props.history.push("/location")
-    // } else {
     if (otp) {
       setIsOTPSent(true)
-      setGeneratedOTP(atob(otp))
+      setGeneratedOTP(otp)
       setPhoneNumber(phone)
     }
     // }
   }, [])
-
-  // useEffect(() => {
-  //   return () => {
-  //     setTimerId(null)
-  //   }
-  // }, [])
 
   useEffect(() => {
     if (verifyToken()) {
@@ -138,22 +129,10 @@ function Login(props) {
       TOAST.error("Invalid Phone Number")
       return;
     }
-    // setTimeout(() => {
-    //   console.log('atob("MTIzNDU2") =>', atob("MTIzNDU2"));
-
-    //   setGeneratedOTP(atob("MTIzNDU2"))
-    //   saveOTP("MTIzNDU2", phoneNumber)
-    //   // setTimeout(() => {
-    //   //   setShowResendBtn(true);
-    //   // }, 3000)
-    //   setIsOTPSent(true)
-    //   setIsLoading(false)
-    // }, 2000);
     callCounter()
     setIsLoading(true)
     fetchOTP(phoneNumber).then(resp => {
-      setGeneratedOTP(atob(resp.data.data.otp))
-      saveOTP(resp.data.data.otp, phoneNumber)
+      saveOTP(resp.data.data.token, phoneNumber)
       setIsOTPSent(true)
       setIsLoading(false)
     }).catch(e => {
@@ -188,26 +167,18 @@ function Login(props) {
       TOAST.error("Invalid OTP")
       return;
     }
-    // setIsLoading(true)
-
-    // setTimeout(() => {
-    // setIsLoading(false)
-    if (Number(OTP) === Number(generatedOTP)) {
-      setLoginUser(phoneNumber);
-      // saveOTP("", phoneNumber)
-
+    verifyOTP(Number(OTP)).then(resp => {
+      console.log('resp =>', resp.data.data.token)
+      setLoginUser(resp.data.data.token);
       if (parsed.redirect) {
         props.history.push(`/${parsed.redirect}`)
       } else {
         props.history.push("/")
       }
-
-      // window.location.href = `${window.location.origin}`
-      return;
-    } else {
+    }).catch(e => {
       TOAST.error("Invalid OTP")
-    }
-    // }, 1000);
+      console.log('e =>', e);
+    })
   }
 
   const resendOTPHandler = () => {

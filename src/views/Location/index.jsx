@@ -9,7 +9,7 @@ import FullScreenDialog from '../../components/FullScreenDialog';
 
 const useStyles = makeStyles((theme) => ({
   mainWrapper: {
-    height: "100vh",
+    height: "calc(100vh - 36px)",
     width: "100%",
     position: "fixed",
     background: `url(${require("../../assets/images/loginBg.jpg")})`,
@@ -77,8 +77,9 @@ function Location(props) {
     if (cookies.location) {
       props.history.push("/")
     }
-    navigator.geolocation.getCurrentPosition(
-      function (position) {
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
         Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas`).then(resp => {
@@ -88,11 +89,15 @@ function Location(props) {
         }).catch(e => {
           console.log('e =>', e)
         })
-      },
-      function (error) {
-        console.error("Error Code = " + error.code + " - " + error.message);
-      }
-    );
+      });
+    } else {
+      console.error("Geolocation is not supported by this browser!");
+    }
+    var tag = document.createElement('script');
+    tag.async = false;
+    tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas&callback=initMap&libraries=&v=weekly";
+    var body = document.getElementsByTagName('body')[0];
+    body.appendChild(tag);
     getLocations()
   }, [])
 
@@ -107,8 +112,10 @@ function Location(props) {
 
   return (
     <div className={classes.mainWrapper} >
-      <p style={{ color: "white" }}>{currentLocation}</p>
-      <Grid container direction={"column"} spacing={1} className={classes.container}>
+      <div id="map"></div>
+      <Button color={"primary"} fullWidth onClick={() => props.history.push("/")} variant={"contained"}>Go</Button>
+      {/* <p style={{ color: "white" }}>{currentLocation}</p> */}
+      {/* <Grid container direction={"column"} spacing={1} className={classes.container}>
         <Grid item className={classes.title}><Typography variant={"h4"}>Find Area</Typography></Grid>
         <Grid item>
           <Autocomplete
@@ -139,6 +146,7 @@ function Location(props) {
           <Button onClick={() => submit()} disabled={!zipCode} classes={{ disabled: classes.disabledButton }} className={classes.btn} variant={"contained"} color={"primary"}>Go for Shopping</Button>
         </Grid>
       </Grid>
+    */}
     </div >
   )
 }

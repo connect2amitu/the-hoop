@@ -1,12 +1,14 @@
-import Axios from "axios";
+import instance from "./index";
 
-
-export const fetchOTP = async (mobile_no) => {
-  return await Axios.post(`https://thehoop.in/admin/temp/hoop_otp.php`, { mobile_no })
-
+export const fetchOTP = async (mobile) => {
+  return await instance.post(`Customer/sendRegisterOTP`, { mobile })
 }
 
-export const resendOTP = async (data) => {
-  return await Axios.post(`https://thehoop.in/admin/temp/hoop_resend_otp.php`, data)
+export const resendOTP = async (mobile) => {
+  return await instance.post(`Customer/sendRegisterOTP`, { mobile })
+}
 
+
+export const verifyOTP = async (otp) => {
+  return await instance.post(`Customer/verifyRegisterOTP`, { otp }, { headers: { "x-auth": localStorage.getItem("token") } })
 }

@@ -34,9 +34,10 @@ const useAuth = () => {
   }, [])
 
 
-  const setLoginUser = (phoneNumber) => {
-    var token = jwt.sign({ isVerified: true, phoneNumber }, SECRET_KEY, { expiresIn: "100d" });
+  const setLoginUser = (token) => {
+    // var token = jwt.sign({ isVerified: true, phoneNumber }, SECRET_KEY, { expiresIn: "100d" });
     removeCookie("otp");
+    localStorage.setItem('token', token);
     setCookie("token", token, COOKIE_OPTION);
     setState({ ...state, token })
   }
@@ -44,6 +45,7 @@ const useAuth = () => {
   const saveOTP = (otp, phone) => {
     setCookie('phone', phone, COOKIE_OPTION);
     setCookie('otp', otp, COOKIE_OPTION);
+    localStorage.setItem('token', otp);
     setState({ ...state, otp, phone })
   }
 

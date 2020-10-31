@@ -265,7 +265,7 @@ const Header = (props) => {
                   </Grid>
                   : <Typography className={classes.storeName}><Skeleton variant="text" /></Typography>
                 }
-                <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>Delivery in {location?.area_pincode}</p>
+                <p className={cls(classes.chooseZip, classes.storeName)} onClick={() => toggleStore()}>{glocation ? glocation : location?.area_pincode}</p>
               </Grid>
             </>
           }
