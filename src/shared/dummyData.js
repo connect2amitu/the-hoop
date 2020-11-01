@@ -131,10 +131,12 @@ export const DUMMY_DEPARTMENTS = [
 export const STORES = [
   {
     id: 1,
-    name: "Maruti General Store",
+    store_name: "Maruti General Store",
     slug: "maruti-general-store",
     image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1487/5ffe3fb7-2a0c-4714-8c71-364d7186a3d3.png",
     tags: ["Test - 1", "Groceries", "Butcher Shop"],
+    distance: "0.6",
+    description: "martuti store description is here",
     type: "delivery",
     categories: [
       {
@@ -986,11 +988,14 @@ export const STORES = [
   },
   {
     id: 2,
-    name: "The Hoop",
+    store_name: "The Hoop",
     slug: "thehoop",
     image: require("../assets/images/logo/thehooplogo.svg"),
     tags: ["Organic", "Veggies", "Local"],
     type: "delivery",
+    description: "small store description",
+    distance: "0.9",
+    rating: 3.2,
     categories: [
       {
         category_id: 1,

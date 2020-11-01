@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   productTitle: {
     [theme.breakpoints.down(768)]: {
       // fontSize: "12px",
-      width: "300px"
+      width: 280
     }
   },
   addToCartBtn: {
@@ -50,10 +50,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px !important",
     fontWeight: 600,
     // height: 22,
-    width: 300,
+    width: 280,
     // maxHeight: 42,
     overflow: "hidden",
-    textOverflow: "ellipsis"
+    textOverflow: "ellipsis",
+    [theme.breakpoints.down(375)]: {
+      width: "270px !important"
+    }
   },
   productName: {
     fontSize: "14px !important",

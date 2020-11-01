@@ -3,7 +3,7 @@ import { makeStyles, Grid, Button, TextField, Typography } from '@material-ui/co
 import { useAppState } from '../../context';
 import { useCookies } from 'react-cookie';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { COOKIE_OPTION } from '../../shared/constants';
+import { COOKIE_OPTION, GOOGLE_API_KEY } from '../../shared/constants';
 import Axios from 'axios';
 import FullScreenDialog from '../../components/FullScreenDialog';
 
@@ -69,7 +69,7 @@ function Location(props) {
   const classes = useStyles();
   const [zipCode, setZipcode] = useState("")
   const [currentLocation, setCurrentLocation] = useState("")
-  const { locations, location, getLocations, setLocation, setAddress } = useAppState("useGlobal");
+  const { getLocations, setLocation } = useAppState("useGlobal");
 
   const [cookies, setCookie] = useCookies();
 
@@ -82,10 +82,12 @@ function Location(props) {
       navigator.geolocation.getCurrentPosition(position => {
         console.log("Latitude is :", position.coords.latitude);
         console.log("Longitude is :", position.coords.longitude);
-        Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas`).then(resp => {
-          console.log('location resp =>', resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
-          setCurrentLocation(resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
-          setAddress(resp.data.results[0].formatted_address.split(", ").slice(1).join(", "))
+        Axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&location_type=ROOFTOP&result_type=street_address&key=${GOOGLE_API_KEY}`).then(resp => {
+          let data = {
+            address: resp.data.results[0].formatted_address.split(", ").slice(1).join(", "),
+            position: { latitude: position.coords.latitude, longitude: position.coords.longitude }
+          }
+          setLocation(JSON.stringify(data))
         }).catch(e => {
           console.log('e =>', e)
         })
@@ -95,25 +97,22 @@ function Location(props) {
     }
     var tag = document.createElement('script');
     tag.async = false;
-    tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas&callback=initMap&libraries=&v=weekly";
+    tag.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&callback=initMap&libraries=&v=weekly`;
     var body = document.getElementsByTagName('body')[0];
     body.appendChild(tag);
     getLocations()
   }, [])
 
   const submit = () => {
-    var data = { ...zipCode, address: currentLocation };
+    var data = { ...zipCode, ...currentLocation };
     console.log('data =>', data)
-
-    setLocation(data)
-    setCookie('location', zipCode, COOKIE_OPTION);
     props.history.push("/")
   }
 
   return (
     <div className={classes.mainWrapper} >
+      <Button color={"primary"} fullWidth onClick={() => submit()} variant={"contained"}>Go</Button>
       <div id="map"></div>
-      <Button color={"primary"} fullWidth onClick={() => props.history.push("/")} variant={"contained"}>Go</Button>
       {/* <p style={{ color: "white" }}>{currentLocation}</p> */}
       {/* <Grid container direction={"column"} spacing={1} className={classes.container}>
         <Grid item className={classes.title}><Typography variant={"h4"}>Find Area</Typography></Grid>

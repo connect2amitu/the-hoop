@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   productTitle: {
     [theme.breakpoints.down(768)]: {
       // fontSize: "12px",
-      width: "300px"
+      width: 280
     }
   },
   addToCartBtn: {

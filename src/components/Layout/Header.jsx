@@ -139,8 +139,6 @@ const Header = (props) => {
   const [stores, setStores] = useState(false);
   const classes = useStyles();
   const { toggleCart, toggleStore, glocation, location, toggleLocation, openStoreDetailBox, toggleStoreDetailBox } = useAppState("useGlobal");
-  console.log('location =>', location)
-
 
   const { verifyToken } = useAppState("useAuth");
   const { cart, cart_items } = useAppState("useCart");
@@ -167,9 +165,8 @@ const Header = (props) => {
   }, [open]);
 
 
-
   useEffect(() => {
-    if (!location) {
+    if (!location && !glocation) {
       props.history.push("/location")
     }
   }, [])

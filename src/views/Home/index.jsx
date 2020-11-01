@@ -1,5 +1,5 @@
 import { Avatar, Button, Container, Grid, makeStyles, styled, Typography } from '@material-ui/core';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
 import { NavLink } from 'react-router-dom';
@@ -218,9 +218,16 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Home = () => {
-  const { stores } = useAppState("useStore");
+  const { stores, getStores } = useAppState("useStore");
+  const { location } = useAppState("useGlobal");
+
   const classes = useStyles();
 
+  console.log('stores =>', stores)
+
+  useEffect(() => {
+    getStores(location.position)
+  }, [])
 
   return (
     <Container maxWidth={"lg"} className={classes.mainContainer}>
@@ -256,17 +263,17 @@ const Home = () => {
                       <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
                         <div>
                           <div className={classes.bannerWrapper}>
-                            <span className={classes.distance}>1 km away</span>
+                            <span className={classes.distance}>{o.distance} km away</span>
                             <img className={classes.shopTopBanner} src={`https://picsum.photos/300/100?random=${index}`} alt="test" />
                           </div>
                           <div className={classes.storeProfile}>
                             <img src={o.image || ""} className={classes.storeImage} alt="testing" />
                             <div className={classes.storeDetail} >
                               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                                <h3 className={classes.storeName} >{o.name}</h3>
-                                <span className={classes.rating}><StarRateRounded style={{ color: "#FDCC0D" }} />4.5</span>
+                                <h3 className={classes.storeName} >{o.store_name}</h3>
+                                {o.rating && <span className={classes.rating}><StarRateRounded style={{ color: "#FDCC0D" }} />{o.rating}</span>}
                               </div>
-                              <p className={classes.description} >{`description of the store ${o.name} and location of the store`}</p>
+                              <p className={classes.description} >{o.description}</p>
                             </div>
                           </div>
                         </div>

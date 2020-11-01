@@ -126,10 +126,10 @@ const StoreListing = (props) => {
                     <Grid item>
                       <Grid className={classes.meta} container direction={"column"} alignItems={"flex-start"} justify={"flex-start"}>
                         <Grid item>
-                          <h3 className={classes.storeName}>{store.name}</h3>
+                          <h3 className={classes.storeName}>{store.store_name}</h3>
                         </Grid>
                         <Grid item>
-                          <span className={classes.storeTags}>{store.tags.join(" • ")}</span>
+                          <span className={classes.storeTags}>{store.tags && store.tags.join(" • ")}</span>
                         </Grid>
                       </Grid>
                     </Grid>

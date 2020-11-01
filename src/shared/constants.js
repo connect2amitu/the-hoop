@@ -14,6 +14,8 @@ export const RAZORPAY = {
   secret: "6rPsa9D7KfSqE7smuo79a564"
 };
 
+
+export const GOOGLE_API_KEY = "AIzaSyBifN6Ghk3qyWUhFsrZkxt3ixRcPqi-pas"
 var date = new Date();
 date.setDate(date.getDate() + 30);
 
