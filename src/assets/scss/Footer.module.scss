@@ -15,11 +15,11 @@
     width           : 100%;
     // padding-left : 64px;
     // padding-right: 64px;
-    padding         : 14px 64px;
+    padding         : 14px;
 
     @media screen and (max-width: 767px) {
       .main {
-        flex-direction: column;
+        // flex-direction: column;
 
       }
     }

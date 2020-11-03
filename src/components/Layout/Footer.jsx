@@ -25,7 +25,7 @@ export default function Footer() {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6} lg={8}>
-            <Grid container justify={"flex-end"} >
+            <Grid container >
               <Grid item>
                 <Grid container spacing={2}>
                   <Grid item><NavLink className={classes.link} to="/about">About us</NavLink></Grid>
