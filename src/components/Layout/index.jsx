@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import { IconButton, makeStyles } from '@material-ui/core'
-import { useLocation } from 'react-router-dom';
+import { useLocation, withRouter } from 'react-router-dom';
 import { KeyboardArrowUpRounded } from '@material-ui/icons';
 import { ToastContainer } from 'react-toastify';
 
@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Layout({ history, children }) {
+function Layout({ history, children, ...props }) {
+  console.log('props =>', props.location.pathname)
+
   const { pathname } = useLocation();
   const classes = useStyles();
   useEffect(() => {
@@ -55,10 +57,10 @@ function Layout({ history, children }) {
         draggable
         pauseOnHover={false}
       />
-      <Footer />
+      {(props.location.pathname === "/" || props.location.pathname === "/about" || props.location.pathname === "/refund" || props.location.pathname === "/terms-of-service") && <Footer />}
 
     </React.Fragment >
   )
 }
 
-export default Layout
+export default withRouter(Layout)
