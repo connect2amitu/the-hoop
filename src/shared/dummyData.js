@@ -131,8 +131,8 @@ export const DUMMY_DEPARTMENTS = [
 export const STORES = [
   {
     id: 1,
-    store_name: "Maruti General Store",
-    slug: "maruti-general-store",
+    store_name: "City Light",
+    slug: "city-light",
     image: "https://d2lnr5mha7bycj.cloudfront.net/warehouse/logo/1487/5ffe3fb7-2a0c-4714-8c71-364d7186a3d3.png",
     tags: ["Test - 1", "Groceries", "Butcher Shop"],
     distance: "0.6",

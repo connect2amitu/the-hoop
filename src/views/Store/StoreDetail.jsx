@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { styled, Container, Button, Grid, makeStyles, Avatar, Typography, CircularProgress } from '@material-ui/core';
+import React, { useEffect } from 'react'
+import { Button, Grid, makeStyles, Typography, CircularProgress } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import CategoryAndProduct from './CategoryAndProduct';
 import { useAppState } from '../../context';
 import Slider from "react-slick";
-import StoreBanner from '../../components/StoreBanner'
 import cls from 'classnames'
 import MyContainer from '../../components/Layout/MyContainer';
 
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     outline: "none",
     margin: "0 auto",
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   },
   categorySlider: { marginTop: 15, padding: "0 20px" },
@@ -71,9 +70,11 @@ const Store = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
+  console.log('departmentsstore =>', departments, store)
+
   useEffect(() => {
     getStoreBySlug(props.match.params.storeName)
-    getStoreDepartment()
+    getStoreDepartment(props.match.params.storeName)
   }, [props.match.params.storeName])
 
   return (
@@ -96,12 +97,11 @@ const Store = (props) => {
         </Grid>
         <Grid container className={classes.categoryWrap}>
           {
-            [...departments, ...departments].map((o, index) =>
+            departments.map((o, index) =>
               <Grid item key={index} style={{ padding: "15px 5px" }} >
-                <Button style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} className={classes.categoryItem} alt="sdfgdg" />
-                <Typography variant={"subtitle2"} className={cls(classes.tCenter, classes.categoryName)} >{o.category_name}</Typography>
+                <Button style={{ backgroundImage: `url(${o.image})` }} className={classes.categoryItem} alt="sdfgdg" />
+                <Typography variant={"subtitle2"} className={cls(classes.tCenter, classes.categoryName)} >{o.category}</Typography>
               </Grid>
-
             )
           }
         </Grid>

@@ -7,88 +7,6 @@ import { useAppState } from '../../context';
 import { StarRateRounded } from '@material-ui/icons';
 
 
-
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 1000,
-  autoplay: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
-
-const categorySettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  autoplay: true,
-  slidesToShow: 6,
-  slidesToScroll: 6,
-  responsive: [
-    {
-      breakpoint: 3000,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 2000,
-      settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1800,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1500,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-  ]
-};
-
 const useStyles = makeStyles((theme) => ({
   mainContainer: { marginTop: 25 },
   loader: {
@@ -138,18 +56,6 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     fontSize: "12px",
     textAlign: "start",
-    // height: 200,
-    // boxShadow: "rgba(0, 0, 0, 0.16) 0px 2px 8px",
-    // [theme.breakpoints.up('md')]: {
-    //   width: "32%"
-    // },
-    // [theme.breakpoints.down('sm')]: {
-    //   width: "45%",
-    //   margin: 10,
-    // },
-    // [theme.breakpoints.down('xs')]: {
-    //   width: "100%"
-    // },
     "&:hover": {
       cursor: "pointer"
     },
@@ -228,27 +134,10 @@ const Home = () => {
   useEffect(() => {
     getStores(location.position)
   }, [])
+  console.log('stores =>', stores)
 
   return (
     <Container maxWidth={"lg"} className={classes.mainContainer}>
-      {/* <Grid container>
-        <Grid item xs={12} className={classes.videoContainer}>
-          <video className={classes.videoSlider} autoPlay loop>
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-            <source src="https://parachutemontreal.ca/workspace/uploads/accueil-slideshow/v2-1-.webm" type="video/webm" />
-          </video>
-        </Grid>
-      </Grid> */}
-
-      {/* <Slider {...categorySettings} className={classes.categorySlider}>
-        {
-          [...new Array(15)].map(o =>
-            <div style={{ padding: 15 }}>
-              <img src={require("../../assets/images/storeBanner.png")} className={classes.categoryItem} alt="sdfgdg" />
-            </div>
-          )
-        }
-      </Slider> */}
       <Grid container direction={"column"}>
         <Grid item={12}>
           <Typography variant={"h4"}>Stores</Typography>
@@ -260,7 +149,7 @@ const Home = () => {
                 {
                   stores && stores.map((o, index) =>
                     <Grid item xs={12} sm={6} md={3} key={index}>
-                      <Button component={NavLink} to={`/store/${o.slug}`} className={classes.shopCart}>
+                      <Button component={NavLink} to={`/store/${o.slug || "thehoop"}`} className={classes.shopCart}>
                         <div>
                           <div className={classes.bannerWrapper}>
                             <span className={classes.distance}>{o.distance} km away</span>

@@ -12,3 +12,13 @@ export const fetchStores = async (location) => {
   return data;
 
 }
+
+export const fetchStoreCategories = async (slug) => {
+  var data = await Axios.get(`${HOST_API}/customer/getStoreCategories?store=${slug}`).then(resp => {
+    return resp.data.data;
+  }).catch(e => {
+    console.log('e =>', e);
+  })
+  return data;
+
+}
