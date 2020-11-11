@@ -13,255 +13,152 @@ export default function TnC() {
     <MyContainer>
       <h1><strong>Terms and Conditions</strong></h1>
 
-      <p>Welcome to The Hoop!</p>
-
-      <p>These terms and conditions outline the rules and regulations for the use of The Hoop's Website, located at www.thehoop.in.</p>
-
-      <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use The Hoop if you do not agree to take all of the terms and conditions stated on this page.</p>
-
-      <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
-
-      <h3><strong>Cookies</strong></h3>
-
-      <p>We employ the use of cookies. By accessing The Hoop, you agreed to use cookies in agreement with the The Hoop's Privacy Policy. </p>
-
-      <p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
-
-      <h3><strong>License</strong></h3>
-
-      <p>Unless otherwise stated, The Hoop and/or its licensors own the intellectual property rights for all material on The Hoop. All intellectual property rights are reserved. You may access this from The Hoop for your own personal use subjected to restrictions set in these terms and conditions.</p>
-
-      <p>You must not:</p>
-      <ul>
-        <li>Republish material from The Hoop</li>
-        <li>Sell, rent or sub-license material from The Hoop</li>
-        <li>Reproduce, duplicate or copy material from The Hoop</li>
-        <li>Redistribute content from The Hoop</li>
-      </ul>
-
-      <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. The Hoop does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of The Hoop,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, The Hoop shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
-
-      <p>The Hoop reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
-
-      <p>You warrant and represent that:</p>
-
-      <ul>
-        <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
-        <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
-        <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
-        <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
-      </ul>
-
-      <p>You hereby grant The Hoop a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
-
-      <h3><strong>Hyperlinking to our Content</strong></h3>
-
-      <p>The following organizations may link to our Website without prior written approval:</p>
-
-      <ul>
-        <li>Government agencies;</li>
-        <li>Search engines;</li>
-        <li>News organizations;</li>
-        <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
-        <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
-      </ul>
-
-      <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
-
-      <p>We may consider and approve other link requests from the following types of organizations:</p>
-
-      <ul>
-        <li>commonly-known consumer and/or business information sources;</li>
-        <li>dot.com community sites;</li>
-        <li>associations or other groups representing charities;</li>
-        <li>online directory distributors;</li>
-        <li>internet portals;</li>
-        <li>accounting, law and consulting firms; and</li>
-        <li>educational institutions and trade associations.</li>
-      </ul>
-
-      <p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of The Hoop; and (d) the link is in the context of general resource information.</p>
-
-      <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
-
-      <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to The Hoop. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
-
-      <p>Approved organizations may hyperlink to our Website as follows:</p>
-
-      <ul>
-        <li>By use of our corporate name; or</li>
-        <li>By use of the uniform resource locator being linked to; or</li>
-        <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
-      </ul>
-
-      <p>No use of The Hoop's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
-
-      <h3><strong>iFrames</strong></h3>
-
-      <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
-
-      <h3><strong>Content Liability</strong></h3>
-
-      <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
-
-      <h3><strong>Your Privacy</strong></h3>
-
-      <p>Please read Privacy Policy</p>
-
-      <h3><strong>Reservation of Rights</strong></h3>
-
-      <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
-
-      <h3><strong>Removal of links from our website</strong></h3>
-
-      <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
-
-      <p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
-
-      <h3><strong>Disclaimer</strong></h3>
-
-      <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
-
-      <ul>
-        <li>limit or exclude our or your liability for death or personal injury;</li>
-        <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
-        <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
-        <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
-      </ul>
-
-      <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
-
-      <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
-      {/* <div>
-        <div>
-          <div>
-            <h2><strong>Terms and Conditions</strong></h2>
-
-            <p>Welcome to celebrationclub!</p>
-
-            <p>These terms and conditions outline the rules and regulations for the use of celebrationclub's Website, located at https://celebrationclub.in/.</p>
-
-            <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use celebrationclub if you do not agree to take all of the terms and conditions stated on this page. Our Terms and Conditions were created with the help of the <a href="https://www.termsandconditionsgenerator.com">Terms And Conditions Generator</a> and the <a href="https://www.privacypolicyonline.com/terms-conditions-generator/">Free Terms &amp; Conditions Generator</a>.</p>
-
-            <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
-
-            <h3><strong>Cookies</strong></h3>
-
-            <p>We employ the use of cookies. By accessing celebrationclub, you agreed to use cookies in agreement with the celebrationclub's Privacy Policy.</p>
-
-            <p>Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
-
-            <h3><strong>License</strong></h3>
-
-            <p>Unless otherwise stated, celebrationclub and/or its licensors own the intellectual property rights for all material on celebrationclub. All intellectual property rights are reserved. You may access this from celebrationclub for your own personal use subjected to restrictions set in these terms and conditions.</p>
-
-            <p>You must not:</p>
-            <ul>
-              <li>Republish material from celebrationclub</li>
-              <li>Sell, rent or sub-license material from celebrationclub</li>
-              <li>Reproduce, duplicate or copy material from celebrationclub</li>
-              <li>Redistribute content from celebrationclub</li>
-            </ul>
-
-            <p>This Agreement shall begin on the date hereof.</p>
-
-            <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. celebrationclub does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of celebrationclub,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, celebrationclub shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
-
-            <p>celebrationclub reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
-
-            <p>You warrant and represent that:</p>
-
-            <ul>
-              <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
-              <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
-              <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
-              <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
-            </ul>
-
-            <p>You hereby grant celebrationclub a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
-
-            <h3><strong>Hyperlinking to our Content</strong></h3>
-
-            <p>The following organizations may link to our Website without prior written approval:</p>
-
-            <ul>
-              <li>Government agencies;</li>
-              <li>Search engines;</li>
-              <li>News organizations;</li>
-              <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
-              <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
-            </ul>
-
-            <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
-
-            <p>We may consider and approve other link requests from the following types of organizations:</p>
-
-            <ul>
-              <li>commonly-known consumer and/or business information sources;</li>
-              <li>dot.com community sites;</li>
-              <li>associations or other groups representing charities;</li>
-              <li>online directory distributors;</li>
-              <li>internet portals;</li>
-              <li>accounting, law and consulting firms; and</li>
-              <li>educational institutions and trade associations.</li>
-            </ul>
-
-            <p>We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of celebrationclub; and (d) the link is in the context of general resource information.</p>
-
-            <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
-
-            <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to celebrationclub. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
-
-            <p>Approved organizations may hyperlink to our Website as follows:</p>
-
-            <ul>
-              <li>By use of our corporate name; or</li>
-              <li>By use of the uniform resource locator being linked to; or</li>
-              <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
-            </ul>
-
-            <p>No use of celebrationclub's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
-
-            <h3><strong>iFrames</strong></h3>
-
-            <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
-
-            <h3><strong>Content Liability</strong></h3>
-
-            <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
-
-            <h3><strong>Your Privacy</strong></h3>
-
-            <p>Please read Privacy Policy</p>
-
-            <h3><strong>Reservation of Rights</strong></h3>
-
-            <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
-
-            <h3><strong>Removal of links from our website</strong></h3>
-
-            <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
-
-            <p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
-
-            <h3><strong>Disclaimer</strong></h3>
-
-            <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
-
-            <ul>
-              <li>limit or exclude our or your liability for death or personal injury;</li>
-              <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
-              <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
-              <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
-            </ul>
-
-            <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
-
-            <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
-          </div>
-        </div>
+      <div className="col-sm-12">
+        <p></p>
+        <ul className="webpage">
+          <li><strong>DEFINITIONS</strong></li>
+        </ul>
+        <p>"Agreement" means the terms and conditions as detailed herein including all schedules, appendices, annexures, Privacy Policy, Disclaimer and will include the references to this Agreement as amended, novated, supplemented, varied or replaced from time to time.</p>
+        <p>"You"/ "User" shall mean the end user accessing the Website, its contents and using the services offered through the Website.</p>
+        <p>"Hoop"/"we"/ "us"/"our" shall mean __________________________ or its affiliates, franchisees, service providers, successors and assigns "Site" means the online shopping platform owned and operated by ___________________ ("www._________________"), which provides a venue to the users of to buy the Products listed on Site.</p>
+        <ul start="2" className="webpage">
+          <li><strong>ACCEPTANCE OF TERMS</strong></li>
+        </ul>
+        <p><br />The services that Hoop provides to you, the User is subject to the following Terms of Use ("TOU"). Hoop reserves the right to update the TOU at any time without notice to User. The most current version of the TOU can be reviewed by clicking on the "Terms of Use" hypertext link located at the bottom of our Web pages.</p>
+        <ul className="webpage">
+          <li>This document is an electronic record in terms of The Information Technology Act, 2000 ("IT Act") and rules thereunder, and is published in accordance with the provisions of Rule 3 (1) under IT Act which mandates for publishing of rules and regulations, privacy policy and terms of use for access or usage of the Website. This electronic record is generated by a computer system and does not require any physical or digital signatures.</li>
+        </ul>
+        <ul className="webpage">
+          <li>The domain name <a href="https://www.thehoop.in">thehoop.in</a> (“Website”) is an e-commerce portal owned and operated by ______________________ ("Hoop"), a company incorporated under the laws of India, having its registered office at ____________________________.</li>
+        </ul>
+        <ul className="webpage">
+          <li>Your use / access of the Website, its related sites and hyperlinks, shall be governed by the terms and conditions, policies, rules of Hoop ("Terms") posted on the Website from time to time. These Terms applies to all users (whether Registered user or Guest User) of the Website.</li>
+        </ul>
+        <ul className="webpage">
+          <li>This Agreement, which incorporates by reference other provisions applicable to use of www.Hoop.com, including, but not limited to, supplemental terms and conditions set forth hereof ("Supplemental Terms") governing the use of certain specific material contained in www.Hoop.com, sets forth the terms and conditions that apply to use of www.Hoop.com by User. By using Hoop (other than to read this Agreement for the first time), User agrees to comply with all of the terms and conditions hereof. The right to use www.Hoop.com is personal to User and is not transferable to any other person or entity. User is responsible for all use of User's Account (under any screen name or password) and for ensuring that all use of User's Account complies fully with the provisions of this Agreement. User shall be responsible for protecting the confidentiality of User's password(s), if any. By subscribing to or using the website or any of our services through the Website you agree that you have read, understood, accept and are bound by the Terms, Policies, directions of Hoop regardless of how you subscribe to or use the Website, however Hoop at its sole discretion reserves its right not to accept a user from registering on the Website without assigning any reason thereof.</li>
+        </ul>
+        <ul className="webpage">
+          <li>Hoop shall have the right at any time to change or discontinue any aspect or feature of the platform, including, but not limited to, content, hours of availability, and equipment needed for access or use.</li>
+        </ul>
+        <ul start="3" className="webpage">
+          <li><strong>AMENDMENTS</strong></li>
+        </ul>
+        <p><br />Hoop reserves its right to amend the Website, Policies, Conditions or Terms of use and at any time without prior notice. All such updates and amendments shall be posted on the Website and will be effective from the time of its posting on the Website. You are advised to regularly check for any amendments or updates to the terms and conditions contained in this User Agreement, Terms and Policies.</p>
+        <p><strong>&nbsp;</strong></p>
+        <ul start="4" className="webpage">
+          <li><strong>DESCRIPTION OF SERVICES</strong></li>
+        </ul>
+        <p>All products/services and information displayed on Website constitute an "invitation to offer". Your order for purchase constitutes your "offer". All orders placed by you on the Website are subject to availability and acceptance by us and conditional on your acceptance and adherence to these terms and conditions.</p>
+        <ul start="5" className="webpage">
+          <li><strong>USER CONDUCT</strong></li>
+        </ul>
+        <ol>
+          <li>You shall use www.Hoop.com for lawful purposes only. Any conduct by you that in Hoop 's discretion restricts or inhibits any other User from using or enjoying www.Hoop.com will not be permitted. You shall not use www.Hoop.com to advertise or perform any commercial solicitation, including, but not limited to, the solicitation of users to become subscribers of other on-line information services competitive with Hoop.</li>
+        </ol>
+        <ul className="webpage">
+          <li>You agree and undertake not to reverse engineer, modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information or software obtained from the Website. Reproduction, copying of the content for commercial or non-commercial purposes and unwarranted modification of data and information within the content of the Website is not permitted.</li>
+        </ul>
+        <ul className="webpage">
+          <li>You agree and undertake not to display, upload, modify, publish, transmit, update or share any information that:</li>
+        </ul>
+        <ul className="webpage">
+          <li>belongs to another person and to which you do not have any legal right</li>
+        </ul>
+        <ul className="webpage">
+          <li>is grossly harmful, harassing, blasphemous, defamatory, obscene, pornographic, invasive of another's privacy, hateful, or racially, ethnically objectionable, disparaging, relating or encouraging money laundering or gambling, or otherwise unlawful in any manner what so ever;</li>
+        </ul>
+        <p>iii. harm minors in any way;</p>
+        <ul className="webpage">
+          <li>infringes any patent, trademark, copyright or other proprietary rights or third party's trade secrets or rights of publicity or privacy;</li>
+        </ul>
+        <ul className="webpage">
+          <li>violates any law for the time being in force;</li>
+        </ul>
+        <ul className="webpage">
+          <li>impersonate another person</li>
+        </ul>
+        <p>vii. contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer resource; or contains any Trojan horses, worms, time bombs, cancelbots, easter eggs or other computer programming routines that may damage, detrimentally interfere with, diminish value of, surreptitiously intercept or expropriate any system, data or personal information.</p>
+        <ul className="webpage">
+          <li>You, as a Buyer, understand that upon initiating a transaction you are entering into a legally binding and enforceable contract with Hoop to purchase the products and /or services from Hoop, and pay the transaction price to Hoop using appropriate Payment Facility. You, as a Buyer, understand that the all payment facility may not be available in full or in part for certain category of products and for certain locations and hence you may not be entitled to use that Payment Facility in respect of the transactions for those products or locations.</li>
+        </ul>
+        <ul className="webpage">
+          <li>www.Hoop.com contains copyrighted material, trademarks and other proprietary information, including, but not limited to, text, software, photos, video, graphics, music and sound, and the entire contents of www.Hoop.com are copyrighted as a collective work under the United States of America copyright laws. Hoop owns a copyright in the selection, coordination, arrangement and enhancement of such content, as well as in the content original to it. User may not modify, publish, transmit, participate in the transfer or sale, create derivative works, or in any way exploit, any of the content, in whole or in part. User may download copyrighted material for User's personal use only. Except as otherwise expressly permitted under copyright law, no copying, redistribution, retransmission, publication or commercial exploitation of downloaded material will be permitted without the express permission of Hoop and the copyright owner. In the event of any permitted copying, redistribution or publication of copyrighted material, no changes in or deletion of author attribution, trademark legend or copyright notice shall be made. User acknowledges that it does not acquire any ownership rights by downloading copyrighted material.</li>
+        </ul>
+        <ul className="webpage">
+          <li>The foregoing provisions are for the benefit of Hoop, its subsidiaries, affiliates and its third party content providers and licensors and each shall have the right to assert and enforce such provisions directly or on its own behalf.</li>
+        </ul>
+        <ul start="6" className="webpage">
+          <li><strong>USE OF SERVICES</strong></li>
+        </ul>
+        <p>Hoop grants you a limited, revocable permission to access and make personal use of this Website, but not to download or modify it, its Contents or any portion of it, except with express written consent of Hoop. This permission does not include any resale or commercial use of this website or its contents; any collection and use of any product listings, descriptions, or prices; any derivative use of this website or its contents; any downloading or copying of account information for the benefit of another seller; or any use of data mining, robots, or similar data gathering and extraction tools.</p>
+        <p>The use of the Website and its Content grants no rights to you in relation to any copyright, designs, trademarks and all other intellectual property and material rights relating to the Content. Including the content but not limited to the design, structure, selection, coordination, expression, "look and feel" and arrangement of such Content, contained on the Website are original to Hoop and are owned and controlled or licensed by us, and are protected by trade dress, copyright, patent and trademark laws, and various other intellectual property rights.</p>
+        <p>Except as expressly provided in Terms of Use, no part of the Website and no Content may be copied, reproduced, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted or distributed in any way (including "mirroring") to any other computer, server, website or other medium for publication or distribution or for any commercial enterprise, without our express prior written consent.</p>
+        <ul start="7" className="webpage">
+          <li><strong>CONTRACT AND DELIVERY OF PRODUCT</strong></li>
+        </ul>
+        <p>Your order is an offer to us to buy the product(s) in your order. We will confirm our acceptance of your offer either through an e-mail / SMS or through shipment of the items you requested. Upon placing an order, you will receive an e-mail confirming receipt of your order with details (the "Order Confirmation E-mail"). The Order Confirmation E-mail is an acknowledgement that we have received your order, and does not confirm acceptance of your offer to buy the product(s) ordered. Our acceptance to your offer takes place and the contract of sale for a product ordered by you concludes only upon actual dispatch of products to you and an e-mail confirmation in that regard is sent to you (the "Dispatch E-mail"). We, at our sole discretion, reserve our right to limit the quantity of items and cancel any order, even after acceptance.</p>
+        <p>Hoop has complete right to accept or reject an order placed online. No act or omission of Hoop prior to actual dispatch of the product(s) ordered will constitute an acceptance of your offer. You agree not to dispute the decision of Hoop in this regard.</p>
+        <p>Delivery of the Products under your Order in the Website shall be made as per our Delivery/shipment policy mentioned herein. Title of the Product shall pass on to you upon receipt of payment.</p>
+        <ul start="8" className="webpage">
+          <li><strong>MEMBER ACCOUNT, PASSWORD, AND SECURITY</strong></li>
+        </ul>
+        <p>If any of the Services requires User to open an account, User must complete the registration process by providing Hoop with current, complete and accurate information as prompted by the applicable registration form.</p>
+        <p>You can use the services offered by the Website as a "Registered User". As part of the registration process on the Site, Hoop may collect certain personally identifiable information about you including first and last name, email address, mobile phone number and contact details, Postal code, Demographic profile (like your age, gender, occupation, education, address etc.) and information about the pages on the site you visit/access, the links you click on the site, the number of times you access the page and any such browsing information.</p>
+        <p>You hereby affirms that the information provided by him / her is true, correct and complete to the best of his / her knowledge and belief. The User agrees and understands that he / she will be solely responsible in the event of any inaccuracy or deviation therefrom at a later stage.</p>
+        <p>As a Registered User, you are responsible for maintaining the confidentiality of your user id and password. You are also responsible for maintaining the confidentiality of your email id and mobile number and for any unauthorised access to your mobile , tab, computer, computer system and computer network, and you are responsible for all activities that occur under your user id and password, email id and mobile number as the case may be. You agree to maintain and promptly update all data provided by you and to keep it true, accurate, current and complete. If you provide any information that is untrue, inaccurate, not current or incomplete or we have reasonable grounds to suspect that such information is untrue, inaccurate, not current or incomplete, or not in accordance with the Terms, we have the right to indefinitely suspend or terminate or block access of your user account with the Website and refuse to provide you with access to the Website.</p>
+        <p>We will collect personally identifiable information about you only as part of a voluntary registration process, on-line survey, or contest or any combination thereof.</p>
+        <ul start="9" className="webpage">
+          <li><strong>LIMITATION ON LIABILITY</strong></li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <ul className="webpage">
+          <li>In no event shall Hoop or our affiliates be liable for any special, indirect, incidental, consequential or exemplary damages including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses arising out of or in connection with the Website, its services or this User Agreement whatsoever, whether in an action of contract, negligence or other tortious action.</li>
+        </ul>
+        <ol>
+          <li>Without prejudice to the generality of this section the total liability of Hoop to you for all liabilities arising out of this User Agreement be it in tort or contract is limited to the value of the product ordered by you. However, in case of missing a delivery in transit, our liability is limited only to delivery at a later agreed time at no additional charge.</li>
+        </ol>
+        <ul className="webpage">
+          <li>You agree not to hold Hoop or any of its officers, employees, agents responsible or accountable for any of your listing, postings or information and nor shall we, our officers, employees or agents be liable for any misuse, illegal activity or third party content as most postings, listings or information are generated by various users directly and we do not have any role in the creation, publication or distribution of the posting, listing or information, nor are we in a position to have editorial control over the substance or content contained in the listings, postings, or information.</li>
+        </ul>
+        <ul className="webpage">
+          <li>You understand and agree that we do not guarantee the accuracy or legitimacy of any listing, posting, information by other users. You further agree that we are not liable for any loss of money, goodwill, or reputation, or any special, indirect, or consequential damages arising out of your use of the site or as a result of any sale, purchase of goods and services with other users of the site. Hoop also cannot guarantee continuous or secure access to our services. Accordingly, to the extent legally permitted we exclude all implied warranties, of merchantability, fitness or quality of the website and our services.</li>
+        </ul>
+        <ul start="10" className="webpage">
+          <li><strong>DISCLAIMER</strong></li>
+        </ul>
+        <p>You acknowledge and undertake that you are accessing the services on the Website and transacting at your own risk and are using your best and prudent judgment before placing any order or availing the services or entering into any transactions with us through our Website. Hoop shall not be held liable nor responsible for any representations or warranties/guarantees of the products save and except the limited manufacturer's warranty/guarantee on the respective Product is assigned unto us and we hereby expressly disclaim and any all responsibility and liability in that regard. We further expressly disclaim any warranties or representations (express or implied) in respect of quality, suitability, accuracy, reliability, completeness, timeliness, performance, safety, merchantability, fitness for a particular purpose, or legality of the products listed or displayed or transacted or the content (including product or pricing information and/or specifications) on the website. While we have taken precautions to avoid inaccuracies in content, this website, all content, information (including the price of products), software, products, services and related graphics are provided as is, without warranty of any kind.</p>
+        <ul start="11" className="webpage">
+          <li><strong>INDEMNIFICATION</strong></li>
+        </ul>
+        <p>You agree to indemnify, defend and hold harmless us and affiliates including employees, directors, officers, agents and their successors and assigns from and against any and all losses, liabilities, claims, damages, costs and expenses (including legal fees and disbursements in connection therewith and interest chargeable thereon) asserted against or incurred by us arising out of your actions or inactions or result from your breach of the Terms and Conditions herein or any document incorporated by reference/hyperlink or infringement of intellectual property rights or your violation of any law, rules or regulations or the rights of any third party.</p>
+        <p>You hereby expressly release Hoop and/or its affiliates and/or any of its officers and representatives from any cost, damage, liability or other consequence of any of the actions/inactions of the Manufacturers/Brand owners of the Products purchased through the website and specifically waiver any claims or demands that you may have in this behalf under any statute, contract or otherwise.</p>
+        <p>This clause shall survive the expiry or termination of this Agreement.</p>
+        <ul start="12" className="webpage">
+          <li><strong>INTELLECTUAL PROPERTY RIGHTS</strong></li>
+        </ul>
+        <p>All Content included on the website, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of Hoop, its affiliates or its content suppliers and is protected by the Intellectual Property Laws of India.</p>
+        <p>The trademark Hoop, its logo and all products and logos denoted with TM are trademarks owned or registered trademarks of Hoop or its affiliates.</p>
+        <p>Hoop is not an expert in your intellectual property rights, and we cannot verify that the suppliers of our online marketplace have the right to sell the goods and/or services offered by them. Hoop is also not an arbiter or judge of disputes about intellectual property rights. By taking down a listing, as a prudential matter, Hoop is not endorsing a claim of infringement. Neither, in those instances in which Hoop declines to take down a listing, is Hoop determining that the listing is not infringing, nor is Hoop endorsing the sale of goods in such cases. Hoop and its affiliates or its content suppliers respect the intellectual property of others. If you believe that your intellectual property rights have been used in a way that gives rise to concerns of infringement, please write to us with your concerns.</p>
+        <p><strong>&nbsp;</strong></p>
+        <ul start="13" className="webpage">
+          <li><strong>MISCELLANEOUS</strong></li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <ul className="webpage">
+          <li><strong>Waiver: </strong>If you breach these conditions and we take no action, we will still be entitled to use our rights and remedies in any other situation where you breach these conditions.</li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <ul className="webpage">
+          <li><strong>Governing Law and Jurisdiction: </strong>This Agreement shall be governed and construed in accordance with the laws of the Republic of India and the courts at Mumbai shall have exclusive jurisdiction on all matters and disputes arising out of and relating to the website.</li>
+        </ul>
+        <ul className="webpage">
+          <li><strong>Severability: </strong>If any of these Terms is deemed invalid, void or unenforceable in whole or in part for any reasons, such invalidity or unenforceability condition or part thereof will be deemed severable and will not affect the validity and enforceability of any remaining condition or part of such condition / Terms.</li>
+        </ul>
+        <ul className="webpage">
+          <li><strong>Force Majeure</strong>– Neither party will be responsible for any failure or delay in performance due to circumstances beyond its reasonable control, including, without limitation, acts of god, war, riot, embargoes, acts of civil or military authorities, fire, floods, accidents, service outages resulting from equipment and/or software failure and/or telecommunications failures, power failures, network failures, failures of third party service providers (including providers of internet services and telecommunications). The party affected by any such event shall notify the other party within a maximum of fifteen (15) days from its occurence. The performance of this agreement shall then be suspended for as long as any such event shall prevent the affected party from performing its obligations under this agreement.</li>
+        </ul>
       </div>
-    */}
+
     </MyContainer>
   )
 }

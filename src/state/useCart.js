@@ -85,8 +85,6 @@ const useCart = () => {
           qty: qty,
         }
 
-        // setCookie('cart_items', _cart_items, COOKIE_OPTION);
-
       } else {
         _cart_items.splice(index, 1)
       }
@@ -130,76 +128,10 @@ const useCart = () => {
 
 
   const addToCart = (product, sub_prod_id) => {
-
-    //#region 
-    // var retailer_list = state.cart.items;
-    // var index = findIndex(retailer_list, { retailer_id: store.id })
-    // if (index >= 0) {
-    //   // exist
-
-
-    //   var index2 = findIndex(retailer_list[index].items, { product_id: product.id })
-    //   if (index2 >= 0) {
-    //     retailer_list[index].items[index2] = {
-    //       product_id: product.id,
-    //       name: product.name,
-    //       image: product.image,
-    //       quantity: product.quantity,
-    //       discount: product.discount,
-    //       retailer_id: store.id,
-    //       price: Number(product.price),
-    //     }
-    //   } else {
-    //     retailer_list[index].items.push({
-    //       product_id: product.id,
-    //       name: product.name,
-    //       image: product.image,
-    //       quantity: product.quantity,
-    //       discount: product.discount,
-    //       retailer_id: store.id,
-    //       price: Number(product.price),
-    //     })
-    //   }
-    //   var store_total = 0;
-
-    //   retailer_list[index].items.map(({ price }) => {
-    //     store_total += Number(price);
-    //   })
-    //   retailer_list[index].price = store_total;
-    // } else {
-    //   retailer_list.push({
-    //     retailer_id: store.id,
-    //     store_name: store.name,
-    //     image: store.image,
-    //     price: Number(product.price) * product.quantity,
-    //     items: [{
-    //       product_id: product.id,
-    //       name: product.name,
-    //       image: product.image,
-    //       quantity: product.quantity,
-    //       discount: product.discount,
-    //       retailer_id: store.id,
-    //       price: Number(product.price),
-    //     }]
-    //   })
-
-    //   // not exists add new store in list
-    // }
-    // var data = {
-    //   ...state,
-    //   count: itemCount().count,
-    //   items: retailer_list,
-    //   grand_total: Number((itemCount().total).toFixed(2))
-    // }
-    // console.log('data =>', data);
-    //#endregion
-
     var _cart_items = Object.assign([], state.cart_items);
-
     var index = findIndex(_cart_items, { sub_prod_id: sub_prod_id })
 
     if (index >= 0) {
-
       _cart_items[index] = {
         ...product,
         qty: _cart_items[index].qty + 1,

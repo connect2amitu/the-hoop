@@ -57,7 +57,7 @@ function Layout({ history, children, ...props }) {
         draggable
         pauseOnHover={false}
       />
-      {(props.location.pathname === "/" || props.location.pathname === "/about" || props.location.pathname === "/refund" || props.location.pathname === "/terms-of-service") && <Footer />}
+      {(props.location.pathname === "/" || props.location.pathname === "/about" || props.location.pathname === "/refund" || props.location.pathname === "/terms-of-service" || props.location.pathname === "/delivery-policy" || props.location.pathname === "/payment-policy") && <Footer />}
 
     </React.Fragment >
   )

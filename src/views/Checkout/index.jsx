@@ -40,10 +40,20 @@ export default function Checkout(props) {
   const [loading, setLoading] = useState("")
   const [paymentMode, setPaymentMode] = useState(0);
   const { location } = useAppState("global");
-  const { grand_total, cart_items, setOrderResponse, discount } = useAppState("cart");
+  const { grand_total, cart_items, setOrderResponse } = useAppState("cart");
   const classes = useStyles();
 
-
+  var discount = 0;
+  if (grand_total <= 300) {
+    discount = 10
+  } else if (grand_total > 300 && grand_total <= 500) {
+    discount = 15
+  } else if (grand_total > 500 && grand_total <= 700) {
+    discount = 20
+  }
+  else if (grand_total > 700) {
+    discount = 25
+  }
   useEffect(() => {
     if (cart_items.length <= 0) {
       props.history.push("/");
@@ -179,10 +189,10 @@ export default function Checkout(props) {
         }) => (
             <form onSubmit={handleSubmit}>
               <Grid container spacing={2} direction={"column"}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <Typography variant={"h4"}>Checkout</Typography>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <TextField
                     id="outlined-basic"
                     fullWidth
@@ -199,7 +209,7 @@ export default function Checkout(props) {
                   />
 
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <TextField
                     id="standard-multiline-static"
                     label="Address"
@@ -216,7 +226,7 @@ export default function Checkout(props) {
                     helperText={errors.address && touched.address && errors.address}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <TextField
                     id="outlined-basic"
                     fullWidth
@@ -232,7 +242,7 @@ export default function Checkout(props) {
                   />
 
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <Typography variant="h6" >
                     Pay with
           </Typography>
@@ -281,7 +291,7 @@ export default function Checkout(props) {
                   </div>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <Paper style={{ padding: 10 }} elevation={3}>
                     <Typography variant={"h6"}>PRICE DETAILS</Typography>
                     <Grid container direction={"column"}>
@@ -301,7 +311,7 @@ export default function Checkout(props) {
                             <Typography>Discount</Typography>
                           </Grid>
                           <Grid item>
-                            <Typography >{grand_total * (discount / 100)} &#8377; </Typography>
+                            <Typography >{Math.floor(grand_total * (discount / 100))} &#8377; </Typography>
                           </Grid>
                         </Grid>
                       </Grid>}
@@ -319,7 +329,7 @@ export default function Checkout(props) {
                   </Paper>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12} md={6}>
                   <Button variant={"contained"} disabled={loading} className={classes.btn} type={"submit"} fullWidth color={"primary"}>{loading ? <CircularProgress style={{ color: "#fff", height: 26, width: 26 }} /> : `Place Order`}</Button>
                 </Grid>
               </Grid>
