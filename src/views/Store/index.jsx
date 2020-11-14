@@ -11,6 +11,8 @@ import MyContainer from '../../components/Layout/MyContainer';
 
 const Store = (props) => {
   const { store, getStoreBySlug } = useAppState("useStore");
+  console.log('amitstore =>', store)
+
   const settings = {
     dots: true,
     infinite: true,

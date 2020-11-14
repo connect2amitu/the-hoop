@@ -70,11 +70,11 @@ const Store = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
-  console.log('departmentsstore =>', departments, store)
+  console.log('departmentsstore =>', store)
 
   useEffect(() => {
     getStoreBySlug(props.match.params.storeName)
-    getStoreDepartment(props.match.params.storeName)
+    // getStoreDepartment(props.match.params.storeName)
   }, [props.match.params.storeName])
 
   return (
@@ -97,7 +97,7 @@ const Store = (props) => {
         </Grid>
         <Grid container className={classes.categoryWrap}>
           {
-            departments.map((o, index) =>
+            store && store.categories.map((o, index) =>
               <Grid item key={index} style={{ padding: "15px 5px" }} >
                 <Button style={{ backgroundImage: `url(${o.image})` }} className={classes.categoryItem} alt="sdfgdg" />
                 <Typography variant={"subtitle2"} className={cls(classes.tCenter, classes.categoryName)} >{o.category}</Typography>
@@ -106,9 +106,9 @@ const Store = (props) => {
           }
         </Grid>
         {
-          store?.categories && <>
+          store && store.categories && <>
             <Grid container spacing={2} direction={"column"} alignItems={"flex-start"} justify={"center"}>
-              {store.categories.slice(1).map((category, index) =>
+              {store.categories.map((category, index) =>
                 <React.Fragment key={index}>
                   <Grid item xs={12}>
                     <CategoryAndProduct category={category} store={store} />

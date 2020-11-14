@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import { DUMMY_DEPARTMENTS, STORES } from "../shared/dummyData";
-import { fetchStoreCategories, fetchStores } from '../apis/store'
+import { fetchStoreBySlug, fetchStoreCategories, fetchStores } from '../apis/store'
 function reducer(state, action) {
   return { ...state, ...action };
 }
@@ -20,14 +20,20 @@ const useStore = () => {
 
   const getStoreBySlug = (slug) => {
     console.log('getStoreBySlug slug =>', slug);
+    fetchStoreBySlug(slug).then(resp => {
+      console.log('resp =>', resp.data);
+      setState({ store: resp.data, isLoading: false })
+    }).catch(err => {
+      console.log('err =>', err);
+      setState({ store: null, isLoading: false })
+    })
+    // var data = STORES.find(data => data.slug === slug) || null;
+    // console.log('data =>', data);
 
-    var data = STORES.find(data => data.slug === slug) || null;
-    console.log('data =>', data);
-
-    setState({ isLoading: true })
-    setTimeout(() => {
-      setState({ store: data, isLoading: false })
-    }, 1000);
+    // setState({ isLoading: true })
+    // setTimeout(() => {
+    //   setState({ store: data, isLoading: false })
+    // }, 1000);
   }
 
   const getStores = (location) => {

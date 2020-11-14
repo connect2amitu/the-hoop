@@ -279,6 +279,8 @@ const CategoryAndProduct = (props) => {
 
 
   const { category } = props;
+  console.log('category =>', category)
+
   return (
     <>
       <Grid container className={classes.categoryHeading} justify={"space-between"}>
@@ -287,49 +289,55 @@ const CategoryAndProduct = (props) => {
         </Grid>
         <Grid item xs={12}>
           <Grid container spacing={1} >
-            {
-              category.products.slice(0, 4).map((product, index) =>
-                <Grid item xs={12} sm={4} md={3} ld={3} key={index}>
-                  <Grid container spacing={1}>
-                    <Grid item xs={3} md={4} className={classes.productImageWrapper} >
-                      <Button component={NavLink} to={`/store/maruti-general-store/test`} className={classes.productImage} style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} />
-                    </Grid>
-                    <Grid item xs={9} md={8}>
-                      <Grid container spacing={1} direction={"column"}>
-                        <Grid item className={classes.productNameGrid}>
-                          <Typography className={classes.productName} variant={"caption"} >{product.name}</Typography>
+            <Grid item>
+              {category.sub_categories && category.sub_categories.map((subProd, index) => <Grid container spacing={1} >
+                <p>{subProd.sub_category_name}</p>
+                {
+                  subProd && subProd.products.map((product, index) =>
+                    <Grid item xs={12} sm={4} md={3} ld={3} key={index}>
+                      <Grid container spacing={1}>
+                        <Grid item xs={3} md={4} className={classes.productImageWrapper} >
+                          <Button component={NavLink} to={`/store/maruti-general-store/test`} className={classes.productImage} style={{ backgroundImage: `url(https://placeimg.com/640/480/${index})` }} />
                         </Grid>
-                        <Grid item>
-                          <FormControl variant="outlined" className={classes.selectBox}>
-                            <Select
-                              classes={{ root: classes.select }}
-                              labelId={`product-${product.id}`}
-                              id={`product-${product.id}`}
-                              value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
-                              onChange={(e) => handleChange(e, product.id)}
-                              inputProps={{
-                                name: `product-${product.id}`,
-                              }}
-                            >
-                              {
-                                product.data.map((option, index) =>
-                                  <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
-                                )
-                              }
-                            </Select>
-                          </FormControl>
-                        </Grid>
-                        <Grid item>
-                          <Grid container alignItems={"center"}>
-                            {showButtons(product)}
+                        <Grid item xs={9} md={8}>
+                          <Grid container spacing={1} direction={"column"}>
+                            <Grid item className={classes.productNameGrid}>
+                              <Typography className={classes.productName} variant={"caption"} >{product.name}</Typography>
+                            </Grid>
+                            <Grid item>
+                              <FormControl variant="outlined" className={classes.selectBox}>
+                                <Select
+                                  classes={{ root: classes.select }}
+                                  labelId={`product-${product.id}`}
+                                  id={`product-${product.id}`}
+                                  value={state && state[`product-${product.id}`] ? product.data.find(o => o.sub_prod_id === state[`product-${product.id}`].sub_prod_id) : product.data[0]}
+                                  onChange={(e) => handleChange(e, product.id)}
+                                  inputProps={{
+                                    name: `product-${product.id}`,
+                                  }}
+                                >
+                                  {
+                                    product.data.map((option, index) =>
+                                      <MenuItem key={index} value={option}>{option.qty}{option.unit} - {option.rate}Rs</MenuItem>
+                                    )
+                                  }
+                                </Select>
+                              </FormControl>
+                            </Grid>
+                            <Grid item>
+                              <Grid container alignItems={"center"}>
+                                {showButtons(product)}
+                              </Grid>
+                            </Grid>
                           </Grid>
                         </Grid>
                       </Grid>
                     </Grid>
-                  </Grid>
-                </Grid>
-              )
-            }
+                  )
+                }
+              </Grid>)
+              }
+            </Grid>
           </Grid>
         </Grid >
 
