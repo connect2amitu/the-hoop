@@ -114,17 +114,6 @@ const Header = (props) => {
   const { cart_items, grand_total } = useAppState("cart");
 
   var discount = findDiscount(grand_total);
-  // if (grand_total <= 300) {
-  //   discount = 10
-  // } else if (grand_total > 300 && grand_total <= 500) {
-  //   discount = 15
-  // } else if (grand_total > 500 && grand_total <= 700) {
-  //   discount = 20
-  // }
-  // else if (grand_total > 700) {
-  //   discount = 25
-  // }
-
 
   useEffect(() => {
     if (!location) {
