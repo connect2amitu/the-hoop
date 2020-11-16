@@ -21,6 +21,8 @@ const Page404 = React.lazy(() => import('./components/404'))
 const AboutUs = React.lazy(() => import('./views/Account/AboutUs'))
 const Refund = React.lazy(() => import('./views/Account/Refund'))
 const TnC = React.lazy(() => import('./views/Account/TnC'))
+const PaymentPolicy = React.lazy(() => import('./views/Account/PaymentPolicy'))
+const DeliveryPolicy = React.lazy(() => import('./views/Account/DeliveryPolicy'))
 
 
 function App({ isDark }) {
@@ -48,6 +50,8 @@ function App({ isDark }) {
                   <Route exact path="/about" component={AboutUs} />
                   <Route exact path="/refund" component={Refund} />
                   <Route exact path="/terms-of-service" component={TnC} />
+                  <Route exact path="/delivery-policy" component={DeliveryPolicy} />
+                  <Route exact path="/payment-policy" component={PaymentPolicy} />
                   <Route exact path="*" component={Page404} />
                 </Switch>
               </Layout>

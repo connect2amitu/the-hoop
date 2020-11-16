@@ -31,6 +31,8 @@ export default function Footer() {
                   <Grid item><NavLink className={classes.link} to="/about">About us</NavLink></Grid>
                   <Grid item><NavLink className={classes.link} to="/refund">Refund</NavLink></Grid>
                   <Grid item><NavLink className={classes.link} to="/terms-of-service">Terms of Service</NavLink></Grid>
+                  <Grid item><NavLink className={classes.link} to="/delivery-policy">Delivery Policy</NavLink></Grid>
+                  <Grid item><NavLink className={classes.link} to="/payment-policy">Payment Policy</NavLink></Grid>
                 </Grid>
               </Grid>
             </Grid>

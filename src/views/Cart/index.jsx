@@ -6,6 +6,7 @@ import { useAppState } from '../../context';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { orderBy } from 'lodash';
 import { useCookies } from 'react-cookie';
+import { findDiscount } from '../../shared/funs';
 
 
 
@@ -43,6 +44,11 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 'auto',
     bottom: 0,
+    maxWidth: 550,
+    [theme.breakpoints.down(768)]: {
+      width: "100%",
+      maxWidth: "initial",
+    },
   },
   checkout: {
     fontSize: 20
@@ -59,7 +65,18 @@ function Cart(props) {
   const { toggleCart, closeCart, openCart } = useAppState("global");
   const [cookies, setCookie] = useCookies();
 
-  const { removeCart, cart_items, grand_total, updateProductQty, discount } = useAppState("cart");
+  const { removeCart, cart_items, grand_total, updateProductQty } = useAppState("cart");
+  var discount = findDiscount(grand_total);
+  // if (grand_total <= 300) {
+  //   discount = 10
+  // } else if (grand_total > 300 && grand_total <= 500) {
+  //   discount = 15
+  // } else if (grand_total > 500 && grand_total <= 700) {
+  //   discount = 20
+  // }
+  // else if (grand_total > 700) {
+  //   discount = 25
+  // }
 
   const confirmDelete = (sub_prod_id) => {
     confirmAlert({
@@ -154,20 +171,6 @@ function Cart(props) {
                     </Grid>
                     <Grid item>
                       <IconButton onClick={() => removeCart(index)
-                        // confirmAlert({
-                        //   title: 'Remove Item',
-                        //   message: 'Are you sure you want to remove this item from cart?',
-                        //   buttons: [
-                        //     {
-                        //       label: 'Yes',
-                        //       onClick: () => removeCart(index)
-                        //     },
-                        //     {
-                        //       label: 'No',
-                        //       onClick: () => console.info("no")
-                        //     }
-                        //   ]
-                        // })
                       }><ClearRounded color={"primary"} /></IconButton>
                     </Grid>
 
@@ -214,24 +217,6 @@ function Cart(props) {
           <AppBar position="fixed" color="primary" onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} className={classes.appBar}>
             <Toolbar>
               <Grid container spacing={0} justify={"space-between"} alignItems={"center"} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }}>
-                {/* <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleStore()}>
-                          <Grid item><StorefrontRounded /> </Grid>
-                          <Grid item><span>Store</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => handleClickOpen()}>
-                          <Grid item><SearchRounded /></Grid>
-                          <Grid item><span>Search</span></Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid item>
-                        <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push(`/store/${store.slug}/departments`)} >
-                          <Grid item><ViewModuleRounded /> </Grid>
-                          <Grid item><span>Department</span></Grid>
-                        </Grid>
-                      </Grid> */}
                 <Grid item>
                   <Button color={"inherit"} className={classes.checkout} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >Checkout</Button>
                 </Grid>
@@ -239,22 +224,7 @@ function Cart(props) {
                   <Button color={"inherit"} className={classes.checkout} onClick={() => { closeCart(); props.history.push(!cookies.isVerified ? "/login" : "/checkout") }} >
                     {discount > 0 && <span >&#8377;<span style={{ textDecoration: "line-through", fontWeight: "lighter" }}>{grand_total}</span>&nbsp;&nbsp;</span>}
                         &#8377;<span style={{ fontSize: 23, fontWeight: 700 }}>{Math.ceil(grand_total - grand_total * (discount / 100))}/-</span></Button>
-
-
-                  {/* <Grid container alignItems={"center"} direction={"column"} onClick={() => toggleCart()} >
-                          <Badge badgeContent={cart.count} color="secondary"><Grid item><ShoppingBasketRounded /></Grid></Badge>
-                          <Grid item><span>Cart</span></Grid>
-                        </Grid> */}
                 </Grid>
-                {/* {isLoggedIn &&
-                        <Grid item>
-                          <Grid container alignItems={"center"} direction={"column"} onClick={() => props.history.push('/account')}>
-                            <Grid item ><AccountBoxRounded /> </Grid>
-                            <Grid item><span>Profile</span></Grid>
-                          </Grid>
-                        </Grid>
-                      } */}
-
               </Grid>
             </Toolbar>
           </AppBar>

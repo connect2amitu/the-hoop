@@ -10,6 +10,7 @@ import { useAppState } from '../../context';
 import { useEffect } from 'react';
 import FormDialog from '../Location';
 import { useCookies } from 'react-cookie';
+import { findDiscount } from '../../shared/funs';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -110,7 +111,20 @@ const Header = (props) => {
 
 
   const { toggleCart, closeCart, location, toggleLocation } = useAppState("global");
-  const { cart_items, grand_total, discount } = useAppState("cart");
+  const { cart_items, grand_total } = useAppState("cart");
+
+  var discount = findDiscount(grand_total);
+  // if (grand_total <= 300) {
+  //   discount = 10
+  // } else if (grand_total > 300 && grand_total <= 500) {
+  //   discount = 15
+  // } else if (grand_total > 500 && grand_total <= 700) {
+  //   discount = 20
+  // }
+  // else if (grand_total > 700) {
+  //   discount = 25
+  // }
+
 
   useEffect(() => {
     if (!location) {

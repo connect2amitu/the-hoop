@@ -35,3 +35,19 @@ export const toHHMMSS = (secs) => {
     .filter((v, i) => v !== "00" || i > 0)
     .join(":")
 }
+
+
+export const findDiscount = (grand_total) => {
+  var discount = 0
+  // if (grand_total <= 300) {
+  //   discount = 10
+  // } else if (grand_total > 300 && grand_total <= 500) {
+  //   discount = 15
+  // } else if (grand_total > 500 && grand_total <= 700) {
+  //   discount = 20
+  // }
+  // else if (grand_total > 700) {
+  //   discount = 25
+  // }
+  return discount
+}
